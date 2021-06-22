@@ -1,0 +1,21 @@
+---
+   - name: Enable boot strap on enterprise instances
+     hosts: all,!ufs
+     become_user: splunk
+     become: true
+     tasks:
+       - name: enable boot-start
+         shell:
+           /opt/splunk/bin/splunk enable boot-start splunk |
+           chown -R splunk /opt/splunk
+
+
+   - name: Enable boot strap on ufs
+     hosts: ufs
+     become_user: splunk
+     become: true
+     tasks:
+       - name: enable boot-start
+         shell:
+           /opt/splunkforwarder/bin/splunk enable boot-start splunk |
+           chown -R splunk /opt/splunkforwarder

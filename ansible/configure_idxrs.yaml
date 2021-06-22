@@ -1,0 +1,15 @@
+---
+  - name: copy baseline splunk configurations
+    hosts: idxrs
+    become: true
+    strategy: free
+    tasks:
+      - name: BootStrap Indexers with deploymentClient config
+        copy:
+          src: "./AppDeploymentBundle/splunk_config_baseline/{{ item }}"
+          dest: "/opt/splunk/etc/apps/"
+          owner: splunk
+          group: splunk
+          mode: 0755
+        with_items:
+          - org_all_deploymentclient

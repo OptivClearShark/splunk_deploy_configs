@@ -1,0 +1,70 @@
+---
+  - name: Create Splunk Data Volume
+    hosts: idxrs standalone dfs syslog hfs
+    become: true
+    strategy: free
+    tasks:
+      - name: install lvm2
+        yum:
+          name: "{{ packages }}"
+          state: latest
+          update_cache: yes
+        vars:
+          packages:
+            - lvm2
+            - gcc
+            - nvme-cli
+            - xfsprogs
+
+      - shell: nvme list
+        register: nvme
+
+      - debug:
+          msg: "{{ inventory_hostname }} EBS is NVME connected"
+        when: nvme.stdout != ""
+
+      - name: Create Nvme based Volume Group vg_splunkdata
+        lvg:
+          pvs: /dev/nvme1n1,/dev/nvme2n1,/dev/nvme3n1,/dev/nvme4n1,/dev/nvme5n1,/dev/nvme6n1
+          vg: vg_splunkdata
+        when: nvme.stdout != ""
+
+      - name: Create Volume Group vg_splunkdata
+        lvg:
+          pvs: /dev/xvdba,/dev/xvdbb,/dev/xvdbc,/dev/xvdbd,/dev/xvdbe,/dev/xvdbf
+          vg: vg_splunkdata
+        when: nvme.stdout == ""
+
+      - name: Create a logical volume
+        lvol:
+          vg: vg_splunkdata
+          lv: lv_splunkdata
+          size: +100%FREE
+
+      - name: create file system for lv_splunkdata
+        filesystem:
+              fstype: xfs
+              dev: /dev/vg_splunkdata/lv_splunkdata
+
+      - name: create data directory
+        file:
+           path: /splunkdata
+           state: directory
+           owner: splunk
+           group: splunk
+           mode: 0755
+
+      - name: mount lv_splunkdata logical volume
+        mount:
+          name: /splunkdata
+          src: /dev/vg_splunkdata/lv_splunkdata
+          fstype: xfs
+          state: mounted
+
+      - name: create data directory
+        file:
+           path: /splunkdata
+           state: directory
+           owner: splunk
+           group: splunk
+           mode: 0755

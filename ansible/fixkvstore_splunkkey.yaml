@@ -1,0 +1,22 @@
+---
+  - hosts: all
+    become: true
+    strategy: free
+    tasks:
+      - name: change mongodb splunk key permissions
+        file:
+          path: "/opt/splunk/var/lib/splunk/kvstore/mongo/splunk.key"
+          owner: splunk
+          group: splunk
+          mode: '0400'
+        register: permissions
+
+      - name: Restart Splunk if permissions were corrected
+        when: permissions.changed
+        command: "/opt/splunk/bin/splunk restart"
+        register: splunk
+
+      - name: Output from Splunk Restart
+        when: permissions.changed
+        debug:
+         var: splunk.stdout_lines

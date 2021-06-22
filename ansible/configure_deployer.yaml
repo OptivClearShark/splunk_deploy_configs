@@ -1,0 +1,32 @@
+---
+  - name: copy baseline splunk configurations
+    hosts: deployer
+    become: true
+    strategy: free
+    tasks:
+      - name: Copy non cluster baseline .conf directories to SH's apps directory
+        copy:
+          src: "./AppDeploymentBundle/splunk_config_baseline/{{ item }}"
+          dest: "/opt/splunk/etc/apps/"
+          owner: splunk
+          group: splunk
+          mode: 0755
+        with_items:
+          - org_all_deploymentclient
+          - org_all_indexes
+          - org_all_search_base_web
+          - org_all_search_base
+          - org_search_volume_indexes
+          - org_all_forwarder_outputs
+          - org_ds_serverclasses
+
+      - name: Copy non cluster baseline .conf directories to SH's apps directory
+        copy:
+          src: "./AppDeploymentBundle/splunk_config_sh_cluster/{{ item }}"
+          dest: "/opt/splunk/etc/apps/"
+          owner: splunk
+          group: splunk
+          mode: 0755
+        with_items:
+          - org_all_ds_deploy_app_repo
+          - org_all_deployer_baseline

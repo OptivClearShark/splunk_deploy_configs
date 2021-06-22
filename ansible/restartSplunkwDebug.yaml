@@ -1,0 +1,22 @@
+---
+ - name: Restart splunk
+   hosts: all:!ufs
+   become: true
+   become_user: splunk
+   tasks:
+     - name: Restarting Splunk Enterprise Services with DEBUG ENABLED
+       command: "/opt/splunk/bin/splunk restart --debug"
+       register: splunk
+     - debug:
+         var: splunk.stdout_lines
+
+ - name: Restart UFs
+   hosts: ufs
+   become: true
+   become_user: splunk
+   tasks:
+     - name: Restarting Splunk Enterprise Services with DEBUG ENABLED
+       command: "/opt/splunkforwarder/bin/splunk restart --debug"
+       register: splunk
+     - debug:
+         var: splunk.stdout_lines

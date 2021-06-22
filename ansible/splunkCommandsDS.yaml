@@ -1,0 +1,15 @@
+---
+  - name: Deployment Server Splunk Commands
+    hosts: ds
+    become: true
+    become_user: splunk
+    tasks:
+
+    - command: "/opt/splunk/bin/splunk reload deploy-server -auth {{ splunk_admin }}:{{ splunk_pw }}"
+      register: splunk
+      tags:
+        - reload
+    - debug:
+       var: splunk.stdout_lines
+       tags:
+         - reload

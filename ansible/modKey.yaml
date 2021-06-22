@@ -1,0 +1,10 @@
+---
+  - name: chmod 400 mongo/splunk.key
+    become: true
+    hosts: splunk-stand-alone
+    tasks:
+    - file:
+        path: /opt/splunk/var/lib/splunk/kvstore/mongo/splunk.key
+        owner: splunk
+        group: splunk
+        mode: 0400

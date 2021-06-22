@@ -1,0 +1,15 @@
+---
+  - name: run bash script to upgrade splunk enterprise
+    hosts: all
+    become: true
+    tasks:
+
+      - name: check if splunk is installed
+        service_facts:
+
+      - name: run bash script to upgrade splunk
+        script: ../scripts/splunk_upgrade.sh
+        when:
+          - ansible_facts.services["Splunkd.service"] is defined
+        tags:
+          -  upgrade

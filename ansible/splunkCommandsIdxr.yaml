@@ -1,0 +1,18 @@
+---
+  - name: Deployment Server Splunk Commands
+    hosts: idxrs
+    become: true
+    become_user: splunk
+    tasks:
+
+    - name: Clean Event Data from listed indexes
+      shell: |
+        /opt/splunk/bin/splunk stop
+        /opt/splunk/bin/splunk clean eventdata -index {{ index }} -auth {{ splunk_admin }}:{{ splunk_pw }}
+        /opt/splunk/bin/splunk start
+      register: splunk
+      tags:
+        - clean
+
+    - debug:
+       var: splunk.stdout_lines

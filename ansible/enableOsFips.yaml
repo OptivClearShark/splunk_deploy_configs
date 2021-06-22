@@ -1,0 +1,7 @@
+---
+  - name: run bash script to fips enable server
+    hosts: all
+    become: true
+    tasks:
+      - name: run bash script to install splunk
+        script: ./scripts/rehl_enable_fips.sh

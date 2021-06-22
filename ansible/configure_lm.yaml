@@ -1,0 +1,14 @@
+---
+  - name: copy baseline splunk configurations
+    hosts: ds
+    become: true
+    strategy: free
+    tasks:
+
+      - name: Create Directory for enterprise trial license
+        copy:
+          src: "./AppDeploymentBundle/enterprise"
+          dest: "/opt/splunk/etc/licenses/"
+          owner: splunk
+          group: splunk
+          mode: 0755

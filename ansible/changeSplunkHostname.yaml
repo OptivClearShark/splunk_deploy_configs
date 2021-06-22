@@ -1,0 +1,21 @@
+---
+  - name: update/correct splunk server hostname
+    hosts: all
+    become: true
+    tasks:
+
+    - name: Comment out default hostname in /opt/splunk/etc/system/local/server.conf
+      replace:
+        path: /opt/splunk/etc/system/local/server.conf
+        regexp: '(serverName = .*)'
+        replace: 'serverName = {{ inventory_hostname }}'
+
+    - name: change hostname to myserver
+      hostname:
+        name: "{{ inventory_hostname }}"
+
+    - name: Restarting Splunk Enterprise Services
+      command: "/opt/splunk/bin/splunk restart"
+      register: splunk
+    - debug:
+       var: splunk.stdout_lines

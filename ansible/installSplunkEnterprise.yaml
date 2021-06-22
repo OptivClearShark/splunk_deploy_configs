@@ -1,0 +1,15 @@
+---
+  - name: run bash script to install splunk enterprise
+    hosts: all,!ufs,!syslog
+    become: true
+    tasks:
+
+      - name: check if splunk is installed
+        service_facts:
+
+      - name: run bash script to install splunk
+        script: ../scripts/splunk_install.sh
+        when:
+          - ansible_facts.services["Splunkd.service"] is not defined
+        tags:
+          -  install

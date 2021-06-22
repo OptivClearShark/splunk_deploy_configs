@@ -1,0 +1,33 @@
+---
+  - name: Configure Intermediate UFs
+    hosts: ufs
+    become: true
+    tasks:
+
+      - name: create splunk data directory
+        file:
+           path: /opt/splunk_test_logs
+           state: directory
+           owner: splunk
+           group: splunk
+           mode: 0755
+
+
+      - name: copy uf certificate
+        copy:
+          src: "{{ item }}"
+          dest: "/opt/splunkforwarder/etc/auth/{{ item }}"
+          owner: splunk
+          group: splunk
+          mode: 0755
+        with_items:
+          - ufCertKeyCABundle.pem
+          - CMDC1-CA.cer
+
+      - name: Comment out system/local sslPassword
+        replace:
+          path: /opt/splunkforwarder/etc/system/local/server.conf
+          regexp: 'sslPassword'
+          replace: "#sslPassword"
+        tags:
+          - sslpassword

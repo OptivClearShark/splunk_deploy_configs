@@ -1,0 +1,29 @@
+---
+  - name: copy baseline splunk configurations
+    hosts: idxrs shs hfs 
+    become: true
+    tasks:
+      - name: Copy baseline template .conf directories to deployment server
+        copy:
+          src: "./AppDeploymentBundle/splunk_config_baseline/{{ item }}"
+          dest: "/opt/splunk/etc/apps/"
+          owner: splunk
+          group: splunk
+          mode: 0755
+        with_items:
+          - org_all_deploymentclient
+
+
+  - name: copy baseline splunk configurations to Universal forwarders
+    hosts: ufs
+    become: true
+    tasks:
+      - name: Copy baseline template .conf directories to deployment server
+        copy:
+          src: "./AppDeploymentBundle/splunk_config_baseline/{{ item }}"
+          dest: "/opt/splunkforwarder/etc/apps/"
+          owner: splunk
+          group: splunk
+          mode: 0755
+        with_items:
+          - org_all_deploymentclient

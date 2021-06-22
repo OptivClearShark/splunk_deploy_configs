@@ -1,0 +1,7 @@
+---
+  - name: run bash script to install splunk enterprise
+    hosts: syslog
+    become: true
+    tasks:
+      - name: run bash script to install splunk
+        script: ../scripts/splunk_uninstall.sh

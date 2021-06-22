@@ -1,0 +1,103 @@
+---
+  - name: Baseline Config for etc/deployment-apps directory
+    hosts: ds
+    become: true
+    strategy: free
+    tasks:
+      - name: Copying baseline config apps to etc/deployment-apps directory on DS
+        copy:
+          src: "./AppDeploymentBundle/splunk_config_baseline/{{ item }}"
+          dest: "/opt/splunk/etc/deployment-apps/"
+          owner: splunk
+          group: splunk
+          mode: 0755
+        with_items:
+          - org_all_deploymentclient
+          - org_all_forwarder_outputs
+          - org_all_forwarder_outputs_ssl
+          - org_all_indexes
+          - org_all_search_base
+          - org_all_search_base_web
+          - org_full_license_server
+          - org_search_volume_indexes
+          - org_indexer_volume_indexes
+          - org_all_indexer_base
+          - org_test_forwarder_inputs
+          - orga_all_forwarder_outputs
+          - orgb_all_forwarder_outputs
+          - orga_indexer_s3_remote_volume_indexes
+          - orgb_indexer_s3_remote_volume_indexes
+          - org_all_indexes_remote_volume
+          - org_all_search_dfs
+          - org_all_app_props
+          - org_all_dfs_forwarder_outputs
+          - orga_dfs_indexer_s3_remote_volume_indexes
+        tags:
+          - ds
+          - baseline-deployment
+
+      - name: Copying cluster baseline config apps to etc/deployment-apps directory on DS
+        copy:
+          src: "./AppDeploymentBundle/splunk_config_index_cluster/{{ item }}"
+          dest: "/opt/splunk/etc/deployment-apps/"
+          owner: splunk
+          group: splunk
+          mode: 0755
+        with_items:
+          - org_cluster_forwarder_outputs
+          - org_master_deploymentclient
+          - org_cluster_forwarders_indexerDiscovery_outputs
+          - org_multisite_master_base
+          - org_cluster_indexer_base
+          - org_cluster_search_base
+          - org_site_1_forwarder_affinity
+          - org_site_2_forwarder_affinity
+          - org_cluster_master_base
+          - org_cluster_master_indexerDiscovery_server
+        tags:
+          - ds
+
+      - name: Copy baseline non cluster .conf directories to etc/apps on DS
+        copy:
+          src: "./AppDeploymentBundle/splunk_config_baseline/{{ item }}"
+          dest: "/opt/splunk/etc/apps/"
+          owner: splunk
+          group: splunk
+          mode: 0755
+        with_items:
+          - org_all_indexes
+          - org_all_search_base_web
+          - org_all_search_base
+          - org_search_volume_indexes
+          - org_all_forwarder_outputs
+          - org_ds_serverclasses
+        tags:
+          - ds
+          - baseline_apps
+
+      - name: Copy custom apps to etc/apps on DS
+        copy:
+          src: "./AppDeploymentBundle/custom_apps/{{ item }}"
+          dest: "/opt/splunk/etc/apps/"
+          owner: splunk
+          group: splunk
+          mode: 0755
+        with_items:
+          - twistlock
+        tags:
+          - ds
+          - custom
+
+      - name: Copy custom apps to etc/deployment-apps on DS
+        copy:
+          src: "./AppDeploymentBundle/custom_apps/{{ item }}"
+          dest: "/opt/splunk/etc/deployment-apps/"
+          owner: splunk
+          group: splunk
+          mode: 0755
+        with_items:
+          - twistlock
+          - org_hec_indexer_inputs
+        tags:
+          - ds
+          - custom

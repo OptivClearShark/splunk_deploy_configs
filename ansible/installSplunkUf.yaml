@@ -1,0 +1,11 @@
+---
+  - name: run bash script to install splunk enterprise
+    hosts: ufs
+    become: true
+    tasks:
+      - name: Wait 300 seconds, but only start checking after 60 seconds
+        wait_for_connection:
+          delay: 60
+          timeout: 300
+      - name: run bash script to install splunk
+        script: ../scripts/splunk_uf_install.sh

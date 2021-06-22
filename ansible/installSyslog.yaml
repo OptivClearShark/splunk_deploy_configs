@@ -1,0 +1,17 @@
+---
+  - hosts: syslog
+    become: true
+    tasks:
+      - name: install rsyslog
+        yum:
+          name: "{{ packages }}"
+          state: latest
+          update_cache: yes
+        vars:
+          packages:
+            - rsyslog
+
+      - name: start rsyslog
+        service:
+          state: started
+          name: rsyslog

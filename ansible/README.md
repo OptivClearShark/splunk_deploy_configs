@@ -6,7 +6,7 @@ The playbook `deploySplunk.yaml` contains all playbooks in order of operations t
 
 * enableOsFips.yaml (enables FIPs for REHL7 optional)
 * installSplunkEnterprise.yaml
-Will, wget the splunk rpm package, prep the server and run the rpm installer.  Finishes with boot strapping the splunkd service with the created splunk account
+- Will, wget the splunk rpm package, prep the server and run the rpm installer.  Finishes with boot strapping the splunkd service with the created splunk account
 * installSplunkUf.yaml
 * createSplunkDataDisks.yaml (optional)
 * configure_standalone.yaml

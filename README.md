@@ -6,8 +6,8 @@
 
 <h3> Ansible directory </>
 <br/>
-<body> Contains play books to install, configure update and run splunk commands </>
+<h4> Contains play books to install, configure update and run splunk commands </>
 
 <h3> Scripts Directory </>
 <br/>
-<body> Scripts directory includes scripts to enable FIPS on REHL servers, install Splunk Enterprise, install Splunk UFs, and upgrade splunk </>
+<h4> Scripts directory includes scripts to enable FIPS on REHL servers, install Splunk Enterprise, install Splunk UFs, and upgrade splunk </>

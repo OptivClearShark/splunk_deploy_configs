@@ -16,3 +16,4 @@
   - import_playbook: configure_deployer.yaml
   - import_playbook: configure_subordinate_ds.yaml
   - import_playbook: changeSplunkHostname.yaml
+  - import_playbook: restartSplunk.yaml

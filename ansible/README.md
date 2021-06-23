@@ -23,7 +23,7 @@ The playbook `deploySplunk.yaml` contains all playbooks in order of operations t
 * `configure_cm.yaml`
   - boot straps and loads configuration apps for cluster master. you can also use this to load up apps into your `master-apps` directory
 * `configure_ds.yaml`
-  - probably the most critical playbook.  this boot straps and loads all configuration apps for the deployment server and loads the deployment-apps directory which will be pushed out to participating splunk roles.  Both splunk enterprise and universal forwarders
+  - probably the most critical playbook aside from the `installSplunkEnterprise.yaml`.  this boot straps and loads all configuration apps for the deployment server and loads the deployment-apps directory which will be pushed out to participating splunk roles.  Both splunk enterprise and universal forwarders
 * `configure_shs.yaml`
   - boot straps search head roles with `deploymentclient.conf` to point it to the correct deployment server
 * `configure_lm.yaml`

@@ -1,8 +1,8 @@
-<h1> Ansible Playbook Initial Flow <h1/>
+# Ansible Playbook Initial Flow
 
 The playbook `deploySplunk.yaml` contains all playbooks in order of operations to deploy Splunk enterprise initially and to update any configuration.  Running the entire deployment is time consuming though so running an individual playbooks to update the deployment server, cluster master, license master, indexer (boot strap files), etc, would be more time efficient.
 
-<h2> Playbooks called in deploySplunk.yaml <h2/>
+# Playbooks called in deploySplunk.yaml
 
 enableOsFips.yaml (enables FIPs for REHL7 optional)
 installSplunkEnterprise.yaml
@@ -24,7 +24,7 @@ restartSplunk.yaml
 
 
 
-<h1>Playbook Breakdown<h1/>
+# Playbook Breakdown
 
 `enableOsFips.yaml`
 `applyClusterBundle.yaml`

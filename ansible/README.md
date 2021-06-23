@@ -4,24 +4,24 @@ The playbook `deploySplunk.yaml` contains all playbooks in order of operations t
 
 # Playbooks called in deploySplunk.yaml
 
-* enableOsFips.yaml (enables FIPs for REHL7 optional)
-* installSplunkEnterprise.yaml
-  - Will, wget the splunk rpm package, prep the server and run the rpm installer.  Finishes with boot strapping the splunkd service with the created splunk account
-* installSplunkUf.yaml
-* createSplunkDataDisks.yaml (optional)
-* configure_standalone.yaml
-* configure_cm.yaml
-* configure_ds.yaml
-* configure_shs.yaml
-* configure_lm.yaml
-* configure_idxrs.yaml
-* configure_idxrs_site1.yaml
-* configure_idxrs_site2.yaml
-* configure_dfs.yaml
-* configure_deployer.yaml
-* configure_subordinate_ds.yaml
-* changeSplunkHostname.yaml
-* restartSplunk.yaml
+* `enableOsFips.yaml` (enables FIPs for REHL7 optional)
+* `installSplunkEnterprise.yaml`
+  - Will, wget the splunk rpm package, prep the server and run the rpm installer.  Finishes with boot strapping the splunkd service with the created splunk account as a systemd managed service.
+* `installSplunkUf.yaml`
+* `createSplunkDataDisks.yaml` (optional)
+* `configure_standalone.yaml`
+* `configure_cm.yaml`
+* `configure_ds.yaml`
+* `configure_shs.yaml`
+* `configure_lm.yaml`
+* `configure_idxrs.yaml`
+* `configure_idxrs_site1.yaml`
+* `configure_idxrs_site2.yaml`
+* `configure_dfs.yaml`
+* `configure_deployer.yaml`
+* `configure_subordinate_ds.yaml`
+* `changeSplunkHostname.yaml`
+* `restartSplunk.yaml`
 
 
 

@@ -5,6 +5,7 @@ The playbook `deploySplunk.yaml` contains all playbooks in order of operations t
 # Playbooks called in deploySplunk.yaml
 
 * `enableOsFips.yaml` (enables FIPs for REHL7 optional)
+  - runs bash script to enable FIPS at OS level for REHL7 servers.  Server needs to have internet access or a satellite server to download packages
 * `installSplunkEnterprise.yaml`
   - Will wget the splunk rpm package from Splunk's download site
   - prep the server and run the rpm installer.  
@@ -16,19 +17,29 @@ The playbook `deploySplunk.yaml` contains all playbooks in order of operations t
   - re-permission the /opt/splunkforwarder directory with `chmod -R 755` and `chown -R splunk:splunk`
   - Finishes with boot strapping the splunkd service with the created splunk account as a systemd managed service, Enabling and starting the service
 * `createSplunkDataDisks.yaml` (optional)
+  - Creates the data disks in which splunk indexed data is stored.  This is geared towards indexers.  Optional if you want to do this manually
 * `configure_standalone.yaml`
+  - boot straps a standalone Splunk server.  This server would serve as a SH, IDXR, LM and potentially DS
 * `configure_cm.yaml`
+  - boot straps and loads configuration apps for cluster master. you can also use this to load up apps into your `master-apps` directory
 * `configure_ds.yaml`
+  - probably the most critical playbook.  this boot straps and loads all configuration apps for the deployment server and loads the deployment-apps directory which will be pushed out to participating splunk roles.  Both splunk enterprise and universal forwarders
 * `configure_shs.yaml`
+  - boot straps search head roles with `deploymentclient.conf` to point it to the correct deployment server
 * `configure_lm.yaml`
+  - boot straps search head roles with `deploymentclient.conf` to point it to the correct deployment server
+  - copies .lic license file into the correct directory
+  - the associated app `org_all_lm_license_server` will reference this file
 * `configure_idxrs.yaml`
+  - boot straps indexer roles with `deploymentclient.conf` to point it to the correct deployment server
 * `configure_idxrs_site1.yaml`
+  - in a multisite indexer configuration, this bootstraps indexers which are in site 1 with the correct server.conf file to give it site 1 affinity
 * `configure_idxrs_site2.yaml`
-* `configure_dfs.yaml`
-* `configure_deployer.yaml`
-* `configure_subordinate_ds.yaml`
-* `changeSplunkHostname.yaml`
+  - in a multisite indexer configuration, this bootstraps indexers which are in site 2 with the correct server.conf file to give it site 2 affinity
+* `changeSplunkHostname.yaml` (optional)
+  - changes the splunk hostname to whatever the ansible inventory name is for the host.  This playbook is optional.  
 * `restartSplunk.yaml`
+  - restarts splunk  
 
 
 

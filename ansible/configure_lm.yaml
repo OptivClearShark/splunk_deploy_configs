@@ -1,9 +1,18 @@
 ---
   - name: copy baseline splunk configurations
-    hosts: ds
+    hosts: lm
     become: true
     strategy: free
     tasks:
+      - name: Copy non cluster baseline .conf directories to LM's apps directory
+        copy:
+          src: "./AppDeploymentBundle/splunk_config_baseline/{{ item }}"
+          dest: "/opt/splunk/etc/apps/"
+          owner: splunk
+          group: splunk
+          mode: 0755
+        with_items:
+          - org_all_deploymentclient
 
       - name: Create Directory for enterprise trial license
         copy:

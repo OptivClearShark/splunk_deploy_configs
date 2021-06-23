@@ -3,16 +3,14 @@
     hosts: idxrs dfs shs
     become: true
     strategy: free
+    vars:
+      app : "{{ app }}"
     tasks:
 
     - name: Splunk delete etc/app directory
       file:
         path: "/opt/splunk/etc/apps/{{ item }}"
         state: absent
-      with_items:
-        - org_all_indexes
-        - org_all_indexes_remote_volume
-        - org_indexer_volume_indexes
 
     - name: Restarting Splunk Enterprise Services with DEBUG ENABLED
       command: "/opt/splunk/bin/splunk restart"

@@ -1,10 +1,10 @@
 <h1> Ansible Playbook Initial Flow </>
 <br/>
-<h2> The playbook ```deploySplunk.yaml``` contains all playbooks in order of operations to deploy Splunk enterprise initially and to update any configuration.  Running the entire deployment is time consuming though so running an individual playbooks to update the deployment server, cluster master, license master, indexer (boot strap files), etc, would be more time efficient.
-<h2/>
+The playbook ```deploySplunk.yaml``` contains all playbooks in order of operations to deploy Splunk enterprise initially and to update any configuration.  Running the entire deployment is time consuming though so running an individual playbooks to update the deployment server, cluster master, license master, indexer (boot strap files), etc, would be more time efficient.
+
 <br/>
 <h1>Playbook Breakdown</>
-<h2/>
+
 
 ```applyClusterBundle.yaml```
 ```baseLineToUF.yaml```

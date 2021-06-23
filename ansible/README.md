@@ -6,8 +6,15 @@ The playbook `deploySplunk.yaml` contains all playbooks in order of operations t
 
 * `enableOsFips.yaml` (enables FIPs for REHL7 optional)
 * `installSplunkEnterprise.yaml`
-  - Will, wget the splunk rpm package, prep the server and run the rpm installer.  Finishes with boot strapping the splunkd service with the created splunk account as a systemd managed service.
+  - Will wget the splunk rpm package from Splunk's download site
+  - prep the server and run the rpm installer.  
+  - re-permission the /opt/splunk directory with `chmod -R 755` and `chown -R splunk:splunk`
+  - Finishes with boot strapping the splunkd service with the created splunk account as a systemd managed service, Enabling and starting the service
 * `installSplunkUf.yaml`
+  - Will wget the splunk universal forwarder rpm package from Splunk's download site
+  - prep the endpoint and run the rpm installer.  
+  - re-permission the /opt/splunkforwarder directory with `chmod -R 755` and `chown -R splunk:splunk`
+  - Finishes with boot strapping the splunkd service with the created splunk account as a systemd managed service, Enabling and starting the service
 * `createSplunkDataDisks.yaml` (optional)
 * `configure_standalone.yaml`
 * `configure_cm.yaml`

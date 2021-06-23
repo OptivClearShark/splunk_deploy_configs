@@ -1,18 +1,34 @@
 ---
-  - name: Deployment Server Splunk Commands
+  - name: Clean Event Data from index
     hosts: idxrs
     become: true
     become_user: splunk
+    vars:
+      splunk_admin: "{{ splunk_admin }}"
+      splunk_pw: "{{ splunk_pw }}"
+      index: "{{ index }}"
     tasks:
 
-    - name: Clean Event Data from listed indexes
+    - name: Stopping Splunkd
       shell: |
         /opt/splunk/bin/splunk stop
-        /opt/splunk/bin/splunk clean eventdata -index {{ index }} -auth {{ splunk_admin }}:{{ splunk_pw }}
+      register: splunk
+
+    - debug:
+       var: splunk.stdout_lines
+
+    - name: Cleaning Indexing
+      shell: |
+        /opt/splunk/bin/splunk clean eventdata -index {{ index }} -auth {{ splunk_admin }}:{{ splunk_pw }} -f
+      register: splunk
+
+    - debug:
+       var: splunk.stdout_lines
+
+    - name: Starting Splunk
+      shell: |
         /opt/splunk/bin/splunk start
       register: splunk
-      tags:
-        - clean
 
     - debug:
        var: splunk.stdout_lines

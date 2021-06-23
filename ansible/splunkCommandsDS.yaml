@@ -3,6 +3,10 @@
     hosts: ds
     become: true
     become_user: splunk
+    vars:
+      splunk_admin: "{{ splunk_admin }}"
+      splunk_pw: "{{ splunk_pw }}"
+      
     tasks:
 
     - command: "/opt/splunk/bin/splunk reload deploy-server -auth {{ splunk_admin }}:{{ splunk_pw }}"

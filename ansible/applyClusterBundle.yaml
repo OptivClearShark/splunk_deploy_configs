@@ -5,7 +5,7 @@
      become: true
      tasks:
        - name: Applying Cluster Bundle
-         command: "/opt/splunk/bin/splunk apply cluster-bundle -auth {{ splunk_admin }}:{{ splunk_pw}}"
+         command: "/opt/splunk/bin/splunk apply cluster-bundle -auth {{ splunk_admin }}:{{ splunk_pw }}"
          register: splunk
        - debug:
            var: splunk.stdout_lines

@@ -1,0 +1,17 @@
+---
+  - name: Reconfigure or Initially configure Splunk Boot strap
+    hosts: all
+    become: true
+    gather_facts: yes
+
+    tasks:
+      - name: Stop splunk
+        shell: |
+          /opt/splunk/bin/splunk stop
+      - name: Disable splunkd boot start
+        shell: |
+          /opt/splunk/bin/splunk disable boot-start
+
+      - name: enable splunk as systemd service with polkit
+        shell: |
+          /opt/splunk/bin/splunk enable boot-start -systemd-managed 1  -create-polkit-rules 1 -user splunk -group splunk --accept-license --no-prompt --answer-yes

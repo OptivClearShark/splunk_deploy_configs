@@ -1,0 +1,26 @@
+---
+   - name: Apply Splunk Indexer Cluster-bundle
+     hosts: cms
+     become_user: splunk
+     become: true
+     tasks:
+
+
+       - name: Copy cluster baseline .conf directories to cluster master master-apps directory
+         copy:
+           src: "./AppDeploymentBundle/splunk_config_baseline/{{ item }}"
+           dest: "/opt/splunk/etc/master-apps/"
+           owner: splunk
+           group: splunk
+           mode: 0755
+         with_items:
+           - org_all_indexes
+           - org_all_indexer_base
+           - org_indexer_volume_indexes
+           - org_full_license_server
+
+       - name: Applying Cluster Bundle
+         command: "/opt/splunk/bin/splunk apply cluster-bundle -auth admin:clearshark123!"
+         register: splunk
+       - debug:
+           var: splunk.stdout_lines

@@ -1,0 +1,40 @@
+---
+  - name: create user account
+    hosts: all
+    vars:
+        password: 'clearshark123!'
+        users:
+        - lgoodrich
+        - roman
+    become: true
+    strategy: free
+    tasks:
+
+    - name: Add the user 'johnd' with a specific uid and a primary group of 'admin'
+      user:
+        name: "{{ item }}"
+        groups: "wheel"
+        append: yes
+        generate_ssh_key: yes
+        ssh_key_bits: 2048
+        ssh_key_file: .ssh/id_rsa
+        password: "{{ password }}"
+      with_items:
+        - "{{ users }}"
+
+
+    - name: Set authorized key taken from file
+      authorized_key:
+        user: "{{ item }}"
+        state: present
+        manage_dir: yes
+        key: "./{{ item }}"
+      with_items:
+        - "{{ users }}"
+
+    - name: Add user user to the sudoers
+      copy:
+        dest: "/etc/sudoers.d/{{ item }}"
+        content: "{{ item }}  ALL=(ALL)  NOPASSWD: ALL"
+      with_items:
+        - "{{ users }}"

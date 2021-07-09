@@ -12,7 +12,6 @@
   - import_playbook: configure_idxrs.yaml
   - import_playbook: configure_idxrs_site1.yaml
   - import_playbook: configure_idxrs_site2.yaml
-  - import_playbook: configure_dfs.yaml
   - import_playbook: configure_deployer.yaml
   - import_playbook: configure_subordinate_ds.yaml
   - import_playbook: changeSplunkHostname.yaml

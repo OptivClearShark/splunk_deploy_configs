@@ -1,39 +1,23 @@
 ---
   - name: Create Splunk Data Volume
-    hosts: idxrs standalone dfs syslog hfs
+    hosts: idxrs
     become: true
     strategy: free
     tasks:
       - name: install lvm2
         yum:
-          name: "{{ packages }}"
-          state: latest
-          update_cache: yes
-        vars:
-          packages:
+          name:
             - lvm2
             - gcc
             - nvme-cli
             - xfsprogs
-
-      - shell: nvme list
-        register: nvme
-
-      - debug:
-          msg: "{{ inventory_hostname }} EBS is NVME connected"
-        when: nvme.stdout != ""
-
-      - name: Create Nvme based Volume Group vg_splunkdata
-        lvg:
-          pvs: /dev/nvme1n1,/dev/nvme2n1,/dev/nvme3n1,/dev/nvme4n1,/dev/nvme5n1,/dev/nvme6n1
-          vg: vg_splunkdata
-        when: nvme.stdout != ""
+          state: latest
+          update_cache: yes
 
       - name: Create Volume Group vg_splunkdata
         lvg:
-          pvs: /dev/xvdba,/dev/xvdbb,/dev/xvdbc,/dev/xvdbd,/dev/xvdbe,/dev/xvdbf
+          pvs: "{{ splunk_disks }}"
           vg: vg_splunkdata
-        when: nvme.stdout == ""
 
       - name: Create a logical volume
         lvol:

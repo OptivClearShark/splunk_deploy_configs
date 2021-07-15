@@ -20,3 +20,5 @@ sudo chmod 400 /opt/splunk/var/lib/splunk/kvstore/mongo/splunk.key
 sudo /opt/splunk/bin/splunk enable boot-start -systemd-managed 1  -create-polkit-rules 1 -user splunk -group splunk --accept-license --no-prompt --answer-yes
 sudo systemctl daemon-reload
 sudo systemctl enable Splunkd.service
+
+sudo /opt/splunk/bin/splunk start 

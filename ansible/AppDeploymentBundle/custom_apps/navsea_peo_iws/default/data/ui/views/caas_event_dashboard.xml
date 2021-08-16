@@ -1,0 +1,132 @@
+<form theme="dark">
+  <label>Caas Event Dashboard</label>
+  <search id="caas_base1">
+    <query>index=peo sourcetype="CaaS Event" $field1$ $host1$ $flow1$ source="/opt/splunk/etc/apps/navsea_peo_iws/data/DataCollect.reference-short-delay.20200814T104857/*/CaaSmgenActor.log"
+| stats count by _time host request flow_id src_port dst_ip dst_port max_frame_size max_frames_per_interval app_flow_type latency number</query>
+    <earliest>$time1.earliest$</earliest>
+    <latest>$time1.latest$</latest>
+    <sampleRatio>1</sampleRatio>
+  </search>
+  <fieldset submitButton="false">
+    <input type="time" token="time1" searchWhenChanged="true">
+      <label>Select a Time Range:</label>
+      <default>
+        <earliest>-24h@h</earliest>
+        <latest>now</latest>
+      </default>
+    </input>
+    <input type="dropdown" token="field1" searchWhenChanged="true">
+      <label>Sender/Reciever/Both</label>
+      <choice value="receiver">receiver</choice>
+      <choice value="sender">sender</choice>
+      <choice value="*">both</choice>
+      <default>*</default>
+      <prefix>request=</prefix>
+      <initialValue>*</initialValue>
+    </input>
+    <input type="multiselect" token="host1">
+      <label>Host selection:</label>
+      <choice value="*">All</choice>
+      <valuePrefix>host="</valuePrefix>
+      <valueSuffix>"</valueSuffix>
+      <delimiter> OR </delimiter>
+      <fieldForLabel>host</fieldForLabel>
+      <fieldForValue>host</fieldForValue>
+      <search base="caas_base1">
+        <query>| stats count by host</query>
+      </search>
+      <initialValue>*</initialValue>
+      <default>*</default>
+    </input>
+    <input type="multiselect" token="flow1">
+      <label>Flow ID selection:</label>
+      <choice value="*">All</choice>
+      <default>*</default>
+      <valuePrefix>flow_id=</valuePrefix>
+      <delimiter> OR </delimiter>
+      <fieldForLabel>flow_id</fieldForLabel>
+      <fieldForValue>flow_id</fieldForValue>
+      <search base="caas_base1">
+        <query>| stats count by flow_id</query>
+      </search>
+    </input>
+  </fieldset>
+  <row>
+    <panel>
+      <chart>
+        <search base="caas_base1">
+          <query>| timechart count(dst_port) by host</query>
+        </search>
+        <option name="charting.chart">line</option>
+        <option name="charting.chart.nullValueMode">zero</option>
+        <option name="charting.chart.showDataLabels">minmax</option>
+        <option name="charting.drilldown">none</option>
+        <option name="refresh.display">progressbar</option>
+      </chart>
+    </panel>
+  </row>
+  <row>
+    <panel>
+      <table>
+        <title>Destination info</title>
+        <search base="caas_base1">
+          <query>| stats values(dst_port) dc(dst_port) by host dst_ip
+| sort -dc(dst_port)</query>
+        </search>
+        <option name="drilldown">none</option>
+        <option name="refresh.display">progressbar</option>
+      </table>
+    </panel>
+    <panel>
+      <chart>
+        <title>Max Frame Size</title>
+        <search base="caas_base1">
+          <query>| timechart max(max_frame_size) as max_frame_size by host</query>
+        </search>
+        <option name="charting.chart">line</option>
+        <option name="charting.chart.nullValueMode">zero</option>
+        <option name="charting.chart.showDataLabels">minmax</option>
+        <option name="charting.drilldown">none</option>
+        <option name="charting.layout.splitSeries">0</option>
+        <option name="refresh.display">progressbar</option>
+      </chart>
+    </panel>
+    <panel>
+      <chart>
+        <title>Max Frames per Interval</title>
+        <search base="caas_base1">
+          <query>| timechart max(max_frames_per_interval) as max_frames_per_interval by host</query>
+        </search>
+        <option name="charting.chart">line</option>
+        <option name="charting.chart.nullValueMode">zero</option>
+        <option name="charting.drilldown">none</option>
+        <option name="refresh.display">progressbar</option>
+      </chart>
+    </panel>
+  </row>
+  <row>
+    <panel>
+      <chart>
+        <title>Average Latency</title>
+        <search base="caas_base1">
+          <query>| timechart avg(latency) by host</query>
+        </search>
+        <option name="charting.chart">line</option>
+        <option name="charting.chart.nullValueMode">zero</option>
+        <option name="charting.chart.showDataLabels">minmax</option>
+        <option name="charting.drilldown">none</option>
+        <option name="refresh.display">progressbar</option>
+      </chart>
+    </panel>
+    <panel>
+      <chart>
+        <title>App Flow Type</title>
+        <search base="caas_base1">
+          <query>| stats count by app_flow_type</query>
+        </search>
+        <option name="charting.chart">pie</option>
+        <option name="charting.drilldown">none</option>
+      </chart>
+    </panel>
+  </row>
+</form>

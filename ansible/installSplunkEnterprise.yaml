@@ -7,47 +7,8 @@
       - name: check if splunk is installed
         service_facts:
 
-      - name: Download Splunk RPM
-        get_url:
-          url: https://www.splunk.com/bin/splunk/DownloadActivityServlet?architecture=x86_64&platform=linux&version=8.2.1&product=splunk&filename=splunk-8.2.1-ddff1c41e5cf-linux-2.6-x86_64.rpm&wget=true
-          dest: ../bin/splunk-8.2.1-ddff1c41e5cf-linux-2.6-x86_64.rpm
-          mode: '0755'
-        when:
-          - ansible_facts.services["Splunkd.service"] is not defined
-
-      - name: Copy non cluster baseline .conf directories to cluster master apps directory
-        copy:
-          src: "../bin/splunk-8.2.1-ddff1c41e5cf-linux-2.6-x86_64.rpm"
-          dest: "/tmp/"
-          owner: splunk
-          group: splunk
-          mode: 0755
-        when:
-          - ansible_facts.services["Splunkd.service"] is not defined'
-
       - name: run bash script to install splunk
-        shell: |
-            cd /tmp
-            sudo adduser splunk
-            sudo yum install wget -y
-            sudo rpm -i /tmp/splunk-8.2.1-ddff1c41e5cf-linux-2.6-x86_64.rpm
-            sudo chown -R splunk:splunk /opt/splunk
-            sudo chmod -R 755 /opt/splunk
-            sudo usermod -aG adm splunk
-            sudo -u splunk bash -c 'cat <<EOF > /opt/splunk/etc/system/local/user-seed.conf
-            [user_info]
-            USERNAME = admin
-            PASSWORD = clearshark123!
-
-            EOF'
-
-            sudo chmod 400 /opt/splunk/var/lib/splunk/kvstore/mongo/splunk.key
-            sudo /opt/splunk/bin/splunk enable boot-start -systemd-managed 1  -create-polkit-rules 1 -user splunk -group splunk --accept-license --no-prompt --answer-yes
-            sudo systemctl daemon-reload
-            sudo systemctl enable Splunkd.service
-
-            sudo /opt/splunk/bin/splunk start
-
+        script: ../scripts/splunk_install.sh
         when:
           - ansible_facts.services["Splunkd.service"] is not defined
         tags:

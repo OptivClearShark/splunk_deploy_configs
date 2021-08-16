@@ -6,10 +6,10 @@
     tasks:
       - name: BootStrap Indexers with baseline cluster config
         copy:
-          src: "./AppDeploymentBundle/splunk_config_index_cluster/{{ item }}"
+          src: "./AppDeploymentBundle/splunk_config_baseline/{{ item }}"
           dest: "/opt/splunk/etc/apps/"
           owner: splunk
           group: splunk
           mode: 0755
         with_items:
-          - org_site_2_indexer_base
+          - org_all_deploymentclient_site2

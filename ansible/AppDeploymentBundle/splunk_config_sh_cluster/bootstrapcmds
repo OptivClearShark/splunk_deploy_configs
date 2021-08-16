@@ -1,0 +1,15 @@
+./splunk init shcluster-config -auth admin:clearshark123! -mgmt_uri https://splunksha0.cloudmegalodon.us:8089 -replication_port 8888 -replication_factor 2 -conf_deploy_fetch_url https://splunkdeployb0.cloudmegalodon.us:8089 -secret clearshark123! -shcluster_label shcluster1
+
+./splunk init shcluster-config -auth admin:clearshark123! -mgmt_uri https://splunksha1.cloudmegalodon.us:8089 -replication_port 8888 -replication_factor 2 -conf_deploy_fetch_url https://splunkdeployb0.cloudmegalodon.us:8089 -secret clearshark123! -shcluster_label shcluster1
+
+./splunk init shcluster-config -auth admin:clearshark123! -mgmt_uri https://splunkshb0.cloudmegalodon.us:8089 -replication_port 8888 -replication_factor 2 -conf_deploy_fetch_url https://splunkdeployb0.cloudmegalodon.us:8089 -secret clearshark123! -shcluster_label shcluster1
+
+
+./splunk init shcluster-config -auth admin:clearshark123! -mgmt_uri https://splunkshb1.cloudmegalodon.us:8089 -replication_port 8888 -replication_factor 2 -conf_deploy_fetch_url https://splunkdeployb0.cloudmegalodon.us:8089 -secret clearshark123! -shcluster_label shcluster1
+
+
+./splunk init shcluster-config -auth admin:clearshark123! -mgmt_uri https://splunksha02.cloudmegalodon.us:8089 -replication_port 8888 -replication_factor 2 -conf_deploy_fetch_url https://splunkdeployb0.cloudmegalodon.us:8089 -secret clearshark123! -shcluster_label shcluster1
+
+./splunk restart
+
+./splunk bootstrap shcluster-captain -servers_list "https://splunksha0.cloudmegalodon.us:8089,https://splunksha1.cloudmegalodon.us:8089,https://splunksha2.cloudmegalodon.us:8089,https://splunkshb0.cloudmegalodon.us:8089,https://splunkshb1.cloudmegalodon.us:8089" -auth admin:clearshark123!

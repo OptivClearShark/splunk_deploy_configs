@@ -1,0 +1,238 @@
+---
+  - name: Install and configure SC4U host
+    hosts: sc4u_hosts
+    become: true
+    strategy: free
+    tasks:
+
+
+
+      # Add following to /etc/sysctl.conf
+      #
+      # net.core.rmem_default = 17039360 net.core.rmem_max = 17039360
+      #
+      # Apply to the kernel
+      #
+      # sysctl -
+
+    - name: add net.core.rmem_default line in sysctl.conf
+      lineinfile:
+        path: /etc/sysctl.conf
+        line: 'net.core.rmem_default = 17039360 net.core.rmem_max = 17039360'
+
+    - name: apply to kernel
+      shell: sysctl -p
+      register: command_output
+
+    - name: Show sysctl -p output
+      ansible.builtin.debug:
+        msg: "{{ command_output }}"
+
+
+      #
+      # netstat -su | grep "receive errors"
+      #
+
+    - name: Ensure the kernel is not dropping packets
+      shell: netstat -su | grep "receive errors"
+      register: netstat_ouput
+
+    - ansible.builtin.debug:
+        msg: "{{ netstat_ouput.stdout }}"
+
+
+      #
+      # Create the systemd unit file /lib/systemd/system/sc4s.service. Copy and paste from the SC4S sample unit file.
+      #
+      # [Unit]
+      # Description=SC4S Container
+      # Wants=NetworkManager.service network-online.target
+      # After=NetworkManager.service network-online.target
+      #
+      # [Install]
+      # WantedBy=multi-user.target
+      #
+      # [Service]
+      # Environment="SC4S_IMAGE=ghcr.io/splunk/splunk-connect-for-syslog/splunk-connect-for-syslog:1"
+      #
+      # # Required mount point for syslog-ng persist data (including disk buffer)
+      # Environment="SC4S_PERSIST_MOUNT=splunk-sc4s-var:/var/lib/syslog-ng"
+      #
+      # # Optional mount point for local overrides and configurations; see notes in docs
+      # Environment="SC4S_LOCAL_MOUNT=/opt/sc4s/local:/etc/syslog-ng/conf.d/local:z"
+      #
+      # # Optional mount point for local disk archive (EWMM output) files
+      # Environment="SC4S_ARCHIVE_MOUNT=/opt/sc4s/archive:/var/lib/syslog-ng/archive:z"
+      #
+      # # Map location of TLS custom TLS
+      # Environment="SC4S_TLS_MOUNT=/opt/sc4s/tls:/etc/syslog-ng/tls:z"
+      #
+      # TimeoutStartSec=0
+      #
+      # ExecStartPre=/usr/bin/podman pull $SC4S_IMAGE
+      # ExecStartPre=/usr/bin/bash -c "/usr/bin/systemctl set-environment SC4SHOST=$(hostname -s)"
+      #
+      # ExecStart=/usr/bin/podman run \
+      #   -e "SC4S_CONTAINER_HOST=${SC4SHOST}" \
+      #   -v "$SC4S_PERSIST_MOUNT" \
+      #   -v "$SC4S_LOCAL_MOUNT" \
+      #   -v "$SC4S_ARCHIVE_MOUNT" \
+      #   -v "$SC4S_TLS_MOUNT" \
+      #   --env-file=/opt/sc4s/env_file \
+      #   --network host \
+      #   --name SC4S \
+      #   --rm $SC4S_IMAGE
+      #
+      # Restart=on-abnormal
+
+    - name: Create systemd unit file for sc4s
+      ansible.builtin.file:
+        path: /lib/systemd/system/sc4s.service
+        owner: root
+        group: root
+        state: touch
+        mode: '0644'
+
+    - name: Create the systemd unit file /lib/systemd/system/sc4s.service. Copy and paste from the SC4S sample unit file.
+      blockinfile:
+        path: /lib/systemd/system/sc4s.service
+        block: |
+          [Unit]
+          Description=SC4S Container
+          Wants=NetworkManager.service network-online.target
+          After=NetworkManager.service network-online.target
+
+          [Install]
+          WantedBy=multi-user.target
+
+          [Service]
+          Environment="SC4S_IMAGE=ghcr.io/splunk/splunk-connect-for-syslog/splunk-connect-for-syslog:1"
+
+          # Required mount point for syslog-ng persist data (including disk buffer)
+          Environment="SC4S_PERSIST_MOUNT=splunk-sc4s-var:/var/lib/syslog-ng"
+
+          # Optional mount point for local overrides and configurations; see notes in docs
+          Environment="SC4S_LOCAL_MOUNT=/opt/sc4s/local:/etc/syslog-ng/conf.d/local:z"
+
+          # Optional mount point for local disk archive (EWMM output) files
+          Environment="SC4S_ARCHIVE_MOUNT=/opt/sc4s/archive:/var/lib/syslog-ng/archive:z"
+
+          # Map location of TLS custom TLS
+          Environment="SC4S_TLS_MOUNT=/opt/sc4s/tls:/etc/syslog-ng/tls:z"
+
+          TimeoutStartSec=0
+
+          ExecStartPre=/usr/bin/podman pull $SC4S_IMAGE
+          ExecStartPre=/usr/bin/bash -c "/usr/bin/systemctl set-environment SC4SHOST=$(hostname -s)"
+
+          ExecStart=/usr/bin/podman run \
+            -e "SC4S_CONTAINER_HOST=${SC4SHOST}" \
+            -v "$SC4S_PERSIST_MOUNT" \
+            -v "$SC4S_LOCAL_MOUNT" \
+            -v "$SC4S_ARCHIVE_MOUNT" \
+            -v "$SC4S_TLS_MOUNT" \
+            --env-file=/opt/sc4s/env_file \
+            --network host \
+            --name SC4S \
+            --rm $SC4S_IMAGE
+
+          Restart=on-abnormal
+
+    - name: Subscribe to a specific pool by ID.
+      redhat_subscription:
+       state: present
+       username: jcspigler2010
+       password: Isnow2010!
+       pool_ids:
+        - 2c9280817af91203017b35f1dd4624e9
+
+    - name: refresh rehl subscription
+      shell: subscription-manager refresh
+
+    - name: disable rehl repos
+      shell: subscription-manager repos --disable="*"
+
+    - name: Yum-config-manager disable repos
+      shell: yum-config-manager --disable \*
+
+    - name: Enable Specific REHL repos
+      shell: |
+        subscription-manager repos \
+          --enable="rhel-7-server-rpms" \
+          --enable="rhel-7-server-extras-rpms" \
+          --enable="rhel-7-server-ose-3.11-rpms" \
+          --enable="rhel-7-server-ansible-2.9-rpms"
+
+
+    - name: yum install REHL docker
+      yum:
+        name: docker
+        state: latest
+
+
+    - name: Make sure docker is running
+      ansible.builtin.systemd:
+        state: started
+        name: docker
+      tags:
+        - service
+
+    - name: Create a sc4s volume
+      community.docker.docker_volume:
+        name: splunk-sc4s-var
+
+    - name: Create a directory if it does not exist
+      ansible.builtin.file:
+        path: "{{ item }}"
+        state: directory
+        mode: '0755'
+      with_items:
+        - /opt/sc4s/local
+        - /opt/sc4s/archive
+        - /opt/sc4s/tls
+
+    - name: Create systemd unit file for sc4s
+      ansible.builtin.file:
+        path: /opt/sc4s/env_file
+        owner: root
+        group: root
+        state: touch
+        mode: '0644'
+
+    - name: Create the environment file
+      blockinfile:
+        path: /opt/sc4s/env_file
+        block: |
+            SC4S_DEST_SPLUNK_HEC_DEFAULT_URL=
+            SC4S_DEST_SPLUNK_HEC_DEFAULT_TOKEN=
+
+    # bash sudo yum -y install podman or bash sudo yum install docker-engine -y
+    #
+    # bash sudo podman|docker volume create splunk-sc4s-var
+    #
+    #
+    # bash mkdir /opt/sc4s/local mkdir /opt/sc4s/archive mkdir /opt/sc4s/tls
+    #
+    # Create the environment file /opt/sc4s/env_file and replace the HEC_URL and HEC_TOKEN as appropriate
+    #
+    # ```bash SC4S_DEST_SPLUNK_HEC_DEFAULT_URL= SC4S_DEST_SPLUNK_HEC_DEFAULT_TOKEN=
+    #
+    # Uncomment the following line if using untrusted SSL certificates¶
+    # SC4S_DEST_SPLUNK_HEC_DEFAULT_TLS_VERIFY=no¶
+    #
+    #
+    # Configure SC4S for systemd and start SC4S
+    #
+    # bash sudo systemctl daemon-reload sudo systemctl enable sc4s sudo systemctl start sc4s
+    #
+    # Check podman/docker logs for errors (choose one in command below)
+    #
+    # bash sudo podman|docker logs SC4S
+    #
+    # Search on Splunk for successful installation of SC4S
+    #
+    # index=* sourcetype=sc4s:events "starting up"
+    #
+    # Send sample data to default udp port 514 of SC4S host
+    #
+    # bash echo “Hello SC4S” > /dev/udp/<SC4S_ip>/514

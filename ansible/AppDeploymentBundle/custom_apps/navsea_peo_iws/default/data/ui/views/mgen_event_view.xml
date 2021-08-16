@@ -1,0 +1,157 @@
+<form theme="dark">
+  <label>MGEN Event view</label>
+  <search id="mgen_base1">
+    <query>index=peo sourcetype="MGEN Event" $source1$ flow_id=$click1$
+| stats count by _time host flow_id src_port dst dst_port periodic_rate periodic_size tos ttl</query>
+    <earliest>$time1.earliest$</earliest>
+    <latest>$time1.latest$</latest>
+    <sampleRatio>1</sampleRatio>
+  </search>
+  <fieldset submitButton="false">
+    <input type="time" token="time1">
+      <label>Select a Time Range:</label>
+      <default>
+        <earliest>0</earliest>
+        <latest></latest>
+      </default>
+    </input>
+    <input type="dropdown" token="source1" searchWhenChanged="true">
+      <label>Select a source file:</label>
+      <choice value="&quot;/opt/splunk/etc/apps/navsea_peo_iws/data/DataCollect.reference-short-delay.20200814T104857/*&quot;">short-delay</choice>
+      <choice value="&quot;/opt/splunk/etc/apps/navsea_peo_iws/data/DataCollect.reference-static-short-delay.20200814T104202/*&quot;">static-short-delay</choice>
+      <default>"/opt/splunk/etc/apps/navsea_peo_iws/data/DataCollect.reference-short-delay.20200814T104857/*"</default>
+      <prefix>source=</prefix>
+      <initialValue>"/opt/splunk/etc/apps/navsea_peo_iws/data/DataCollect.reference-short-delay.20200814T104857/*"</initialValue>
+    </input>
+  </fieldset>
+  <row>
+    <panel>
+      <title>Click on a Flow ID in the chart to display more information.</title>
+      <chart>
+        <title>Top 10 Flow_ID's with longest execution time in seconds</title>
+        <search>
+          <query>index=peo sourcetype="MGEN Event" $source1$ | transaction flow_id
+| timechart sum(execute_in_seconds) as execution_time by flow_id useother=f limit=10</query>
+          <earliest>$time1.earliest$</earliest>
+          <latest>$time1.latest$</latest>
+        </search>
+        <option name="charting.chart">column</option>
+        <option name="charting.drilldown">all</option>
+        <option name="refresh.display">progressbar</option>
+        <drilldown>
+          <set token="click1">$click.name2$</set>
+        </drilldown>
+      </chart>
+    </panel>
+  </row>
+  <row>
+    <panel>
+      <single>
+        <title>Host</title>
+        <search base="mgen_base1">
+          <query>| table host</query>
+        </search>
+        <option name="drilldown">none</option>
+      </single>
+    </panel>
+    <panel>
+      <chart>
+        <title>Destination</title>
+        <search base="mgen_base1">
+          <query>| stats sum(count) by dst</query>
+        </search>
+        <option name="charting.axisTitleX.visibility">visible</option>
+        <option name="charting.axisTitleY.visibility">visible</option>
+        <option name="charting.axisTitleY2.visibility">visible</option>
+        <option name="charting.chart">pie</option>
+        <option name="charting.drilldown">none</option>
+        <option name="charting.legend.placement">right</option>
+      </chart>
+    </panel>
+    <panel>
+      <chart>
+        <title>Destination Port</title>
+        <search base="mgen_base1">
+          <query>| stats sum(count) by dst_port</query>
+        </search>
+        <option name="charting.axisTitleX.visibility">visible</option>
+        <option name="charting.axisTitleY.visibility">visible</option>
+        <option name="charting.axisTitleY2.visibility">visible</option>
+        <option name="charting.chart">pie</option>
+        <option name="charting.drilldown">none</option>
+        <option name="charting.legend.placement">right</option>
+      </chart>
+    </panel>
+  </row>
+  <row>
+    <panel>
+      <chart>
+        <title>Periodic Rate</title>
+        <search base="mgen_base1">
+          <query>| stats sum(count) by periodic_rate</query>
+        </search>
+        <option name="charting.chart">pie</option>
+        <option name="charting.drilldown">none</option>
+        <option name="refresh.display">progressbar</option>
+      </chart>
+    </panel>
+    <panel>
+      <chart>
+        <title>Periodic Size</title>
+        <search base="mgen_base1">
+          <query>| stats sum(count) by periodic_size</query>
+        </search>
+        <option name="charting.chart">pie</option>
+        <option name="charting.drilldown">none</option>
+        <option name="refresh.display">progressbar</option>
+      </chart>
+    </panel>
+    <panel>
+      <chart>
+        <title>TOS</title>
+        <search base="mgen_base1">
+          <query>| stats sum(count) by tos</query>
+        </search>
+        <option name="charting.chart">pie</option>
+        <option name="charting.drilldown">none</option>
+        <option name="refresh.display">progressbar</option>
+      </chart>
+    </panel>
+    <panel>
+      <chart>
+        <title>TTL</title>
+        <search base="mgen_base1">
+          <query>| stats count by ttl</query>
+        </search>
+        <option name="charting.chart">pie</option>
+        <option name="charting.chart.sliceCollapsingThreshold">0.01</option>
+        <option name="charting.drilldown">none</option>
+        <option name="refresh.display">progressbar</option>
+      </chart>
+    </panel>
+  </row>
+  <row>
+    <panel>
+      <event>
+        <title>MGEN ON/MOD/OF Flow_ID view for: $click1$</title>
+        <search>
+          <query>index=peo sourcetype="MGEN Event" flow_id=$click1$  $source1$ | transaction flow_id</query>
+          <earliest>$time1.earliest$</earliest>
+          <latest>$time1.latest$</latest>
+          <sampleRatio>1</sampleRatio>
+        </search>
+        <option name="count">20</option>
+        <option name="list.drilldown">none</option>
+        <option name="list.wrap">1</option>
+        <option name="maxLines">5</option>
+        <option name="raw.drilldown">full</option>
+        <option name="refresh.display">progressbar</option>
+        <option name="rowNumbers">0</option>
+        <option name="table.drilldown">all</option>
+        <option name="table.sortDirection">asc</option>
+        <option name="table.wrap">1</option>
+        <option name="type">list</option>
+      </event>
+    </panel>
+  </row>
+</form>

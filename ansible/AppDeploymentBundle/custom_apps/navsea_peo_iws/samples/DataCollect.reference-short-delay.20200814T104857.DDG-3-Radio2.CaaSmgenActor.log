@@ -1,0 +1,14 @@
+2020-08-14 10:49:30,336 - CaaSmgenActor - INFO - CaaSActor Initialized.
+2020-08-14 10:50:00,419 - CaaSmgenActor - INFO - Sent MGEN command: start 10:50:00
+2020-08-14 10:50:00,656 - CaaSmgenActor - INFO - MGEN Event: log caas-demo-700-tracks-norm-all-nodes.drc
+2020-08-14 10:50:01,381 - CaaSmgenActor - INFO - MGEN Event: 0.0 LISTEN UDP 5000,5001,5002,5003,5004,5005,5006,5007,5008
+2020-08-14 10:50:01,587 - CaaSmgenActor - INFO - Sent MGEN command: TXLOG
+2020-08-14 10:50:01,816 - CaaSmgenActor - INFO - Sent MGEN command: ANALYTICS
+2020-08-14 10:50:02,034 - CaaSmgenActor - INFO - MGEN Event: 0.0 LISTEN UDP 5010,5011
+2020-08-14 10:50:02,672 - CaaSmgenActor - INFO - MGEN Event: 0.0 listen udp 4011,5602,5603
+2020-08-14 10:50:02,919 - CaaSmgenActor - INFO - MGEN Event: log caas-demo-700-tracks-norm-all-nodes.drc
+2020-08-14 10:50:03,876 - CaaSmgenActor - INFO - MGEN Event: 0.0 LISTEN UDP 5000,5001,5002,5003,5004,5005,5006,5007,5008
+2020-08-14 10:50:04,222 - CaaSmgenActor - INFO - Sent MGEN command: TXLOG
+2020-08-14 10:50:04,501 - CaaSmgenActor - INFO - Sent MGEN command: ANALYTICS
+2020-08-14 10:50:04,797 - CaaSmgenActor - INFO - MGEN Event: 0.0 LISTEN UDP 5010,5011
+2020-08-14 10:51:08,524 - CaaSmgenActor - INFO - CaaS timeline read complete.

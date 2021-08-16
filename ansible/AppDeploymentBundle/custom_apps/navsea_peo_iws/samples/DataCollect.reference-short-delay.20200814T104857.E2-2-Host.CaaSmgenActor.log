@@ -1,0 +1,509 @@
+2020-08-14 10:49:33,475 - CaaSmgenActor - INFO - CaaSActor Initialized.
+2020-08-14 10:50:00,434 - CaaSmgenActor - INFO - Sent MGEN command: start 10:50:00
+2020-08-14 10:50:00,673 - CaaSmgenActor - INFO - MGEN Event: log caas-demo-700-tracks-norm-all-nodes.drc
+2020-08-14 10:50:00,852 - CaaSmgenActor - INFO - MGEN Event: 0.0 JOIN 225.1.1.1
+2020-08-14 10:50:01,203 - CaaSmgenActor - INFO - MGEN Event: 0.0 JOIN 225.1.1.3
+2020-08-14 10:50:01,394 - CaaSmgenActor - INFO - MGEN Event: 0.0 LISTEN UDP 5000,5001,5002,5003,5004,5005,5006,5007,5008
+2020-08-14 10:50:01,601 - CaaSmgenActor - INFO - Sent MGEN command: TXLOG
+2020-08-14 10:50:01,830 - CaaSmgenActor - INFO - Sent MGEN command: ANALYTICS
+2020-08-14 10:50:02,048 - CaaSmgenActor - INFO - MGEN Event: 0.0 LISTEN UDP 5010,5011
+2020-08-14 10:50:02,257 - CaaSmgenActor - INFO - MGEN Event: 0.0 JOIN 225.1.1.4
+2020-08-14 10:50:02,687 - CaaSmgenActor - INFO - MGEN Event: 0.0 listen udp 4011,5602,5603
+2020-08-14 10:50:02,933 - CaaSmgenActor - INFO - MGEN Event: log caas-demo-700-tracks-norm-all-nodes.drc
+2020-08-14 10:50:03,891 - CaaSmgenActor - INFO - MGEN Event: 0.0 LISTEN UDP 5000,5001,5002,5003,5004,5005,5006,5007,5008
+2020-08-14 10:50:04,246 - CaaSmgenActor - INFO - Sent MGEN command: TXLOG
+2020-08-14 10:50:04,513 - CaaSmgenActor - INFO - Sent MGEN command: ANALYTICS
+2020-08-14 10:50:04,836 - CaaSmgenActor - INFO - MGEN Event: 0.0 LISTEN UDP 5010,5011
+2020-08-14 10:50:05,506 - CaaSmgenActor - INFO - CaaS Event: 20.0 caas request receiver src-port 4011 flow-id 5300 app-flow-type 12 dst 225.1.1.4:5011 elastic traffic-specification 1 max-frames-per-interval 8 max-frame-size 128 latency 8000000
+2020-08-14 10:50:05,509 - CaaSmgenActor - INFO - CaaS Event: 25.0 caas request sender src-port 4011 flow-id 5301 app-flow-type 12 dst 225.1.1.4:5011 elastic traffic-specification 1 max-frames-per-interval 8 max-frame-size 128 latency 8000000
+2020-08-14 10:50:05,798 - CaaSmgenActor - INFO - CaaS Event: 20.0 caas request receiver src-port 4011 flow-id 5301 app-flow-type 12 dst 225.1.1.4:5011 elastic traffic-specification 1 max-frames-per-interval 8 max-frame-size 128 latency 8000000
+2020-08-14 10:50:06,039 - CaaSmgenActor - INFO - CaaS Event: 20.0 caas request receiver src-port 4011 flow-id 5302 app-flow-type 12 dst 225.1.1.4:5011 elastic traffic-specification 1 max-frames-per-interval 8 max-frame-size 128 latency 8000000
+2020-08-14 10:50:06,292 - CaaSmgenActor - INFO - CaaS Event: 20.0 caas request receiver src-port 4011 flow-id 5303 app-flow-type 12 dst 225.1.1.4:5011 elastic traffic-specification 1 max-frames-per-interval 8 max-frame-size 128 latency 8000000
+2020-08-14 10:50:06,378 - CaaSmgenActor - INFO - MGEN Event: 65.0 mgen ON 2021 UDP SRC 4011 DST 225.1.1.4/5011 periodic [8 100] TOS 1 TTL 32
+2020-08-14 10:50:06,399 - CaaSmgenActor - INFO - CaaS Event: 28.0 caas request receiver src-port 4004 flow-id 5000 app-flow-type 10 dst E2-2-Host:5004 traffic-specification 1 max-frames-per-interval 2 max-frame-size 92 latency 4000000
+2020-08-14 10:50:06,481 - CaaSmgenActor - INFO - CaaS Event: 30.0 caas request sender src-port 4004 flow-id 5008 app-flow-type 10 dst E2-1-Host:5004 traffic-specification 1 max-frames-per-interval 2 max-frame-size 92 latency 4000000
+2020-08-14 10:50:06,487 - CaaSmgenActor - INFO - CaaS Event: 30.0 caas request sender src-port 4004 flow-id 5009 app-flow-type 10 dst E2-3-Host:5004 traffic-specification 1 max-frames-per-interval 2 max-frame-size 92 latency 4000000
+2020-08-14 10:50:06,491 - CaaSmgenActor - INFO - CaaS Event: 30.0 caas request sender src-port 4004 flow-id 5010 app-flow-type 10 dst E2-4-Host:5004 traffic-specification 1 max-frames-per-interval 2 max-frame-size 92 latency 4000000
+2020-08-14 10:50:06,497 - CaaSmgenActor - INFO - CaaS Event: 30.0 caas request sender src-port 4004 flow-id 5011 app-flow-type 10 dst DDG-1-Host:5004 traffic-specification 1 max-frames-per-interval 2 max-frame-size 92 latency 4000000
+2020-08-14 10:50:06,502 - CaaSmgenActor - INFO - CaaS Event: 30.0 caas request sender src-port 4004 flow-id 5012 app-flow-type 10 dst DDG-2-Host:5004 traffic-specification 1 max-frames-per-interval 2 max-frame-size 92 latency 4000000
+2020-08-14 10:50:06,507 - CaaSmgenActor - INFO - CaaS Event: 30.0 caas request sender src-port 4004 flow-id 5013 app-flow-type 10 dst DDG-3-Host:5004 traffic-specification 1 max-frames-per-interval 2 max-frame-size 92 latency 4000000
+2020-08-14 10:50:06,513 - CaaSmgenActor - INFO - CaaS Event: 30.0 caas request sender src-port 4004 flow-id 5014 app-flow-type 10 dst DDG-4-Host:5004 traffic-specification 1 max-frames-per-interval 2 max-frame-size 92 latency 4000000
+2020-08-14 10:50:06,522 - CaaSmgenActor - INFO - CaaS Event: 30.0 caas request sender src-port 4004 flow-id 5015 app-flow-type 10 dst DDG-5-Host:5004 traffic-specification 1 max-frames-per-interval 2 max-frame-size 92 latency 4000000
+2020-08-14 10:50:06,535 - CaaSmgenActor - INFO - CaaS Event: 28.0 caas request receiver src-port 4004 flow-id 5017 app-flow-type 10 dst E2-2-Host:5004 traffic-specification 1 max-frames-per-interval 2 max-frame-size 92 latency 4000000
+2020-08-14 10:50:06,576 - CaaSmgenActor - INFO - CaaS Event: 28.0 caas request receiver src-port 4004 flow-id 5025 app-flow-type 10 dst E2-2-Host:5004 traffic-specification 1 max-frames-per-interval 2 max-frame-size 92 latency 4000000
+2020-08-14 10:50:06,624 - CaaSmgenActor - INFO - CaaS Event: 28.0 caas request receiver src-port 4004 flow-id 5033 app-flow-type 10 dst E2-2-Host:5004 traffic-specification 1 max-frames-per-interval 2 max-frame-size 92 latency 4000000
+2020-08-14 10:50:06,671 - CaaSmgenActor - INFO - CaaS Event: 28.0 caas request receiver src-port 4004 flow-id 5041 app-flow-type 10 dst E2-2-Host:5004 traffic-specification 1 max-frames-per-interval 2 max-frame-size 92 latency 4000000
+2020-08-14 10:50:06,709 - CaaSmgenActor - INFO - CaaS Event: 28.0 caas request receiver src-port 4004 flow-id 5049 app-flow-type 10 dst E2-2-Host:5004 traffic-specification 1 max-frames-per-interval 2 max-frame-size 92 latency 4000000
+2020-08-14 10:50:06,751 - CaaSmgenActor - INFO - CaaS Event: 28.0 caas request receiver src-port 4004 flow-id 5057 app-flow-type 10 dst E2-2-Host:5004 traffic-specification 1 max-frames-per-interval 2 max-frame-size 92 latency 4000000
+2020-08-14 10:50:06,783 - CaaSmgenActor - INFO - CaaS Event: 28.0 caas request receiver src-port 4004 flow-id 5065 app-flow-type 10 dst E2-2-Host:5004 traffic-specification 1 max-frames-per-interval 2 max-frame-size 92 latency 4000000
+2020-08-14 10:50:06,811 - CaaSmgenActor - INFO - CaaS Event: 28.0 caas request receiver src-port 4005 flow-id 5072 app-flow-type 10 dst E2-2-Host:5005 traffic-specification 1 max-frames-per-interval 2 max-frame-size 92 latency 4000000
+2020-08-14 10:50:06,842 - CaaSmgenActor - INFO - CaaS Event: 30.0 caas request sender src-port 4005 flow-id 5080 app-flow-type 10 dst E2-1-Host:5005 traffic-specification 1 max-frames-per-interval 2 max-frame-size 92 latency 4000000
+2020-08-14 10:50:06,845 - CaaSmgenActor - INFO - CaaS Event: 30.0 caas request sender src-port 4005 flow-id 5081 app-flow-type 10 dst E2-3-Host:5005 traffic-specification 1 max-frames-per-interval 2 max-frame-size 92 latency 4000000
+2020-08-14 10:50:06,851 - CaaSmgenActor - INFO - CaaS Event: 30.0 caas request sender src-port 4005 flow-id 5082 app-flow-type 10 dst E2-4-Host:5005 traffic-specification 1 max-frames-per-interval 2 max-frame-size 92 latency 4000000
+2020-08-14 10:50:06,855 - CaaSmgenActor - INFO - CaaS Event: 30.0 caas request sender src-port 4005 flow-id 5083 app-flow-type 10 dst DDG-1-Host:5005 traffic-specification 1 max-frames-per-interval 2 max-frame-size 92 latency 4000000
+2020-08-14 10:50:06,863 - CaaSmgenActor - INFO - CaaS Event: 30.0 caas request sender src-port 4005 flow-id 5084 app-flow-type 10 dst DDG-2-Host:5005 traffic-specification 1 max-frames-per-interval 2 max-frame-size 92 latency 4000000
+2020-08-14 10:50:06,873 - CaaSmgenActor - INFO - CaaS Event: 30.0 caas request sender src-port 4005 flow-id 5085 app-flow-type 10 dst DDG-3-Host:5005 traffic-specification 1 max-frames-per-interval 2 max-frame-size 92 latency 4000000
+2020-08-14 10:50:06,879 - CaaSmgenActor - INFO - CaaS Event: 30.0 caas request sender src-port 4005 flow-id 5086 app-flow-type 10 dst DDG-4-Host:5005 traffic-specification 1 max-frames-per-interval 2 max-frame-size 92 latency 4000000
+2020-08-14 10:50:06,884 - CaaSmgenActor - INFO - CaaS Event: 30.0 caas request sender src-port 4005 flow-id 5087 app-flow-type 10 dst DDG-5-Host:5005 traffic-specification 1 max-frames-per-interval 2 max-frame-size 92 latency 4000000
+2020-08-14 10:50:06,895 - CaaSmgenActor - INFO - CaaS Event: 28.0 caas request receiver src-port 4005 flow-id 5089 app-flow-type 10 dst E2-2-Host:5005 traffic-specification 1 max-frames-per-interval 2 max-frame-size 92 latency 4000000
+2020-08-14 10:50:06,966 - CaaSmgenActor - INFO - CaaS Event: 28.0 caas request receiver src-port 4005 flow-id 5097 app-flow-type 10 dst E2-2-Host:5005 traffic-specification 1 max-frames-per-interval 2 max-frame-size 92 latency 4000000
+2020-08-14 10:50:07,046 - CaaSmgenActor - INFO - CaaS Event: 28.0 caas request receiver src-port 4005 flow-id 5105 app-flow-type 10 dst E2-2-Host:5005 traffic-specification 1 max-frames-per-interval 2 max-frame-size 92 latency 4000000
+2020-08-14 10:50:07,131 - CaaSmgenActor - INFO - CaaS Event: 28.0 caas request receiver src-port 4005 flow-id 5113 app-flow-type 10 dst E2-2-Host:5005 traffic-specification 1 max-frames-per-interval 2 max-frame-size 92 latency 4000000
+2020-08-14 10:50:07,184 - CaaSmgenActor - INFO - CaaS Event: 28.0 caas request receiver src-port 4005 flow-id 5121 app-flow-type 10 dst E2-2-Host:5005 traffic-specification 1 max-frames-per-interval 2 max-frame-size 92 latency 4000000
+2020-08-14 10:50:07,233 - CaaSmgenActor - INFO - CaaS Event: 28.0 caas request receiver src-port 4005 flow-id 5129 app-flow-type 10 dst E2-2-Host:5005 traffic-specification 1 max-frames-per-interval 2 max-frame-size 92 latency 4000000
+2020-08-14 10:50:07,268 - CaaSmgenActor - INFO - CaaS Event: 28.0 caas request receiver src-port 4005 flow-id 5137 app-flow-type 10 dst E2-2-Host:5005 traffic-specification 1 max-frames-per-interval 2 max-frame-size 92 latency 4000000
+2020-08-14 10:50:08,363 - CaaSmgenActor - INFO - CaaS Event: 40.0 caas request receiver src-port 4000 flow-id 5148 app-flow-type 8 dst 225.1.1.3:5003 traffic-specification 1 max-frames-per-interval 100 max-frame-size 92 latency 8000000
+2020-08-14 10:50:08,365 - CaaSmgenActor - INFO - CaaS Event: 30.0 caas request sender src-port 4000 flow-id 5149 app-flow-type 8 dst 225.1.1.3:5003 traffic-specification 1 max-frames-per-interval 100 max-frame-size 92 latency 8000000
+2020-08-14 10:50:08,528 - CaaSmgenActor - INFO - CaaS Event: 40.0 caas request receiver src-port 4000 flow-id 5149 app-flow-type 8 dst 225.1.1.3:5003 traffic-specification 1 max-frames-per-interval 100 max-frame-size 92 latency 8000000
+2020-08-14 10:50:08,694 - CaaSmgenActor - INFO - CaaS Event: 40.0 caas request receiver src-port 4000 flow-id 5150 app-flow-type 8 dst 225.1.1.3:5003 traffic-specification 1 max-frames-per-interval 100 max-frame-size 92 latency 8000000
+2020-08-14 10:50:08,866 - CaaSmgenActor - INFO - CaaS Event: 40.0 caas request receiver src-port 4000 flow-id 5151 app-flow-type 8 dst 225.1.1.3:5003 traffic-specification 1 max-frames-per-interval 100 max-frame-size 92 latency 8000000
+2020-08-14 10:50:09,032 - CaaSmgenActor - INFO - CaaS Event: 40.0 caas request receiver src-port 4000 flow-id 5152 app-flow-type 8 dst 225.1.1.3:5003 traffic-specification 1 max-frames-per-interval 100 max-frame-size 92 latency 8000000
+2020-08-14 10:50:09,212 - CaaSmgenActor - INFO - CaaS Event: 40.0 caas request receiver src-port 4000 flow-id 5153 app-flow-type 8 dst 225.1.1.3:5003 traffic-specification 1 max-frames-per-interval 100 max-frame-size 92 latency 8000000
+2020-08-14 10:50:09,446 - CaaSmgenActor - INFO - CaaS Event: 40.0 caas request receiver src-port 4000 flow-id 5154 app-flow-type 8 dst 225.1.1.3:5003 traffic-specification 1 max-frames-per-interval 100 max-frame-size 92 latency 8000000
+2020-08-14 10:50:09,668 - CaaSmgenActor - INFO - CaaS Event: 40.0 caas request receiver src-port 4000 flow-id 5155 app-flow-type 8 dst 225.1.1.3:5003 traffic-specification 1 max-frames-per-interval 100 max-frame-size 92 latency 8000000
+2020-08-14 10:50:09,915 - CaaSmgenActor - INFO - CaaS Event: 40.0 caas request receiver src-port 4000 flow-id 5156 app-flow-type 8 dst 225.1.1.3:5003 traffic-specification 1 max-frames-per-interval 100 max-frame-size 92 latency 8000000
+2020-08-14 10:50:11,212 - CaaSmgenActor - INFO - CaaS Event: 40.0 caas request receiver src-port 4000 flow-id 5161 app-flow-type 6 dst 225.1.1.3:5007 traffic-specification 1 max-frames-per-interval 450 max-frame-size 92 latency 8000000
+2020-08-14 10:50:11,213 - CaaSmgenActor - INFO - CaaS Event: 30.0 caas request sender src-port 4000 flow-id 5162 app-flow-type 6 dst 225.1.1.3:5007 traffic-specification 1 max-frames-per-interval 450 max-frame-size 92 latency 8000000
+2020-08-14 10:50:11,453 - CaaSmgenActor - INFO - CaaS Event: 40.0 caas request receiver src-port 4000 flow-id 5162 app-flow-type 6 dst 225.1.1.3:5007 traffic-specification 1 max-frames-per-interval 450 max-frame-size 92 latency 8000000
+2020-08-14 10:50:11,664 - CaaSmgenActor - INFO - CaaS Event: 40.0 caas request receiver src-port 4000 flow-id 5163 app-flow-type 6 dst 225.1.1.3:5007 traffic-specification 1 max-frames-per-interval 450 max-frame-size 92 latency 8000000
+2020-08-14 10:50:11,910 - CaaSmgenActor - INFO - CaaS Event: 40.0 caas request receiver src-port 4000 flow-id 5164 app-flow-type 6 dst 225.1.1.3:5007 traffic-specification 1 max-frames-per-interval 450 max-frame-size 92 latency 8000000
+2020-08-14 10:50:12,136 - CaaSmgenActor - INFO - CaaS Event: 40.0 caas request receiver src-port 4000 flow-id 5165 app-flow-type 6 dst 225.1.1.3:5007 traffic-specification 1 max-frames-per-interval 450 max-frame-size 92 latency 8000000
+2020-08-14 10:50:12,431 - CaaSmgenActor - INFO - CaaS Event: 40.0 caas request receiver src-port 4000 flow-id 5166 app-flow-type 6 dst 225.1.1.3:5007 traffic-specification 1 max-frames-per-interval 450 max-frame-size 92 latency 8000000
+2020-08-14 10:50:12,673 - CaaSmgenActor - INFO - CaaS Event: 40.0 caas request receiver src-port 4000 flow-id 5167 app-flow-type 6 dst 225.1.1.3:5007 traffic-specification 1 max-frames-per-interval 450 max-frame-size 92 latency 8000000
+2020-08-14 10:50:12,926 - CaaSmgenActor - INFO - CaaS Event: 40.0 caas request receiver src-port 4000 flow-id 5168 app-flow-type 6 dst 225.1.1.3:5007 traffic-specification 1 max-frames-per-interval 450 max-frame-size 92 latency 8000000
+2020-08-14 10:50:13,165 - CaaSmgenActor - INFO - CaaS Event: 40.0 caas request receiver src-port 4000 flow-id 5169 app-flow-type 6 dst 225.1.1.3:5007 traffic-specification 1 max-frames-per-interval 450 max-frame-size 92 latency 8000000
+2020-08-14 10:50:13,330 - CaaSmgenActor - INFO - CaaS Event: 40.0 caas request receiver src-port 4002 flow-id 5170 app-flow-type 4 dst 225.1.1.1:5002 traffic-specification 1 max-frames-per-interval 1 max-frame-size 92 latency 4000000
+2020-08-14 10:50:13,332 - CaaSmgenActor - INFO - CaaS Event: 45.0 caas request sender src-port 4002 flow-id 5171 app-flow-type 4 dst 225.1.1.1:5002 traffic-specification 1 max-frames-per-interval 1 max-frame-size 92 latency 4000000
+2020-08-14 10:50:13,473 - CaaSmgenActor - INFO - CaaS Event: 40.0 caas request receiver src-port 4002 flow-id 5171 app-flow-type 4 dst 225.1.1.1:5002 traffic-specification 1 max-frames-per-interval 1 max-frame-size 92 latency 4000000
+2020-08-14 10:50:13,632 - CaaSmgenActor - INFO - CaaS Event: 40.0 caas request receiver src-port 4002 flow-id 5172 app-flow-type 4 dst 225.1.1.1:5002 traffic-specification 1 max-frames-per-interval 1 max-frame-size 92 latency 4000000
+2020-08-14 10:50:13,829 - CaaSmgenActor - INFO - CaaS Event: 40.0 caas request receiver src-port 4002 flow-id 5173 app-flow-type 4 dst 225.1.1.1:5002 traffic-specification 1 max-frames-per-interval 1 max-frame-size 92 latency 4000000
+2020-08-14 10:50:13,983 - CaaSmgenActor - INFO - CaaS Event: 40.0 caas request receiver src-port 4002 flow-id 5174 app-flow-type 4 dst 225.1.1.1:5002 traffic-specification 1 max-frames-per-interval 1 max-frame-size 92 latency 4000000
+2020-08-14 10:50:14,153 - CaaSmgenActor - INFO - CaaS Event: 40.0 caas request receiver src-port 4002 flow-id 5175 app-flow-type 4 dst 225.1.1.1:5002 traffic-specification 1 max-frames-per-interval 1 max-frame-size 92 latency 4000000
+2020-08-14 10:50:14,305 - CaaSmgenActor - INFO - CaaS Event: 40.0 caas request receiver src-port 4002 flow-id 5176 app-flow-type 4 dst 225.1.1.1:5002 traffic-specification 1 max-frames-per-interval 1 max-frame-size 92 latency 4000000
+2020-08-14 10:50:14,477 - CaaSmgenActor - INFO - CaaS Event: 40.0 caas request receiver src-port 4002 flow-id 5177 app-flow-type 4 dst 225.1.1.1:5002 traffic-specification 1 max-frames-per-interval 1 max-frame-size 92 latency 4000000
+2020-08-14 10:50:14,743 - CaaSmgenActor - INFO - CaaS Event: 40.0 caas request receiver src-port 4002 flow-id 5178 app-flow-type 4 dst 225.1.1.1:5002 traffic-specification 1 max-frames-per-interval 1 max-frame-size 92 latency 4000000
+2020-08-14 10:50:15,014 - CaaSmgenActor - INFO - CaaS Event: 40.0 caas request receiver src-port 4000 flow-id 5179 app-flow-type 2 dst 225.1.1.3:5000 traffic-specification 1 max-frames-per-interval 250 max-frame-size 92 latency 1200000
+2020-08-14 10:50:15,016 - CaaSmgenActor - INFO - CaaS Event: 45.0 caas request sender src-port 4000 flow-id 5180 app-flow-type 2 dst 225.1.1.3:5000 traffic-specification 1 max-frames-per-interval 250 max-frame-size 92 latency 1200000
+2020-08-14 10:50:15,226 - CaaSmgenActor - INFO - CaaS Event: 40.0 caas request receiver src-port 4000 flow-id 5180 app-flow-type 2 dst 225.1.1.3:5000 traffic-specification 1 max-frames-per-interval 250 max-frame-size 92 latency 1200000
+2020-08-14 10:50:15,433 - CaaSmgenActor - INFO - CaaS Event: 40.0 caas request receiver src-port 4000 flow-id 5181 app-flow-type 2 dst 225.1.1.3:5000 traffic-specification 1 max-frames-per-interval 250 max-frame-size 92 latency 1200000
+2020-08-14 10:50:15,627 - CaaSmgenActor - INFO - CaaS Event: 40.0 caas request receiver src-port 4000 flow-id 5182 app-flow-type 2 dst 225.1.1.3:5000 traffic-specification 1 max-frames-per-interval 250 max-frame-size 92 latency 1200000
+2020-08-14 10:50:15,800 - CaaSmgenActor - INFO - CaaS Event: 40.0 caas request receiver src-port 4000 flow-id 5183 app-flow-type 2 dst 225.1.1.3:5000 traffic-specification 1 max-frames-per-interval 250 max-frame-size 92 latency 1200000
+2020-08-14 10:50:16,101 - CaaSmgenActor - INFO - CaaS Event: 40.0 caas request receiver src-port 4000 flow-id 5184 app-flow-type 2 dst 225.1.1.3:5000 traffic-specification 1 max-frames-per-interval 250 max-frame-size 92 latency 1200000
+2020-08-14 10:50:16,298 - CaaSmgenActor - INFO - CaaS Event: 40.0 caas request receiver src-port 4000 flow-id 5185 app-flow-type 2 dst 225.1.1.3:5000 traffic-specification 1 max-frames-per-interval 250 max-frame-size 92 latency 1200000
+2020-08-14 10:50:16,471 - CaaSmgenActor - INFO - CaaS Event: 40.0 caas request receiver src-port 4000 flow-id 5186 app-flow-type 2 dst 225.1.1.3:5000 traffic-specification 1 max-frames-per-interval 250 max-frame-size 92 latency 1200000
+2020-08-14 10:50:16,652 - CaaSmgenActor - INFO - CaaS Event: 40.0 caas request receiver src-port 4000 flow-id 5187 app-flow-type 2 dst 225.1.1.3:5000 traffic-specification 1 max-frames-per-interval 250 max-frame-size 92 latency 1200000
+2020-08-14 10:50:16,857 - CaaSmgenActor - INFO - CaaS Event: 40.0 caas request receiver src-port 4000 flow-id 5188 app-flow-type 1 dst 225.1.1.3:5008 traffic-specification 1 max-frames-per-interval 50 max-frame-size 92 latency 1200000
+2020-08-14 10:50:16,862 - CaaSmgenActor - INFO - CaaS Event: 45.0 caas request sender src-port 4000 flow-id 5189 app-flow-type 1 dst 225.1.1.3:5008 traffic-specification 1 max-frames-per-interval 50 max-frame-size 92 latency 1200000
+2020-08-14 10:50:17,062 - CaaSmgenActor - INFO - CaaS Event: 40.0 caas request receiver src-port 4000 flow-id 5189 app-flow-type 1 dst 225.1.1.3:5008 traffic-specification 1 max-frames-per-interval 50 max-frame-size 92 latency 1200000
+2020-08-14 10:50:17,247 - CaaSmgenActor - INFO - CaaS Event: 40.0 caas request receiver src-port 4000 flow-id 5190 app-flow-type 1 dst 225.1.1.3:5008 traffic-specification 1 max-frames-per-interval 50 max-frame-size 92 latency 1200000
+2020-08-14 10:50:17,470 - CaaSmgenActor - INFO - CaaS Event: 40.0 caas request receiver src-port 4000 flow-id 5191 app-flow-type 1 dst 225.1.1.3:5008 traffic-specification 1 max-frames-per-interval 50 max-frame-size 92 latency 1200000
+2020-08-14 10:50:17,693 - CaaSmgenActor - INFO - CaaS Event: 40.0 caas request receiver src-port 4000 flow-id 5192 app-flow-type 1 dst 225.1.1.3:5008 traffic-specification 1 max-frames-per-interval 50 max-frame-size 92 latency 1200000
+2020-08-14 10:50:17,936 - CaaSmgenActor - INFO - CaaS Event: 40.0 caas request receiver src-port 4000 flow-id 5193 app-flow-type 1 dst 225.1.1.3:5008 traffic-specification 1 max-frames-per-interval 50 max-frame-size 92 latency 1200000
+2020-08-14 10:50:18,146 - CaaSmgenActor - INFO - CaaS Event: 40.0 caas request receiver src-port 4000 flow-id 5194 app-flow-type 1 dst 225.1.1.3:5008 traffic-specification 1 max-frames-per-interval 50 max-frame-size 92 latency 1200000
+2020-08-14 10:50:18,372 - CaaSmgenActor - INFO - CaaS Event: 40.0 caas request receiver src-port 4000 flow-id 5195 app-flow-type 1 dst 225.1.1.3:5008 traffic-specification 1 max-frames-per-interval 50 max-frame-size 92 latency 1200000
+2020-08-14 10:50:18,562 - CaaSmgenActor - INFO - CaaS Event: 40.0 caas request receiver src-port 4000 flow-id 5196 app-flow-type 1 dst 225.1.1.3:5008 traffic-specification 1 max-frames-per-interval 50 max-frame-size 92 latency 1200000
+2020-08-14 10:50:18,624 - CaaSmgenActor - INFO - MGEN Event: 61.8 mgen ON 1018 UDP SRC 4000 DST 225.1.1.3/5008 periodic [0.1 64] TOS 1 TTL 32
+2020-08-14 10:50:18,649 - CaaSmgenActor - INFO - MGEN Event: 62.7 mgen ON 1027 UDP SRC 4000 DST 225.1.1.3/5008 periodic [0.1 64] TOS 1 TTL 32
+2020-08-14 10:50:18,674 - CaaSmgenActor - INFO - MGEN Event: 63.5 mgen ON 1035 UDP SRC 4000 DST 225.1.1.3/5008 periodic [0.1 64] TOS 1 TTL 32
+2020-08-14 10:50:18,684 - CaaSmgenActor - INFO - MGEN Event: 63.9 mgen ON 1039 UDP SRC 4000 DST 225.1.1.3/5008 periodic [0.1 64] TOS 1 TTL 32
+2020-08-14 10:50:18,712 - CaaSmgenActor - INFO - MGEN Event: 65.1 mgen ON 1051 UDP SRC 4000 DST 225.1.1.3/5008 periodic [0.1 64] TOS 1 TTL 32
+2020-08-14 10:50:18,743 - CaaSmgenActor - INFO - MGEN Event: 66.4 mgen ON 1064 UDP SRC 4000 DST 225.1.1.3/5008 periodic [0.1 64] TOS 1 TTL 32
+2020-08-14 10:50:18,777 - CaaSmgenActor - INFO - MGEN Event: 67.8 mgen ON 1078 UDP SRC 4000 DST 225.1.1.3/5008 periodic [0.1 64] TOS 1 TTL 32
+2020-08-14 10:50:18,866 - CaaSmgenActor - INFO - MGEN Event: 71.3 mgen ON 1113 UDP SRC 4000 DST 225.1.1.3/5008 periodic [0.1 64] TOS 1 TTL 32
+2020-08-14 10:50:18,961 - CaaSmgenActor - INFO - MGEN Event: 74.3 mgen ON 1143 UDP SRC 4000 DST 225.1.1.3/5008 periodic [0.1 64] TOS 1 TTL 32
+2020-08-14 10:50:18,969 - CaaSmgenActor - INFO - MGEN Event: 74.5 mgen ON 1145 UDP SRC 4000 DST 225.1.1.3/5008 periodic [0.1 64] TOS 1 TTL 32
+2020-08-14 10:50:18,980 - CaaSmgenActor - INFO - MGEN Event: 75.0 mgen ON 1150 UDP SRC 4000 DST 225.1.1.3/5008 periodic [0.1 64] TOS 1 TTL 32
+2020-08-14 10:50:19,021 - CaaSmgenActor - INFO - MGEN Event: 76.2 mgen ON 1162 UDP SRC 4000 DST 225.1.1.3/5008 periodic [0.1 64] TOS 1 TTL 32
+2020-08-14 10:50:19,037 - CaaSmgenActor - INFO - MGEN Event: 76.8 mgen ON 1168 UDP SRC 4000 DST 225.1.1.3/5008 periodic [0.1 64] TOS 1 TTL 32
+2020-08-14 10:50:19,102 - CaaSmgenActor - INFO - MGEN Event: 79.1 mgen ON 1191 UDP SRC 4000 DST 225.1.1.3/5008 periodic [0.1 64] TOS 1 TTL 32
+2020-08-14 10:50:19,108 - CaaSmgenActor - INFO - MGEN Event: 79.4 mgen ON 1194 UDP SRC 4000 DST 225.1.1.3/5008 periodic [0.1 64] TOS 1 TTL 32
+2020-08-14 10:50:19,136 - CaaSmgenActor - INFO - MGEN Event: 80.7 mgen ON 1207 UDP SRC 4000 DST 225.1.1.3/5008 periodic [0.1 64] TOS 1 TTL 32
+2020-08-14 10:50:19,176 - CaaSmgenActor - INFO - MGEN Event: 82.3 mgen ON 1223 UDP SRC 4000 DST 225.1.1.3/5008 periodic [0.1 64] TOS 1 TTL 32
+2020-08-14 10:50:19,187 - CaaSmgenActor - INFO - MGEN Event: 82.8 mgen ON 1228 UDP SRC 4000 DST 225.1.1.3/5008 periodic [0.1 64] TOS 1 TTL 32
+2020-08-14 10:50:19,277 - CaaSmgenActor - INFO - MGEN Event: 86.7 mgen ON 1267 UDP SRC 4000 DST 225.1.1.3/5008 periodic [0.1 64] TOS 1 TTL 32
+2020-08-14 10:50:19,295 - CaaSmgenActor - INFO - MGEN Event: 87.3 mgen ON 1273 UDP SRC 4000 DST 225.1.1.3/5008 periodic [0.1 64] TOS 1 TTL 32
+2020-08-14 10:50:19,311 - CaaSmgenActor - INFO - MGEN Event: 87.8 mgen ON 1278 UDP SRC 4000 DST 225.1.1.3/5008 periodic [0.1 64] TOS 1 TTL 32
+2020-08-14 10:50:19,385 - CaaSmgenActor - INFO - MGEN Event: 91.0 mgen ON 1310 UDP SRC 4000 DST 225.1.1.3/5008 periodic [0.1 64] TOS 1 TTL 32
+2020-08-14 10:50:19,412 - CaaSmgenActor - INFO - MGEN Event: 92.1 mgen ON 1321 UDP SRC 4000 DST 225.1.1.3/5008 periodic [0.1 64] TOS 1 TTL 32
+2020-08-14 10:50:19,426 - CaaSmgenActor - INFO - MGEN Event: 92.7 mgen ON 1327 UDP SRC 4000 DST 225.1.1.3/5008 periodic [0.1 64] TOS 1 TTL 32
+2020-08-14 10:50:19,476 - CaaSmgenActor - INFO - MGEN Event: 94.9 mgen ON 1349 UDP SRC 4000 DST 225.1.1.3/5008 periodic [0.1 64] TOS 1 TTL 32
+2020-08-14 10:50:19,483 - CaaSmgenActor - INFO - MGEN Event: 95.2 mgen ON 1352 UDP SRC 4000 DST 225.1.1.3/5008 periodic [0.1 64] TOS 1 TTL 32
+2020-08-14 10:50:19,500 - CaaSmgenActor - INFO - MGEN Event: 96.0 mgen ON 1360 UDP SRC 4000 DST 225.1.1.3/5008 periodic [0.1 64] TOS 1 TTL 32
+2020-08-14 10:50:19,525 - CaaSmgenActor - INFO - MGEN Event: 97.1 mgen ON 1371 UDP SRC 4000 DST 225.1.1.3/5008 periodic [0.1 64] TOS 1 TTL 32
+2020-08-14 10:50:19,549 - CaaSmgenActor - INFO - MGEN Event: 98.4 mgen ON 1384 UDP SRC 4000 DST 225.1.1.3/5008 periodic [0.1 64] TOS 1 TTL 32
+2020-08-14 10:50:19,553 - CaaSmgenActor - INFO - MGEN Event: 98.5 mgen ON 1385 UDP SRC 4000 DST 225.1.1.3/5008 periodic [0.1 64] TOS 1 TTL 32
+2020-08-14 10:50:19,587 - CaaSmgenActor - INFO - MGEN Event: 99.6 mgen ON 1396 UDP SRC 4000 DST 225.1.1.3/5008 periodic [0.1 64] TOS 1 TTL 32
+2020-08-14 10:50:19,759 - CaaSmgenActor - INFO - MGEN Event: 106.2 mgen ON 1462 UDP SRC 4000 DST 225.1.1.3/5008 periodic [0.1 64] TOS 1 TTL 32
+2020-08-14 10:50:19,764 - CaaSmgenActor - INFO - MGEN Event: 106.4 mgen ON 1464 UDP SRC 4000 DST 225.1.1.3/5008 periodic [0.1 64] TOS 1 TTL 32
+2020-08-14 10:50:19,843 - CaaSmgenActor - INFO - MGEN Event: 109.2 mgen ON 1492 UDP SRC 4000 DST 225.1.1.3/5008 periodic [0.1 64] TOS 1 TTL 32
+2020-08-14 10:50:19,973 - CaaSmgenActor - INFO - MGEN Event: 63.6 mgen ON 1536 UDP SRC 4000 DST 225.1.1.3/5000 periodic [1 64] TOS 1 TTL 32
+2020-08-14 10:50:19,980 - CaaSmgenActor - INFO - MGEN Event: 64.0 mgen ON 1540 UDP SRC 4000 DST 225.1.1.3/5000 periodic [1 64] TOS 1 TTL 32
+2020-08-14 10:50:19,997 - CaaSmgenActor - INFO - MGEN Event: 64.7 mgen ON 1547 UDP SRC 4000 DST 225.1.1.3/5000 periodic [1 64] TOS 1 TTL 32
+2020-08-14 10:50:20,085 - CaaSmgenActor - INFO - MGEN Event: 67.2 mgen ON 1572 UDP SRC 4000 DST 225.1.1.3/5000 periodic [1 64] TOS 1 TTL 32
+2020-08-14 10:50:20,101 - CaaSmgenActor - INFO - MGEN Event: 68.0 mgen ON 1580 UDP SRC 4000 DST 225.1.1.3/5000 periodic [1 64] TOS 1 TTL 32
+2020-08-14 10:50:20,106 - CaaSmgenActor - INFO - MGEN Event: 68.2 mgen ON 1582 UDP SRC 4000 DST 225.1.1.3/5000 periodic [1 64] TOS 1 TTL 32
+2020-08-14 10:50:20,138 - CaaSmgenActor - INFO - MGEN Event: 69.9 mgen ON 1599 UDP SRC 4000 DST 225.1.1.3/5000 periodic [1 64] TOS 1 TTL 32
+2020-08-14 10:50:20,149 - CaaSmgenActor - INFO - MGEN Event: 70.4 mgen ON 1604 UDP SRC 4000 DST 225.1.1.3/5000 periodic [1 64] TOS 1 TTL 32
+2020-08-14 10:50:20,241 - CaaSmgenActor - INFO - MGEN Event: 72.9 mgen ON 1629 UDP SRC 4000 DST 225.1.1.3/5000 periodic [1 64] TOS 1 TTL 32
+2020-08-14 10:50:20,283 - CaaSmgenActor - INFO - MGEN Event: 74.3 mgen ON 1643 UDP SRC 4000 DST 225.1.1.3/5000 periodic [1 64] TOS 1 TTL 32
+2020-08-14 10:50:20,297 - CaaSmgenActor - INFO - MGEN Event: 74.7 mgen ON 1647 UDP SRC 4000 DST 225.1.1.3/5000 periodic [1 64] TOS 1 TTL 32
+2020-08-14 10:50:20,400 - CaaSmgenActor - INFO - MGEN Event: 77.8 mgen ON 1678 UDP SRC 4000 DST 225.1.1.3/5000 periodic [1 64] TOS 1 TTL 32
+2020-08-14 10:50:20,535 - CaaSmgenActor - INFO - MGEN Event: 68.0 mgen ON 1716 UDP SRC 4002 DST 225.1.1.2/5002 periodic [1 64] TOS 0 TTL 32
+2020-08-14 10:50:20,605 - CaaSmgenActor - INFO - MGEN Event: 361.25 mgen MOD 1643 UDP SRC 4000 DST 225.1.1.3/5007 periodic [5 64] TOS 2 TTL 32
+2020-08-14 10:50:20,655 - CaaSmgenActor - INFO - MGEN Event: 362.25 mgen MOD 1547 UDP SRC 4000 DST 225.1.1.3/5007 periodic [5 64] TOS 2 TTL 32
+2020-08-14 10:50:20,669 - CaaSmgenActor - INFO - MGEN Event: 660.0 mgen MOD 1580 UDP SRC 4000 DST 225.1.1.3/5007 periodic [5 64] TOS 2 TTL 32
+2020-08-14 10:50:20,686 - CaaSmgenActor - INFO - MGEN Event: 660.25 mgen MOD 1678 UDP SRC 4000 DST 225.1.1.3/5007 periodic [5 64] TOS 2 TTL 32
+2020-08-14 10:50:20,750 - CaaSmgenActor - INFO - MGEN Event: 661.5 mgen MOD 1582 UDP SRC 4000 DST 225.1.1.3/5007 periodic [5 64] TOS 2 TTL 32
+2020-08-14 10:50:20,818 - CaaSmgenActor - INFO - MGEN Event: 101.2 mgen ON 1823 UDP SRC 4005 DST DDG-3-Host/5005 periodic [0.2 64] TOS 8 TTL 32
+2020-08-14 10:50:20,833 - CaaSmgenActor - INFO - MGEN Event: 101.8 mgen ON 1826 UDP SRC 4005 DST DDG-5-Host/5005 periodic [0.2 64] TOS 8 TTL 32
+2020-08-14 10:50:20,880 - CaaSmgenActor - INFO - MGEN Event: 960.4 mgen MOD 1547 UDP SRC 4000 DST 225.1.1.3/5000 periodic [1 64] TOS 1 TTL 32
+2020-08-14 10:50:21,035 - CaaSmgenActor - INFO - MGEN Event: 964.4 mgen MOD 1582 UDP SRC 4000 DST 225.1.1.3/5000 periodic [1 64] TOS 1 TTL 32
+2020-08-14 10:50:21,043 - CaaSmgenActor - INFO - MGEN Event: 964.6 mgen MOD 1580 UDP SRC 4000 DST 225.1.1.3/5000 periodic [1 64] TOS 1 TTL 32
+2020-08-14 10:51:12,564 - CaaSmgenActor - INFO - CaaS timeline read complete.
+2020-08-14 10:51:12,565 - CaaSmgenActor - INFO - CaaS Requests start time: 2020-08-14 10:51:12.565898
+2020-08-14 10:51:12,573 - CaaSmgenActor - INFO - Waiting 19 seconds for next event.
+2020-08-14 10:51:31,592 - CaaSmgenActor - INFO - send-line: {"app-id": "5899f736-b8de-451c-bc2f-1dd72314d03c", "protocol": 17, "app-flow-type": 12, "dst-ip": "225.1.1.4", "requestor-host": "10.10.102.2", "traffic-specification": {"1": {"max-frames-per-interval": 8, "latency": 8000000, "max-frame-size": 128, "elastic-flow": true}}, "caas-addr": "10.10.102.1", "src-port": 4011, "flow-id": 5300, "src-ip": "10.10.102.2", "dst-port": 5011}
+2020-08-14 10:51:31,752 - CaaSmgenActor - INFO - CaaS receiver request ID: 5300 received at router.
+2020-08-14 10:51:31,752 - CaaSmgenActor - INFO - send-line: {"app-id": "5899f736-b8de-451c-bc2f-1dd72314d03c", "protocol": 17, "app-flow-type": 12, "dst-ip": "225.1.1.4", "requestor-host": "10.10.102.2", "traffic-specification": {"1": {"max-frames-per-interval": 8, "latency": 8000000, "max-frame-size": 128, "elastic-flow": true}}, "caas-addr": "10.10.102.1", "src-port": 4011, "flow-id": 5301, "src-ip": "10.10.102.2", "dst-port": 5011}
+2020-08-14 10:51:31,886 - CaaSmgenActor - INFO - CaaS receiver request ID: 5301 received at router.
+2020-08-14 10:51:31,886 - CaaSmgenActor - INFO - send-line: {"app-id": "5899f736-b8de-451c-bc2f-1dd72314d03c", "protocol": 17, "app-flow-type": 12, "dst-ip": "225.1.1.4", "requestor-host": "10.10.102.2", "traffic-specification": {"1": {"max-frames-per-interval": 8, "latency": 8000000, "max-frame-size": 128, "elastic-flow": true}}, "caas-addr": "10.10.102.1", "src-port": 4011, "flow-id": 5302, "src-ip": "10.10.102.2", "dst-port": 5011}
+2020-08-14 10:51:31,973 - CaaSmgenActor - INFO - CaaS receiver request ID: 5302 received at router.
+2020-08-14 10:51:31,974 - CaaSmgenActor - INFO - send-line: {"app-id": "5899f736-b8de-451c-bc2f-1dd72314d03c", "protocol": 17, "app-flow-type": 12, "dst-ip": "225.1.1.4", "requestor-host": "10.10.102.2", "traffic-specification": {"1": {"max-frames-per-interval": 8, "latency": 8000000, "max-frame-size": 128, "elastic-flow": true}}, "caas-addr": "10.10.102.1", "src-port": 4011, "flow-id": 5303, "src-ip": "10.10.102.2", "dst-port": 5011}
+2020-08-14 10:51:32,064 - CaaSmgenActor - INFO - CaaS receiver request ID: 5303 received at router.
+2020-08-14 10:51:32,064 - CaaSmgenActor - INFO - Waiting 5 seconds for next event.
+2020-08-14 10:51:37,068 - CaaSmgenActor - INFO - send-line: {"caas-addr": "10.10.102.1", "app-id": "5899f736-b8de-451c-bc2f-1dd72314d03c", "protocol": 17, "flow-id": 5301, "app-flow-type": 12, "dst-port": 5011, "traffic-specification": {"1": {"max-frames-per-interval": 8, "latency": 8000000, "max-frame-size": 128, "elastic-flow": true}}, "src-ip": "10.10.102.2", "dst-ip": "225.1.1.4", "src-port": 4011}
+2020-08-14 10:51:37,138 - CaaSmgenActor - INFO - CaaS sender request ID: 5301 received at router.
+2020-08-14 10:51:37,138 - CaaSmgenActor - INFO - Waiting 3 seconds for next event.
+2020-08-14 10:51:40,140 - CaaSmgenActor - INFO - send-line: {"app-id": "5899f736-b8de-451c-bc2f-1dd72314d03c", "protocol": 17, "app-flow-type": 10, "dst-ip": "10.10.102.2", "requestor-host": "10.10.102.2", "traffic-specification": {"1": {"max-frames-per-interval": 2, "latency": 4000000, "max-frame-size": 92}}, "caas-addr": "10.10.102.1", "src-port": 4004, "flow-id": 5000, "src-ip": "10.10.102.2", "dst-port": 5004}
+2020-08-14 10:51:40,237 - CaaSmgenActor - INFO - CaaS receiver request ID: 5000 received at router.
+2020-08-14 10:51:40,237 - CaaSmgenActor - INFO - send-line: {"app-id": "5899f736-b8de-451c-bc2f-1dd72314d03c", "protocol": 17, "app-flow-type": 10, "dst-ip": "10.10.102.2", "requestor-host": "10.10.102.2", "traffic-specification": {"1": {"max-frames-per-interval": 2, "latency": 4000000, "max-frame-size": 92}}, "caas-addr": "10.10.102.1", "src-port": 4004, "flow-id": 5017, "src-ip": "10.10.102.2", "dst-port": 5004}
+2020-08-14 10:51:40,323 - CaaSmgenActor - INFO - CaaS receiver request ID: 5017 received at router.
+2020-08-14 10:51:40,323 - CaaSmgenActor - INFO - send-line: {"app-id": "5899f736-b8de-451c-bc2f-1dd72314d03c", "protocol": 17, "app-flow-type": 10, "dst-ip": "10.10.102.2", "requestor-host": "10.10.102.2", "traffic-specification": {"1": {"max-frames-per-interval": 2, "latency": 4000000, "max-frame-size": 92}}, "caas-addr": "10.10.102.1", "src-port": 4004, "flow-id": 5025, "src-ip": "10.10.102.2", "dst-port": 5004}
+2020-08-14 10:51:40,385 - CaaSmgenActor - INFO - CaaS receiver request ID: 5025 received at router.
+2020-08-14 10:51:40,385 - CaaSmgenActor - INFO - send-line: {"app-id": "5899f736-b8de-451c-bc2f-1dd72314d03c", "protocol": 17, "app-flow-type": 10, "dst-ip": "10.10.102.2", "requestor-host": "10.10.102.2", "traffic-specification": {"1": {"max-frames-per-interval": 2, "latency": 4000000, "max-frame-size": 92}}, "caas-addr": "10.10.102.1", "src-port": 4004, "flow-id": 5033, "src-ip": "10.10.102.2", "dst-port": 5004}
+2020-08-14 10:51:40,445 - CaaSmgenActor - INFO - CaaS receiver request ID: 5033 received at router.
+2020-08-14 10:51:40,445 - CaaSmgenActor - INFO - send-line: {"app-id": "5899f736-b8de-451c-bc2f-1dd72314d03c", "protocol": 17, "app-flow-type": 10, "dst-ip": "10.10.102.2", "requestor-host": "10.10.102.2", "traffic-specification": {"1": {"max-frames-per-interval": 2, "latency": 4000000, "max-frame-size": 92}}, "caas-addr": "10.10.102.1", "src-port": 4004, "flow-id": 5041, "src-ip": "10.10.102.2", "dst-port": 5004}
+2020-08-14 10:51:40,518 - CaaSmgenActor - INFO - CaaS receiver request ID: 5041 received at router.
+2020-08-14 10:51:40,518 - CaaSmgenActor - INFO - send-line: {"app-id": "5899f736-b8de-451c-bc2f-1dd72314d03c", "protocol": 17, "app-flow-type": 10, "dst-ip": "10.10.102.2", "requestor-host": "10.10.102.2", "traffic-specification": {"1": {"max-frames-per-interval": 2, "latency": 4000000, "max-frame-size": 92}}, "caas-addr": "10.10.102.1", "src-port": 4004, "flow-id": 5049, "src-ip": "10.10.102.2", "dst-port": 5004}
+2020-08-14 10:51:40,598 - CaaSmgenActor - INFO - CaaS receiver request ID: 5049 received at router.
+2020-08-14 10:51:40,599 - CaaSmgenActor - INFO - send-line: {"app-id": "5899f736-b8de-451c-bc2f-1dd72314d03c", "protocol": 17, "app-flow-type": 10, "dst-ip": "10.10.102.2", "requestor-host": "10.10.102.2", "traffic-specification": {"1": {"max-frames-per-interval": 2, "latency": 4000000, "max-frame-size": 92}}, "caas-addr": "10.10.102.1", "src-port": 4004, "flow-id": 5057, "src-ip": "10.10.102.2", "dst-port": 5004}
+2020-08-14 10:51:40,666 - CaaSmgenActor - INFO - CaaS receiver request ID: 5057 received at router.
+2020-08-14 10:51:40,666 - CaaSmgenActor - INFO - send-line: {"app-id": "5899f736-b8de-451c-bc2f-1dd72314d03c", "protocol": 17, "app-flow-type": 10, "dst-ip": "10.10.102.2", "requestor-host": "10.10.102.2", "traffic-specification": {"1": {"max-frames-per-interval": 2, "latency": 4000000, "max-frame-size": 92}}, "caas-addr": "10.10.102.1", "src-port": 4004, "flow-id": 5065, "src-ip": "10.10.102.2", "dst-port": 5004}
+2020-08-14 10:51:40,733 - CaaSmgenActor - INFO - CaaS receiver request ID: 5065 received at router.
+2020-08-14 10:51:40,733 - CaaSmgenActor - INFO - send-line: {"app-id": "5899f736-b8de-451c-bc2f-1dd72314d03c", "protocol": 17, "app-flow-type": 10, "dst-ip": "10.10.102.2", "requestor-host": "10.10.102.2", "traffic-specification": {"1": {"max-frames-per-interval": 2, "latency": 4000000, "max-frame-size": 92}}, "caas-addr": "10.10.102.1", "src-port": 4005, "flow-id": 5072, "src-ip": "10.10.102.2", "dst-port": 5005}
+2020-08-14 10:51:40,811 - CaaSmgenActor - INFO - CaaS receiver request ID: 5072 received at router.
+2020-08-14 10:51:40,812 - CaaSmgenActor - INFO - send-line: {"app-id": "5899f736-b8de-451c-bc2f-1dd72314d03c", "protocol": 17, "app-flow-type": 10, "dst-ip": "10.10.102.2", "requestor-host": "10.10.102.2", "traffic-specification": {"1": {"max-frames-per-interval": 2, "latency": 4000000, "max-frame-size": 92}}, "caas-addr": "10.10.102.1", "src-port": 4005, "flow-id": 5089, "src-ip": "10.10.102.2", "dst-port": 5005}
+2020-08-14 10:51:40,891 - CaaSmgenActor - INFO - CaaS receiver request ID: 5089 received at router.
+2020-08-14 10:51:40,891 - CaaSmgenActor - INFO - send-line: {"app-id": "5899f736-b8de-451c-bc2f-1dd72314d03c", "protocol": 17, "app-flow-type": 10, "dst-ip": "10.10.102.2", "requestor-host": "10.10.102.2", "traffic-specification": {"1": {"max-frames-per-interval": 2, "latency": 4000000, "max-frame-size": 92}}, "caas-addr": "10.10.102.1", "src-port": 4005, "flow-id": 5097, "src-ip": "10.10.102.2", "dst-port": 5005}
+2020-08-14 10:51:41,011 - CaaSmgenActor - INFO - CaaS receiver request ID: 5097 received at router.
+2020-08-14 10:51:41,012 - CaaSmgenActor - INFO - send-line: {"app-id": "5899f736-b8de-451c-bc2f-1dd72314d03c", "protocol": 17, "app-flow-type": 10, "dst-ip": "10.10.102.2", "requestor-host": "10.10.102.2", "traffic-specification": {"1": {"max-frames-per-interval": 2, "latency": 4000000, "max-frame-size": 92}}, "caas-addr": "10.10.102.1", "src-port": 4005, "flow-id": 5105, "src-ip": "10.10.102.2", "dst-port": 5005}
+2020-08-14 10:51:41,096 - CaaSmgenActor - INFO - CaaS receiver request ID: 5105 received at router.
+2020-08-14 10:51:41,096 - CaaSmgenActor - INFO - send-line: {"app-id": "5899f736-b8de-451c-bc2f-1dd72314d03c", "protocol": 17, "app-flow-type": 10, "dst-ip": "10.10.102.2", "requestor-host": "10.10.102.2", "traffic-specification": {"1": {"max-frames-per-interval": 2, "latency": 4000000, "max-frame-size": 92}}, "caas-addr": "10.10.102.1", "src-port": 4005, "flow-id": 5113, "src-ip": "10.10.102.2", "dst-port": 5005}
+2020-08-14 10:51:41,170 - CaaSmgenActor - INFO - CaaS receiver request ID: 5113 received at router.
+2020-08-14 10:51:41,171 - CaaSmgenActor - INFO - send-line: {"app-id": "5899f736-b8de-451c-bc2f-1dd72314d03c", "protocol": 17, "app-flow-type": 10, "dst-ip": "10.10.102.2", "requestor-host": "10.10.102.2", "traffic-specification": {"1": {"max-frames-per-interval": 2, "latency": 4000000, "max-frame-size": 92}}, "caas-addr": "10.10.102.1", "src-port": 4005, "flow-id": 5121, "src-ip": "10.10.102.2", "dst-port": 5005}
+2020-08-14 10:51:41,262 - CaaSmgenActor - INFO - CaaS receiver request ID: 5121 received at router.
+2020-08-14 10:51:41,262 - CaaSmgenActor - INFO - send-line: {"app-id": "5899f736-b8de-451c-bc2f-1dd72314d03c", "protocol": 17, "app-flow-type": 10, "dst-ip": "10.10.102.2", "requestor-host": "10.10.102.2", "traffic-specification": {"1": {"max-frames-per-interval": 2, "latency": 4000000, "max-frame-size": 92}}, "caas-addr": "10.10.102.1", "src-port": 4005, "flow-id": 5129, "src-ip": "10.10.102.2", "dst-port": 5005}
+2020-08-14 10:51:41,335 - CaaSmgenActor - INFO - CaaS receiver request ID: 5129 received at router.
+2020-08-14 10:51:41,335 - CaaSmgenActor - INFO - send-line: {"app-id": "5899f736-b8de-451c-bc2f-1dd72314d03c", "protocol": 17, "app-flow-type": 10, "dst-ip": "10.10.102.2", "requestor-host": "10.10.102.2", "traffic-specification": {"1": {"max-frames-per-interval": 2, "latency": 4000000, "max-frame-size": 92}}, "caas-addr": "10.10.102.1", "src-port": 4005, "flow-id": 5137, "src-ip": "10.10.102.2", "dst-port": 5005}
+2020-08-14 10:51:41,426 - CaaSmgenActor - INFO - CaaS receiver request ID: 5137 received at router.
+2020-08-14 10:51:41,426 - CaaSmgenActor - INFO - Waiting 1 seconds for next event.
+2020-08-14 10:51:42,428 - CaaSmgenActor - INFO - send-line: {"caas-addr": "10.10.102.1", "app-id": "5899f736-b8de-451c-bc2f-1dd72314d03c", "protocol": 17, "flow-id": 5008, "app-flow-type": 10, "dst-port": 5004, "traffic-specification": {"1": {"max-frames-per-interval": 2, "latency": 4000000, "max-frame-size": 92}}, "src-ip": "10.10.102.2", "dst-ip": "10.10.101.2", "src-port": 4004}
+2020-08-14 10:51:42,633 - CaaSmgenActor - INFO - CaaS sender request ID: 5008 received at router.
+2020-08-14 10:51:42,634 - CaaSmgenActor - INFO - send-line: {"caas-addr": "10.10.102.1", "app-id": "5899f736-b8de-451c-bc2f-1dd72314d03c", "protocol": 17, "flow-id": 5009, "app-flow-type": 10, "dst-port": 5004, "traffic-specification": {"1": {"max-frames-per-interval": 2, "latency": 4000000, "max-frame-size": 92}}, "src-ip": "10.10.102.2", "dst-ip": "10.10.103.2", "src-port": 4004}
+2020-08-14 10:51:42,737 - CaaSmgenActor - INFO - CaaS sender request ID: 5009 received at router.
+2020-08-14 10:51:42,738 - CaaSmgenActor - INFO - send-line: {"caas-addr": "10.10.102.1", "app-id": "5899f736-b8de-451c-bc2f-1dd72314d03c", "protocol": 17, "flow-id": 5010, "app-flow-type": 10, "dst-port": 5004, "traffic-specification": {"1": {"max-frames-per-interval": 2, "latency": 4000000, "max-frame-size": 92}}, "src-ip": "10.10.102.2", "dst-ip": "10.10.104.2", "src-port": 4004}
+2020-08-14 10:51:42,816 - CaaSmgenActor - INFO - CaaS sender request ID: 5010 received at router.
+2020-08-14 10:51:42,816 - CaaSmgenActor - INFO - send-line: {"caas-addr": "10.10.102.1", "app-id": "5899f736-b8de-451c-bc2f-1dd72314d03c", "protocol": 17, "flow-id": 5011, "app-flow-type": 10, "dst-port": 5004, "traffic-specification": {"1": {"max-frames-per-interval": 2, "latency": 4000000, "max-frame-size": 92}}, "src-ip": "10.10.102.2", "dst-ip": "10.10.1.2", "src-port": 4004}
+2020-08-14 10:51:42,889 - CaaSmgenActor - INFO - CaaS sender request ID: 5011 received at router.
+2020-08-14 10:51:42,890 - CaaSmgenActor - INFO - send-line: {"caas-addr": "10.10.102.1", "app-id": "5899f736-b8de-451c-bc2f-1dd72314d03c", "protocol": 17, "flow-id": 5012, "app-flow-type": 10, "dst-port": 5004, "traffic-specification": {"1": {"max-frames-per-interval": 2, "latency": 4000000, "max-frame-size": 92}}, "src-ip": "10.10.102.2", "dst-ip": "10.10.2.2", "src-port": 4004}
+2020-08-14 10:51:42,956 - CaaSmgenActor - INFO - CaaS sender request ID: 5012 received at router.
+2020-08-14 10:51:42,956 - CaaSmgenActor - INFO - send-line: {"caas-addr": "10.10.102.1", "app-id": "5899f736-b8de-451c-bc2f-1dd72314d03c", "protocol": 17, "flow-id": 5013, "app-flow-type": 10, "dst-port": 5004, "traffic-specification": {"1": {"max-frames-per-interval": 2, "latency": 4000000, "max-frame-size": 92}}, "src-ip": "10.10.102.2", "dst-ip": "10.10.3.2", "src-port": 4004}
+2020-08-14 10:51:43,028 - CaaSmgenActor - INFO - CaaS sender request ID: 5013 received at router.
+2020-08-14 10:51:43,028 - CaaSmgenActor - INFO - send-line: {"caas-addr": "10.10.102.1", "app-id": "5899f736-b8de-451c-bc2f-1dd72314d03c", "protocol": 17, "flow-id": 5014, "app-flow-type": 10, "dst-port": 5004, "traffic-specification": {"1": {"max-frames-per-interval": 2, "latency": 4000000, "max-frame-size": 92}}, "src-ip": "10.10.102.2", "dst-ip": "10.10.4.2", "src-port": 4004}
+2020-08-14 10:51:43,098 - CaaSmgenActor - INFO - CaaS sender request ID: 5014 received at router.
+2020-08-14 10:51:43,099 - CaaSmgenActor - INFO - send-line: {"caas-addr": "10.10.102.1", "app-id": "5899f736-b8de-451c-bc2f-1dd72314d03c", "protocol": 17, "flow-id": 5015, "app-flow-type": 10, "dst-port": 5004, "traffic-specification": {"1": {"max-frames-per-interval": 2, "latency": 4000000, "max-frame-size": 92}}, "src-ip": "10.10.102.2", "dst-ip": "10.10.5.2", "src-port": 4004}
+2020-08-14 10:51:43,168 - CaaSmgenActor - INFO - CaaS sender request ID: 5015 received at router.
+2020-08-14 10:51:43,169 - CaaSmgenActor - INFO - send-line: {"caas-addr": "10.10.102.1", "app-id": "5899f736-b8de-451c-bc2f-1dd72314d03c", "protocol": 17, "flow-id": 5080, "app-flow-type": 10, "dst-port": 5005, "traffic-specification": {"1": {"max-frames-per-interval": 2, "latency": 4000000, "max-frame-size": 92}}, "src-ip": "10.10.102.2", "dst-ip": "10.10.101.2", "src-port": 4005}
+2020-08-14 10:51:43,250 - CaaSmgenActor - INFO - CaaS sender request ID: 5080 received at router.
+2020-08-14 10:51:43,250 - CaaSmgenActor - INFO - send-line: {"caas-addr": "10.10.102.1", "app-id": "5899f736-b8de-451c-bc2f-1dd72314d03c", "protocol": 17, "flow-id": 5081, "app-flow-type": 10, "dst-port": 5005, "traffic-specification": {"1": {"max-frames-per-interval": 2, "latency": 4000000, "max-frame-size": 92}}, "src-ip": "10.10.102.2", "dst-ip": "10.10.103.2", "src-port": 4005}
+2020-08-14 10:51:43,337 - CaaSmgenActor - INFO - CaaS sender request ID: 5081 received at router.
+2020-08-14 10:51:43,338 - CaaSmgenActor - INFO - send-line: {"caas-addr": "10.10.102.1", "app-id": "5899f736-b8de-451c-bc2f-1dd72314d03c", "protocol": 17, "flow-id": 5082, "app-flow-type": 10, "dst-port": 5005, "traffic-specification": {"1": {"max-frames-per-interval": 2, "latency": 4000000, "max-frame-size": 92}}, "src-ip": "10.10.102.2", "dst-ip": "10.10.104.2", "src-port": 4005}
+2020-08-14 10:51:43,613 - CaaSmgenActor - INFO - CaaS sender request ID: 5082 received at router.
+2020-08-14 10:51:43,616 - CaaSmgenActor - INFO - send-line: {"caas-addr": "10.10.102.1", "app-id": "5899f736-b8de-451c-bc2f-1dd72314d03c", "protocol": 17, "flow-id": 5083, "app-flow-type": 10, "dst-port": 5005, "traffic-specification": {"1": {"max-frames-per-interval": 2, "latency": 4000000, "max-frame-size": 92}}, "src-ip": "10.10.102.2", "dst-ip": "10.10.1.2", "src-port": 4005}
+2020-08-14 10:51:43,893 - CaaSmgenActor - INFO - CaaS sender request ID: 5083 received at router.
+2020-08-14 10:51:43,894 - CaaSmgenActor - INFO - send-line: {"caas-addr": "10.10.102.1", "app-id": "5899f736-b8de-451c-bc2f-1dd72314d03c", "protocol": 17, "flow-id": 5084, "app-flow-type": 10, "dst-port": 5005, "traffic-specification": {"1": {"max-frames-per-interval": 2, "latency": 4000000, "max-frame-size": 92}}, "src-ip": "10.10.102.2", "dst-ip": "10.10.2.2", "src-port": 4005}
+2020-08-14 10:51:43,966 - CaaSmgenActor - INFO - CaaS sender request ID: 5084 received at router.
+2020-08-14 10:51:43,966 - CaaSmgenActor - INFO - send-line: {"caas-addr": "10.10.102.1", "app-id": "5899f736-b8de-451c-bc2f-1dd72314d03c", "protocol": 17, "flow-id": 5085, "app-flow-type": 10, "dst-port": 5005, "traffic-specification": {"1": {"max-frames-per-interval": 2, "latency": 4000000, "max-frame-size": 92}}, "src-ip": "10.10.102.2", "dst-ip": "10.10.3.2", "src-port": 4005}
+2020-08-14 10:51:44,062 - CaaSmgenActor - INFO - CaaS sender request ID: 5085 received at router.
+2020-08-14 10:51:44,062 - CaaSmgenActor - INFO - send-line: {"caas-addr": "10.10.102.1", "app-id": "5899f736-b8de-451c-bc2f-1dd72314d03c", "protocol": 17, "flow-id": 5086, "app-flow-type": 10, "dst-port": 5005, "traffic-specification": {"1": {"max-frames-per-interval": 2, "latency": 4000000, "max-frame-size": 92}}, "src-ip": "10.10.102.2", "dst-ip": "10.10.4.2", "src-port": 4005}
+2020-08-14 10:51:44,139 - CaaSmgenActor - INFO - CaaS sender request ID: 5086 received at router.
+2020-08-14 10:51:44,139 - CaaSmgenActor - INFO - send-line: {"caas-addr": "10.10.102.1", "app-id": "5899f736-b8de-451c-bc2f-1dd72314d03c", "protocol": 17, "flow-id": 5087, "app-flow-type": 10, "dst-port": 5005, "traffic-specification": {"1": {"max-frames-per-interval": 2, "latency": 4000000, "max-frame-size": 92}}, "src-ip": "10.10.102.2", "dst-ip": "10.10.5.2", "src-port": 4005}
+2020-08-14 10:51:44,224 - CaaSmgenActor - INFO - CaaS sender request ID: 5087 received at router.
+2020-08-14 10:51:44,224 - CaaSmgenActor - INFO - send-line: {"caas-addr": "10.10.102.1", "app-id": "5899f736-b8de-451c-bc2f-1dd72314d03c", "protocol": 17, "flow-id": 5149, "app-flow-type": 8, "dst-port": 5003, "traffic-specification": {"1": {"max-frames-per-interval": 100, "latency": 8000000, "max-frame-size": 92}}, "src-ip": "10.10.102.2", "dst-ip": "225.1.1.3", "src-port": 4000}
+2020-08-14 10:51:44,303 - CaaSmgenActor - INFO - CaaS sender request ID: 5149 received at router.
+2020-08-14 10:51:44,303 - CaaSmgenActor - INFO - send-line: {"caas-addr": "10.10.102.1", "app-id": "5899f736-b8de-451c-bc2f-1dd72314d03c", "protocol": 17, "flow-id": 5162, "app-flow-type": 6, "dst-port": 5007, "traffic-specification": {"1": {"max-frames-per-interval": 450, "latency": 8000000, "max-frame-size": 92}}, "src-ip": "10.10.102.2", "dst-ip": "225.1.1.3", "src-port": 4000}
+2020-08-14 10:51:44,376 - CaaSmgenActor - INFO - CaaS sender request ID: 5162 received at router.
+2020-08-14 10:51:44,376 - CaaSmgenActor - INFO - Waiting 8 seconds for next event.
+2020-08-14 10:51:44,862 - CaaSmgenActor - INFO - Flow Accepted: 5301 Source: 10.10.102.2  Destination: 225.1.1.4  Data Rate: 10624
+2020-08-14 10:51:44,862 - CaaSmgenActor - INFO - Flow Accepted: 5301 Source: 10.10.102.2  Destination: 225.1.1.4  Data Rate: 10624
+2020-08-14 10:51:44,862 - CaaSmgenActor - INFO - Flow Accepted: 5301 Source: 10.10.102.2  Destination: 225.1.1.4  Data Rate: 10624
+2020-08-14 10:51:44,862 - CaaSmgenActor - INFO - Flow Accepted: 5301 Source: 10.10.102.2  Destination: 225.1.1.4  Data Rate: 10624
+2020-08-14 10:51:44,863 - CaaSmgenActor - INFO - Flow Accepted: 5301 Source: 10.10.102.2  Destination: 225.1.1.4  Data Rate: 10624
+2020-08-14 10:51:44,863 - CaaSmgenActor - INFO - Flow Accepted: 5301 Source: 10.10.102.2  Destination: 225.1.1.4  Data Rate: 10624
+2020-08-14 10:51:44,863 - CaaSmgenActor - INFO - Flow Accepted: 5301 Source: 10.10.102.2  Destination: 225.1.1.4  Data Rate: 10624
+2020-08-14 10:51:44,863 - CaaSmgenActor - INFO - Flow Accepted: 5301 Source: 10.10.102.2  Destination: 225.1.1.4  Data Rate: 10624
+2020-08-14 10:51:52,383 - CaaSmgenActor - INFO - send-line: {"app-id": "5899f736-b8de-451c-bc2f-1dd72314d03c", "protocol": 17, "app-flow-type": 8, "dst-ip": "225.1.1.3", "requestor-host": "10.10.102.2", "traffic-specification": {"1": {"max-frames-per-interval": 100, "latency": 8000000, "max-frame-size": 92}}, "caas-addr": "10.10.102.1", "src-port": 4000, "flow-id": 5148, "src-ip": "10.10.102.2", "dst-port": 5003}
+2020-08-14 10:51:52,496 - CaaSmgenActor - INFO - CaaS receiver request ID: 5148 received at router.
+2020-08-14 10:51:52,496 - CaaSmgenActor - INFO - send-line: {"app-id": "5899f736-b8de-451c-bc2f-1dd72314d03c", "protocol": 17, "app-flow-type": 8, "dst-ip": "225.1.1.3", "requestor-host": "10.10.102.2", "traffic-specification": {"1": {"max-frames-per-interval": 100, "latency": 8000000, "max-frame-size": 92}}, "caas-addr": "10.10.102.1", "src-port": 4000, "flow-id": 5149, "src-ip": "10.10.102.2", "dst-port": 5003}
+2020-08-14 10:51:52,579 - CaaSmgenActor - INFO - CaaS receiver request ID: 5149 received at router.
+2020-08-14 10:51:52,579 - CaaSmgenActor - INFO - send-line: {"app-id": "5899f736-b8de-451c-bc2f-1dd72314d03c", "protocol": 17, "app-flow-type": 8, "dst-ip": "225.1.1.3", "requestor-host": "10.10.102.2", "traffic-specification": {"1": {"max-frames-per-interval": 100, "latency": 8000000, "max-frame-size": 92}}, "caas-addr": "10.10.102.1", "src-port": 4000, "flow-id": 5150, "src-ip": "10.10.102.2", "dst-port": 5003}
+2020-08-14 10:51:52,687 - CaaSmgenActor - INFO - CaaS receiver request ID: 5150 received at router.
+2020-08-14 10:51:52,687 - CaaSmgenActor - INFO - send-line: {"app-id": "5899f736-b8de-451c-bc2f-1dd72314d03c", "protocol": 17, "app-flow-type": 8, "dst-ip": "225.1.1.3", "requestor-host": "10.10.102.2", "traffic-specification": {"1": {"max-frames-per-interval": 100, "latency": 8000000, "max-frame-size": 92}}, "caas-addr": "10.10.102.1", "src-port": 4000, "flow-id": 5151, "src-ip": "10.10.102.2", "dst-port": 5003}
+2020-08-14 10:51:52,792 - CaaSmgenActor - INFO - CaaS receiver request ID: 5151 received at router.
+2020-08-14 10:51:52,792 - CaaSmgenActor - INFO - send-line: {"app-id": "5899f736-b8de-451c-bc2f-1dd72314d03c", "protocol": 17, "app-flow-type": 8, "dst-ip": "225.1.1.3", "requestor-host": "10.10.102.2", "traffic-specification": {"1": {"max-frames-per-interval": 100, "latency": 8000000, "max-frame-size": 92}}, "caas-addr": "10.10.102.1", "src-port": 4000, "flow-id": 5152, "src-ip": "10.10.102.2", "dst-port": 5003}
+2020-08-14 10:51:52,876 - CaaSmgenActor - INFO - CaaS receiver request ID: 5152 received at router.
+2020-08-14 10:51:52,877 - CaaSmgenActor - INFO - send-line: {"app-id": "5899f736-b8de-451c-bc2f-1dd72314d03c", "protocol": 17, "app-flow-type": 8, "dst-ip": "225.1.1.3", "requestor-host": "10.10.102.2", "traffic-specification": {"1": {"max-frames-per-interval": 100, "latency": 8000000, "max-frame-size": 92}}, "caas-addr": "10.10.102.1", "src-port": 4000, "flow-id": 5153, "src-ip": "10.10.102.2", "dst-port": 5003}
+2020-08-14 10:51:53,012 - CaaSmgenActor - INFO - CaaS receiver request ID: 5153 received at router.
+2020-08-14 10:51:53,012 - CaaSmgenActor - INFO - send-line: {"app-id": "5899f736-b8de-451c-bc2f-1dd72314d03c", "protocol": 17, "app-flow-type": 8, "dst-ip": "225.1.1.3", "requestor-host": "10.10.102.2", "traffic-specification": {"1": {"max-frames-per-interval": 100, "latency": 8000000, "max-frame-size": 92}}, "caas-addr": "10.10.102.1", "src-port": 4000, "flow-id": 5154, "src-ip": "10.10.102.2", "dst-port": 5003}
+2020-08-14 10:51:53,096 - CaaSmgenActor - INFO - CaaS receiver request ID: 5154 received at router.
+2020-08-14 10:51:53,096 - CaaSmgenActor - INFO - send-line: {"app-id": "5899f736-b8de-451c-bc2f-1dd72314d03c", "protocol": 17, "app-flow-type": 8, "dst-ip": "225.1.1.3", "requestor-host": "10.10.102.2", "traffic-specification": {"1": {"max-frames-per-interval": 100, "latency": 8000000, "max-frame-size": 92}}, "caas-addr": "10.10.102.1", "src-port": 4000, "flow-id": 5155, "src-ip": "10.10.102.2", "dst-port": 5003}
+2020-08-14 10:51:53,196 - CaaSmgenActor - INFO - CaaS receiver request ID: 5155 received at router.
+2020-08-14 10:51:53,196 - CaaSmgenActor - INFO - send-line: {"app-id": "5899f736-b8de-451c-bc2f-1dd72314d03c", "protocol": 17, "app-flow-type": 8, "dst-ip": "225.1.1.3", "requestor-host": "10.10.102.2", "traffic-specification": {"1": {"max-frames-per-interval": 100, "latency": 8000000, "max-frame-size": 92}}, "caas-addr": "10.10.102.1", "src-port": 4000, "flow-id": 5156, "src-ip": "10.10.102.2", "dst-port": 5003}
+2020-08-14 10:51:53,298 - CaaSmgenActor - INFO - CaaS receiver request ID: 5156 received at router.
+2020-08-14 10:51:53,298 - CaaSmgenActor - INFO - send-line: {"app-id": "5899f736-b8de-451c-bc2f-1dd72314d03c", "protocol": 17, "app-flow-type": 6, "dst-ip": "225.1.1.3", "requestor-host": "10.10.102.2", "traffic-specification": {"1": {"max-frames-per-interval": 450, "latency": 8000000, "max-frame-size": 92}}, "caas-addr": "10.10.102.1", "src-port": 4000, "flow-id": 5161, "src-ip": "10.10.102.2", "dst-port": 5007}
+2020-08-14 10:51:53,408 - CaaSmgenActor - INFO - CaaS receiver request ID: 5161 received at router.
+2020-08-14 10:51:53,409 - CaaSmgenActor - INFO - send-line: {"app-id": "5899f736-b8de-451c-bc2f-1dd72314d03c", "protocol": 17, "app-flow-type": 6, "dst-ip": "225.1.1.3", "requestor-host": "10.10.102.2", "traffic-specification": {"1": {"max-frames-per-interval": 450, "latency": 8000000, "max-frame-size": 92}}, "caas-addr": "10.10.102.1", "src-port": 4000, "flow-id": 5162, "src-ip": "10.10.102.2", "dst-port": 5007}
+2020-08-14 10:51:53,526 - CaaSmgenActor - INFO - CaaS receiver request ID: 5162 received at router.
+2020-08-14 10:51:53,526 - CaaSmgenActor - INFO - send-line: {"app-id": "5899f736-b8de-451c-bc2f-1dd72314d03c", "protocol": 17, "app-flow-type": 6, "dst-ip": "225.1.1.3", "requestor-host": "10.10.102.2", "traffic-specification": {"1": {"max-frames-per-interval": 450, "latency": 8000000, "max-frame-size": 92}}, "caas-addr": "10.10.102.1", "src-port": 4000, "flow-id": 5163, "src-ip": "10.10.102.2", "dst-port": 5007}
+2020-08-14 10:51:53,642 - CaaSmgenActor - INFO - CaaS receiver request ID: 5163 received at router.
+2020-08-14 10:51:53,643 - CaaSmgenActor - INFO - send-line: {"app-id": "5899f736-b8de-451c-bc2f-1dd72314d03c", "protocol": 17, "app-flow-type": 6, "dst-ip": "225.1.1.3", "requestor-host": "10.10.102.2", "traffic-specification": {"1": {"max-frames-per-interval": 450, "latency": 8000000, "max-frame-size": 92}}, "caas-addr": "10.10.102.1", "src-port": 4000, "flow-id": 5164, "src-ip": "10.10.102.2", "dst-port": 5007}
+2020-08-14 10:51:53,757 - CaaSmgenActor - INFO - CaaS receiver request ID: 5164 received at router.
+2020-08-14 10:51:53,758 - CaaSmgenActor - INFO - send-line: {"app-id": "5899f736-b8de-451c-bc2f-1dd72314d03c", "protocol": 17, "app-flow-type": 6, "dst-ip": "225.1.1.3", "requestor-host": "10.10.102.2", "traffic-specification": {"1": {"max-frames-per-interval": 450, "latency": 8000000, "max-frame-size": 92}}, "caas-addr": "10.10.102.1", "src-port": 4000, "flow-id": 5165, "src-ip": "10.10.102.2", "dst-port": 5007}
+2020-08-14 10:51:53,849 - CaaSmgenActor - INFO - CaaS receiver request ID: 5165 received at router.
+2020-08-14 10:51:53,849 - CaaSmgenActor - INFO - send-line: {"app-id": "5899f736-b8de-451c-bc2f-1dd72314d03c", "protocol": 17, "app-flow-type": 6, "dst-ip": "225.1.1.3", "requestor-host": "10.10.102.2", "traffic-specification": {"1": {"max-frames-per-interval": 450, "latency": 8000000, "max-frame-size": 92}}, "caas-addr": "10.10.102.1", "src-port": 4000, "flow-id": 5166, "src-ip": "10.10.102.2", "dst-port": 5007}
+2020-08-14 10:51:53,962 - CaaSmgenActor - INFO - CaaS receiver request ID: 5166 received at router.
+2020-08-14 10:51:53,963 - CaaSmgenActor - INFO - send-line: {"app-id": "5899f736-b8de-451c-bc2f-1dd72314d03c", "protocol": 17, "app-flow-type": 6, "dst-ip": "225.1.1.3", "requestor-host": "10.10.102.2", "traffic-specification": {"1": {"max-frames-per-interval": 450, "latency": 8000000, "max-frame-size": 92}}, "caas-addr": "10.10.102.1", "src-port": 4000, "flow-id": 5167, "src-ip": "10.10.102.2", "dst-port": 5007}
+2020-08-14 10:51:54,056 - CaaSmgenActor - INFO - CaaS receiver request ID: 5167 received at router.
+2020-08-14 10:51:54,056 - CaaSmgenActor - INFO - send-line: {"app-id": "5899f736-b8de-451c-bc2f-1dd72314d03c", "protocol": 17, "app-flow-type": 6, "dst-ip": "225.1.1.3", "requestor-host": "10.10.102.2", "traffic-specification": {"1": {"max-frames-per-interval": 450, "latency": 8000000, "max-frame-size": 92}}, "caas-addr": "10.10.102.1", "src-port": 4000, "flow-id": 5168, "src-ip": "10.10.102.2", "dst-port": 5007}
+2020-08-14 10:51:54,159 - CaaSmgenActor - INFO - CaaS receiver request ID: 5168 received at router.
+2020-08-14 10:51:54,159 - CaaSmgenActor - INFO - send-line: {"app-id": "5899f736-b8de-451c-bc2f-1dd72314d03c", "protocol": 17, "app-flow-type": 6, "dst-ip": "225.1.1.3", "requestor-host": "10.10.102.2", "traffic-specification": {"1": {"max-frames-per-interval": 450, "latency": 8000000, "max-frame-size": 92}}, "caas-addr": "10.10.102.1", "src-port": 4000, "flow-id": 5169, "src-ip": "10.10.102.2", "dst-port": 5007}
+2020-08-14 10:51:54,276 - CaaSmgenActor - INFO - CaaS receiver request ID: 5169 received at router.
+2020-08-14 10:51:54,276 - CaaSmgenActor - INFO - send-line: {"app-id": "5899f736-b8de-451c-bc2f-1dd72314d03c", "protocol": 17, "app-flow-type": 4, "dst-ip": "225.1.1.1", "requestor-host": "10.10.102.2", "traffic-specification": {"1": {"max-frames-per-interval": 1, "latency": 4000000, "max-frame-size": 92}}, "caas-addr": "10.10.102.1", "src-port": 4002, "flow-id": 5170, "src-ip": "10.10.102.2", "dst-port": 5002}
+2020-08-14 10:51:54,394 - CaaSmgenActor - INFO - CaaS receiver request ID: 5170 received at router.
+2020-08-14 10:51:54,394 - CaaSmgenActor - INFO - send-line: {"app-id": "5899f736-b8de-451c-bc2f-1dd72314d03c", "protocol": 17, "app-flow-type": 4, "dst-ip": "225.1.1.1", "requestor-host": "10.10.102.2", "traffic-specification": {"1": {"max-frames-per-interval": 1, "latency": 4000000, "max-frame-size": 92}}, "caas-addr": "10.10.102.1", "src-port": 4002, "flow-id": 5171, "src-ip": "10.10.102.2", "dst-port": 5002}
+2020-08-14 10:51:54,486 - CaaSmgenActor - INFO - CaaS receiver request ID: 5171 received at router.
+2020-08-14 10:51:54,486 - CaaSmgenActor - INFO - send-line: {"app-id": "5899f736-b8de-451c-bc2f-1dd72314d03c", "protocol": 17, "app-flow-type": 4, "dst-ip": "225.1.1.1", "requestor-host": "10.10.102.2", "traffic-specification": {"1": {"max-frames-per-interval": 1, "latency": 4000000, "max-frame-size": 92}}, "caas-addr": "10.10.102.1", "src-port": 4002, "flow-id": 5172, "src-ip": "10.10.102.2", "dst-port": 5002}
+2020-08-14 10:51:54,567 - CaaSmgenActor - INFO - CaaS receiver request ID: 5172 received at router.
+2020-08-14 10:51:54,567 - CaaSmgenActor - INFO - send-line: {"app-id": "5899f736-b8de-451c-bc2f-1dd72314d03c", "protocol": 17, "app-flow-type": 4, "dst-ip": "225.1.1.1", "requestor-host": "10.10.102.2", "traffic-specification": {"1": {"max-frames-per-interval": 1, "latency": 4000000, "max-frame-size": 92}}, "caas-addr": "10.10.102.1", "src-port": 4002, "flow-id": 5173, "src-ip": "10.10.102.2", "dst-port": 5002}
+2020-08-14 10:51:54,646 - CaaSmgenActor - INFO - CaaS receiver request ID: 5173 received at router.
+2020-08-14 10:51:54,646 - CaaSmgenActor - INFO - send-line: {"app-id": "5899f736-b8de-451c-bc2f-1dd72314d03c", "protocol": 17, "app-flow-type": 4, "dst-ip": "225.1.1.1", "requestor-host": "10.10.102.2", "traffic-specification": {"1": {"max-frames-per-interval": 1, "latency": 4000000, "max-frame-size": 92}}, "caas-addr": "10.10.102.1", "src-port": 4002, "flow-id": 5174, "src-ip": "10.10.102.2", "dst-port": 5002}
+2020-08-14 10:51:54,743 - CaaSmgenActor - INFO - CaaS receiver request ID: 5174 received at router.
+2020-08-14 10:51:54,743 - CaaSmgenActor - INFO - send-line: {"app-id": "5899f736-b8de-451c-bc2f-1dd72314d03c", "protocol": 17, "app-flow-type": 4, "dst-ip": "225.1.1.1", "requestor-host": "10.10.102.2", "traffic-specification": {"1": {"max-frames-per-interval": 1, "latency": 4000000, "max-frame-size": 92}}, "caas-addr": "10.10.102.1", "src-port": 4002, "flow-id": 5175, "src-ip": "10.10.102.2", "dst-port": 5002}
+2020-08-14 10:51:54,828 - CaaSmgenActor - INFO - CaaS receiver request ID: 5175 received at router.
+2020-08-14 10:51:54,829 - CaaSmgenActor - INFO - send-line: {"app-id": "5899f736-b8de-451c-bc2f-1dd72314d03c", "protocol": 17, "app-flow-type": 4, "dst-ip": "225.1.1.1", "requestor-host": "10.10.102.2", "traffic-specification": {"1": {"max-frames-per-interval": 1, "latency": 4000000, "max-frame-size": 92}}, "caas-addr": "10.10.102.1", "src-port": 4002, "flow-id": 5176, "src-ip": "10.10.102.2", "dst-port": 5002}
+2020-08-14 10:51:54,926 - CaaSmgenActor - INFO - CaaS receiver request ID: 5176 received at router.
+2020-08-14 10:51:54,927 - CaaSmgenActor - INFO - send-line: {"app-id": "5899f736-b8de-451c-bc2f-1dd72314d03c", "protocol": 17, "app-flow-type": 4, "dst-ip": "225.1.1.1", "requestor-host": "10.10.102.2", "traffic-specification": {"1": {"max-frames-per-interval": 1, "latency": 4000000, "max-frame-size": 92}}, "caas-addr": "10.10.102.1", "src-port": 4002, "flow-id": 5177, "src-ip": "10.10.102.2", "dst-port": 5002}
+2020-08-14 10:51:55,009 - CaaSmgenActor - INFO - CaaS receiver request ID: 5177 received at router.
+2020-08-14 10:51:55,010 - CaaSmgenActor - INFO - send-line: {"app-id": "5899f736-b8de-451c-bc2f-1dd72314d03c", "protocol": 17, "app-flow-type": 4, "dst-ip": "225.1.1.1", "requestor-host": "10.10.102.2", "traffic-specification": {"1": {"max-frames-per-interval": 1, "latency": 4000000, "max-frame-size": 92}}, "caas-addr": "10.10.102.1", "src-port": 4002, "flow-id": 5178, "src-ip": "10.10.102.2", "dst-port": 5002}
+2020-08-14 10:51:55,091 - CaaSmgenActor - INFO - CaaS receiver request ID: 5178 received at router.
+2020-08-14 10:51:55,091 - CaaSmgenActor - INFO - send-line: {"app-id": "5899f736-b8de-451c-bc2f-1dd72314d03c", "protocol": 17, "app-flow-type": 2, "dst-ip": "225.1.1.3", "requestor-host": "10.10.102.2", "traffic-specification": {"1": {"max-frames-per-interval": 250, "latency": 1200000, "max-frame-size": 92}}, "caas-addr": "10.10.102.1", "src-port": 4000, "flow-id": 5179, "src-ip": "10.10.102.2", "dst-port": 5000}
+2020-08-14 10:51:55,172 - CaaSmgenActor - INFO - CaaS receiver request ID: 5179 received at router.
+2020-08-14 10:51:55,172 - CaaSmgenActor - INFO - send-line: {"app-id": "5899f736-b8de-451c-bc2f-1dd72314d03c", "protocol": 17, "app-flow-type": 2, "dst-ip": "225.1.1.3", "requestor-host": "10.10.102.2", "traffic-specification": {"1": {"max-frames-per-interval": 250, "latency": 1200000, "max-frame-size": 92}}, "caas-addr": "10.10.102.1", "src-port": 4000, "flow-id": 5180, "src-ip": "10.10.102.2", "dst-port": 5000}
+2020-08-14 10:51:55,252 - CaaSmgenActor - INFO - CaaS receiver request ID: 5180 received at router.
+2020-08-14 10:51:55,252 - CaaSmgenActor - INFO - send-line: {"app-id": "5899f736-b8de-451c-bc2f-1dd72314d03c", "protocol": 17, "app-flow-type": 2, "dst-ip": "225.1.1.3", "requestor-host": "10.10.102.2", "traffic-specification": {"1": {"max-frames-per-interval": 250, "latency": 1200000, "max-frame-size": 92}}, "caas-addr": "10.10.102.1", "src-port": 4000, "flow-id": 5181, "src-ip": "10.10.102.2", "dst-port": 5000}
+2020-08-14 10:51:55,335 - CaaSmgenActor - INFO - CaaS receiver request ID: 5181 received at router.
+2020-08-14 10:51:55,335 - CaaSmgenActor - INFO - send-line: {"app-id": "5899f736-b8de-451c-bc2f-1dd72314d03c", "protocol": 17, "app-flow-type": 2, "dst-ip": "225.1.1.3", "requestor-host": "10.10.102.2", "traffic-specification": {"1": {"max-frames-per-interval": 250, "latency": 1200000, "max-frame-size": 92}}, "caas-addr": "10.10.102.1", "src-port": 4000, "flow-id": 5182, "src-ip": "10.10.102.2", "dst-port": 5000}
+2020-08-14 10:51:55,422 - CaaSmgenActor - INFO - CaaS receiver request ID: 5182 received at router.
+2020-08-14 10:51:55,423 - CaaSmgenActor - INFO - send-line: {"app-id": "5899f736-b8de-451c-bc2f-1dd72314d03c", "protocol": 17, "app-flow-type": 2, "dst-ip": "225.1.1.3", "requestor-host": "10.10.102.2", "traffic-specification": {"1": {"max-frames-per-interval": 250, "latency": 1200000, "max-frame-size": 92}}, "caas-addr": "10.10.102.1", "src-port": 4000, "flow-id": 5183, "src-ip": "10.10.102.2", "dst-port": 5000}
+2020-08-14 10:51:55,509 - CaaSmgenActor - INFO - CaaS receiver request ID: 5183 received at router.
+2020-08-14 10:51:55,509 - CaaSmgenActor - INFO - send-line: {"app-id": "5899f736-b8de-451c-bc2f-1dd72314d03c", "protocol": 17, "app-flow-type": 2, "dst-ip": "225.1.1.3", "requestor-host": "10.10.102.2", "traffic-specification": {"1": {"max-frames-per-interval": 250, "latency": 1200000, "max-frame-size": 92}}, "caas-addr": "10.10.102.1", "src-port": 4000, "flow-id": 5184, "src-ip": "10.10.102.2", "dst-port": 5000}
+2020-08-14 10:51:55,632 - CaaSmgenActor - INFO - CaaS receiver request ID: 5184 received at router.
+2020-08-14 10:51:55,633 - CaaSmgenActor - INFO - send-line: {"app-id": "5899f736-b8de-451c-bc2f-1dd72314d03c", "protocol": 17, "app-flow-type": 2, "dst-ip": "225.1.1.3", "requestor-host": "10.10.102.2", "traffic-specification": {"1": {"max-frames-per-interval": 250, "latency": 1200000, "max-frame-size": 92}}, "caas-addr": "10.10.102.1", "src-port": 4000, "flow-id": 5185, "src-ip": "10.10.102.2", "dst-port": 5000}
+2020-08-14 10:51:55,751 - CaaSmgenActor - INFO - CaaS receiver request ID: 5185 received at router.
+2020-08-14 10:51:55,752 - CaaSmgenActor - INFO - send-line: {"app-id": "5899f736-b8de-451c-bc2f-1dd72314d03c", "protocol": 17, "app-flow-type": 2, "dst-ip": "225.1.1.3", "requestor-host": "10.10.102.2", "traffic-specification": {"1": {"max-frames-per-interval": 250, "latency": 1200000, "max-frame-size": 92}}, "caas-addr": "10.10.102.1", "src-port": 4000, "flow-id": 5186, "src-ip": "10.10.102.2", "dst-port": 5000}
+2020-08-14 10:51:55,844 - CaaSmgenActor - INFO - CaaS receiver request ID: 5186 received at router.
+2020-08-14 10:51:55,844 - CaaSmgenActor - INFO - send-line: {"app-id": "5899f736-b8de-451c-bc2f-1dd72314d03c", "protocol": 17, "app-flow-type": 2, "dst-ip": "225.1.1.3", "requestor-host": "10.10.102.2", "traffic-specification": {"1": {"max-frames-per-interval": 250, "latency": 1200000, "max-frame-size": 92}}, "caas-addr": "10.10.102.1", "src-port": 4000, "flow-id": 5187, "src-ip": "10.10.102.2", "dst-port": 5000}
+2020-08-14 10:51:55,934 - CaaSmgenActor - INFO - CaaS receiver request ID: 5187 received at router.
+2020-08-14 10:51:55,934 - CaaSmgenActor - INFO - send-line: {"app-id": "5899f736-b8de-451c-bc2f-1dd72314d03c", "protocol": 17, "app-flow-type": 1, "dst-ip": "225.1.1.3", "requestor-host": "10.10.102.2", "traffic-specification": {"1": {"max-frames-per-interval": 50, "latency": 1200000, "max-frame-size": 92}}, "caas-addr": "10.10.102.1", "src-port": 4000, "flow-id": 5188, "src-ip": "10.10.102.2", "dst-port": 5008}
+2020-08-14 10:51:56,032 - CaaSmgenActor - INFO - CaaS receiver request ID: 5188 received at router.
+2020-08-14 10:51:56,033 - CaaSmgenActor - INFO - send-line: {"app-id": "5899f736-b8de-451c-bc2f-1dd72314d03c", "protocol": 17, "app-flow-type": 1, "dst-ip": "225.1.1.3", "requestor-host": "10.10.102.2", "traffic-specification": {"1": {"max-frames-per-interval": 50, "latency": 1200000, "max-frame-size": 92}}, "caas-addr": "10.10.102.1", "src-port": 4000, "flow-id": 5189, "src-ip": "10.10.102.2", "dst-port": 5008}
+2020-08-14 10:51:56,136 - CaaSmgenActor - INFO - CaaS receiver request ID: 5189 received at router.
+2020-08-14 10:51:56,137 - CaaSmgenActor - INFO - send-line: {"app-id": "5899f736-b8de-451c-bc2f-1dd72314d03c", "protocol": 17, "app-flow-type": 1, "dst-ip": "225.1.1.3", "requestor-host": "10.10.102.2", "traffic-specification": {"1": {"max-frames-per-interval": 50, "latency": 1200000, "max-frame-size": 92}}, "caas-addr": "10.10.102.1", "src-port": 4000, "flow-id": 5190, "src-ip": "10.10.102.2", "dst-port": 5008}
+2020-08-14 10:51:56,229 - CaaSmgenActor - INFO - CaaS receiver request ID: 5190 received at router.
+2020-08-14 10:51:56,229 - CaaSmgenActor - INFO - send-line: {"app-id": "5899f736-b8de-451c-bc2f-1dd72314d03c", "protocol": 17, "app-flow-type": 1, "dst-ip": "225.1.1.3", "requestor-host": "10.10.102.2", "traffic-specification": {"1": {"max-frames-per-interval": 50, "latency": 1200000, "max-frame-size": 92}}, "caas-addr": "10.10.102.1", "src-port": 4000, "flow-id": 5191, "src-ip": "10.10.102.2", "dst-port": 5008}
+2020-08-14 10:51:56,311 - CaaSmgenActor - INFO - CaaS receiver request ID: 5191 received at router.
+2020-08-14 10:51:56,311 - CaaSmgenActor - INFO - send-line: {"app-id": "5899f736-b8de-451c-bc2f-1dd72314d03c", "protocol": 17, "app-flow-type": 1, "dst-ip": "225.1.1.3", "requestor-host": "10.10.102.2", "traffic-specification": {"1": {"max-frames-per-interval": 50, "latency": 1200000, "max-frame-size": 92}}, "caas-addr": "10.10.102.1", "src-port": 4000, "flow-id": 5192, "src-ip": "10.10.102.2", "dst-port": 5008}
+2020-08-14 10:51:56,394 - CaaSmgenActor - INFO - CaaS receiver request ID: 5192 received at router.
+2020-08-14 10:51:56,394 - CaaSmgenActor - INFO - send-line: {"app-id": "5899f736-b8de-451c-bc2f-1dd72314d03c", "protocol": 17, "app-flow-type": 1, "dst-ip": "225.1.1.3", "requestor-host": "10.10.102.2", "traffic-specification": {"1": {"max-frames-per-interval": 50, "latency": 1200000, "max-frame-size": 92}}, "caas-addr": "10.10.102.1", "src-port": 4000, "flow-id": 5193, "src-ip": "10.10.102.2", "dst-port": 5008}
+2020-08-14 10:51:56,478 - CaaSmgenActor - INFO - CaaS receiver request ID: 5193 received at router.
+2020-08-14 10:51:56,478 - CaaSmgenActor - INFO - send-line: {"app-id": "5899f736-b8de-451c-bc2f-1dd72314d03c", "protocol": 17, "app-flow-type": 1, "dst-ip": "225.1.1.3", "requestor-host": "10.10.102.2", "traffic-specification": {"1": {"max-frames-per-interval": 50, "latency": 1200000, "max-frame-size": 92}}, "caas-addr": "10.10.102.1", "src-port": 4000, "flow-id": 5194, "src-ip": "10.10.102.2", "dst-port": 5008}
+2020-08-14 10:51:56,779 - CaaSmgenActor - INFO - CaaS receiver request ID: 5194 received at router.
+2020-08-14 10:51:56,780 - CaaSmgenActor - INFO - send-line: {"app-id": "5899f736-b8de-451c-bc2f-1dd72314d03c", "protocol": 17, "app-flow-type": 1, "dst-ip": "225.1.1.3", "requestor-host": "10.10.102.2", "traffic-specification": {"1": {"max-frames-per-interval": 50, "latency": 1200000, "max-frame-size": 92}}, "caas-addr": "10.10.102.1", "src-port": 4000, "flow-id": 5195, "src-ip": "10.10.102.2", "dst-port": 5008}
+2020-08-14 10:51:56,901 - CaaSmgenActor - INFO - CaaS receiver request ID: 5195 received at router.
+2020-08-14 10:51:56,902 - CaaSmgenActor - INFO - send-line: {"app-id": "5899f736-b8de-451c-bc2f-1dd72314d03c", "protocol": 17, "app-flow-type": 1, "dst-ip": "225.1.1.3", "requestor-host": "10.10.102.2", "traffic-specification": {"1": {"max-frames-per-interval": 50, "latency": 1200000, "max-frame-size": 92}}, "caas-addr": "10.10.102.1", "src-port": 4000, "flow-id": 5196, "src-ip": "10.10.102.2", "dst-port": 5008}
+2020-08-14 10:51:57,002 - CaaSmgenActor - INFO - CaaS receiver request ID: 5196 received at router.
+2020-08-14 10:51:57,003 - CaaSmgenActor - INFO - send-line: {"caas-addr": "10.10.102.1", "app-id": "5899f736-b8de-451c-bc2f-1dd72314d03c", "protocol": 17, "flow-id": 5171, "app-flow-type": 4, "dst-port": 5002, "traffic-specification": {"1": {"max-frames-per-interval": 1, "latency": 4000000, "max-frame-size": 92}}, "src-ip": "10.10.102.2", "dst-ip": "225.1.1.1", "src-port": 4002}
+2020-08-14 10:51:57,110 - CaaSmgenActor - INFO - CaaS sender request ID: 5171 received at router.
+2020-08-14 10:51:57,110 - CaaSmgenActor - INFO - send-line: {"caas-addr": "10.10.102.1", "app-id": "5899f736-b8de-451c-bc2f-1dd72314d03c", "protocol": 17, "flow-id": 5180, "app-flow-type": 2, "dst-port": 5000, "traffic-specification": {"1": {"max-frames-per-interval": 250, "latency": 1200000, "max-frame-size": 92}}, "src-ip": "10.10.102.2", "dst-ip": "225.1.1.3", "src-port": 4000}
+2020-08-14 10:51:57,232 - CaaSmgenActor - INFO - CaaS sender request ID: 5180 received at router.
+2020-08-14 10:51:57,232 - CaaSmgenActor - INFO - send-line: {"caas-addr": "10.10.102.1", "app-id": "5899f736-b8de-451c-bc2f-1dd72314d03c", "protocol": 17, "flow-id": 5189, "app-flow-type": 1, "dst-port": 5008, "traffic-specification": {"1": {"max-frames-per-interval": 50, "latency": 1200000, "max-frame-size": 92}}, "src-ip": "10.10.102.2", "dst-ip": "225.1.1.3", "src-port": 4000}
+2020-08-14 10:51:57,366 - CaaSmgenActor - INFO - CaaS sender request ID: 5189 received at router.
+2020-08-14 10:51:57,366 - CaaSmgenActor - INFO - Waiting 16 seconds for next event.
+2020-08-14 10:51:59,448 - CaaSmgenActor - INFO - Flow Accepted: 5010 Source: 10.10.102.2  Destination: 10.10.104.2  Data Rate: 2080
+2020-08-14 10:51:59,457 - CaaSmgenActor - INFO - Flow Accepted: 5085 Source: 10.10.102.2  Destination: 10.10.3.2  Data Rate: 2080
+2020-08-14 10:51:59,464 - CaaSmgenActor - INFO - Flow Accepted: 5080 Source: 10.10.102.2  Destination: 10.10.101.2  Data Rate: 2080
+2020-08-14 10:51:59,465 - CaaSmgenActor - INFO - Flow Accepted: 5015 Source: 10.10.102.2  Destination: 10.10.5.2  Data Rate: 2080
+2020-08-14 10:51:59,469 - CaaSmgenActor - INFO - Flow Accepted: 5009 Source: 10.10.102.2  Destination: 10.10.103.2  Data Rate: 2080
+2020-08-14 10:51:59,469 - CaaSmgenActor - INFO - Flow Accepted: 5162 Source: 10.10.102.2  Destination: 225.1.1.3  Data Rate: 468000
+2020-08-14 10:51:59,471 - CaaSmgenActor - INFO - Flow Accepted: 5162 Source: 10.10.102.2  Destination: 225.1.1.3  Data Rate: 468000
+2020-08-14 10:51:59,471 - CaaSmgenActor - INFO - Flow Accepted: 5162 Source: 10.10.102.2  Destination: 225.1.1.3  Data Rate: 468000
+2020-08-14 10:51:59,471 - CaaSmgenActor - INFO - Flow Accepted: 5162 Source: 10.10.102.2  Destination: 225.1.1.3  Data Rate: 468000
+2020-08-14 10:51:59,472 - CaaSmgenActor - INFO - Flow Accepted: 5162 Source: 10.10.102.2  Destination: 225.1.1.3  Data Rate: 468000
+2020-08-14 10:51:59,472 - CaaSmgenActor - INFO - Flow Accepted: 5162 Source: 10.10.102.2  Destination: 225.1.1.3  Data Rate: 468000
+2020-08-14 10:51:59,472 - CaaSmgenActor - INFO - Flow Accepted: 5162 Source: 10.10.102.2  Destination: 225.1.1.3  Data Rate: 468000
+2020-08-14 10:51:59,473 - CaaSmgenActor - INFO - Flow Accepted: 5162 Source: 10.10.102.2  Destination: 225.1.1.3  Data Rate: 468000
+2020-08-14 10:51:59,484 - CaaSmgenActor - INFO - Flow Accepted: 5086 Source: 10.10.102.2  Destination: 10.10.4.2  Data Rate: 2080
+2020-08-14 10:51:59,489 - CaaSmgenActor - INFO - Flow Accepted: 5012 Source: 10.10.102.2  Destination: 10.10.2.2  Data Rate: 2080
+2020-08-14 10:51:59,489 - CaaSmgenActor - INFO - Flow Accepted: 5081 Source: 10.10.102.2  Destination: 10.10.103.2  Data Rate: 2080
+2020-08-14 10:51:59,493 - CaaSmgenActor - INFO - Flow Accepted: 5084 Source: 10.10.102.2  Destination: 10.10.2.2  Data Rate: 2080
+2020-08-14 10:51:59,494 - CaaSmgenActor - INFO - Flow Accepted: 5013 Source: 10.10.102.2  Destination: 10.10.3.2  Data Rate: 2080
+2020-08-14 10:51:59,496 - CaaSmgenActor - INFO - Flow Accepted: 5082 Source: 10.10.102.2  Destination: 10.10.104.2  Data Rate: 2080
+2020-08-14 10:51:59,496 - CaaSmgenActor - INFO - Flow Accepted: 5087 Source: 10.10.102.2  Destination: 10.10.5.2  Data Rate: 2080
+2020-08-14 10:51:59,500 - CaaSmgenActor - INFO - Flow Accepted: 5083 Source: 10.10.102.2  Destination: 10.10.1.2  Data Rate: 2080
+2020-08-14 10:51:59,501 - CaaSmgenActor - INFO - Flow Accepted: 5149 Source: 10.10.102.2  Destination: 225.1.1.3  Data Rate: 104000
+2020-08-14 10:51:59,501 - CaaSmgenActor - INFO - Flow Accepted: 5149 Source: 10.10.102.2  Destination: 225.1.1.3  Data Rate: 104000
+2020-08-14 10:51:59,502 - CaaSmgenActor - INFO - Flow Accepted: 5149 Source: 10.10.102.2  Destination: 225.1.1.3  Data Rate: 104000
+2020-08-14 10:51:59,502 - CaaSmgenActor - INFO - Flow Accepted: 5149 Source: 10.10.102.2  Destination: 225.1.1.3  Data Rate: 104000
+2020-08-14 10:51:59,502 - CaaSmgenActor - INFO - Flow Accepted: 5149 Source: 10.10.102.2  Destination: 225.1.1.3  Data Rate: 104000
+2020-08-14 10:51:59,502 - CaaSmgenActor - INFO - Flow Accepted: 5149 Source: 10.10.102.2  Destination: 225.1.1.3  Data Rate: 104000
+2020-08-14 10:51:59,502 - CaaSmgenActor - INFO - Flow Accepted: 5149 Source: 10.10.102.2  Destination: 225.1.1.3  Data Rate: 104000
+2020-08-14 10:51:59,503 - CaaSmgenActor - INFO - Flow Accepted: 5149 Source: 10.10.102.2  Destination: 225.1.1.3  Data Rate: 104000
+2020-08-14 10:51:59,508 - CaaSmgenActor - INFO - Flow Accepted: 5014 Source: 10.10.102.2  Destination: 10.10.4.2  Data Rate: 2080
+2020-08-14 10:51:59,509 - CaaSmgenActor - INFO - Flow Accepted: 5011 Source: 10.10.102.2  Destination: 10.10.1.2  Data Rate: 2080
+2020-08-14 10:51:59,513 - CaaSmgenActor - INFO - Flow Accepted: 5008 Source: 10.10.102.2  Destination: 10.10.101.2  Data Rate: 2080
+2020-08-14 10:52:13,381 - CaaSmgenActor - INFO - Waiting to send 0.0 ON 1018 UDP SRC 4000 DST 225.1.1.3/5008 periodic [0.1 64] TOS 1 TTL 32
+2020-08-14 10:52:13,382 - CaaSmgenActor - INFO - Waiting 1 seconds for next event.
+2020-08-14 10:52:14,383 - CaaSmgenActor - INFO - Waiting to send 0.0 ON 1027 UDP SRC 4000 DST 225.1.1.3/5008 periodic [0.1 64] TOS 1 TTL 32
+2020-08-14 10:52:14,383 - CaaSmgenActor - INFO - Waiting 1 seconds for next event.
+2020-08-14 10:52:15,384 - CaaSmgenActor - INFO - Waiting to send 0.0 ON 1035 UDP SRC 4000 DST 225.1.1.3/5008 periodic [0.1 64] TOS 1 TTL 32
+2020-08-14 10:52:15,385 - CaaSmgenActor - INFO - Waiting to send 0.0 ON 1536 UDP SRC 4000 DST 225.1.1.3/5000 periodic [1 64] TOS 1 TTL 32
+2020-08-14 10:52:15,385 - CaaSmgenActor - INFO - Waiting 1 seconds for next event.
+2020-08-14 10:52:16,385 - CaaSmgenActor - INFO - Waiting to send 0.0 ON 1039 UDP SRC 4000 DST 225.1.1.3/5008 periodic [0.1 64] TOS 1 TTL 32
+2020-08-14 10:52:16,386 - CaaSmgenActor - INFO - Waiting to send 0.0 ON 1540 UDP SRC 4000 DST 225.1.1.3/5000 periodic [1 64] TOS 1 TTL 32
+2020-08-14 10:52:16,386 - CaaSmgenActor - INFO - Waiting to send 0.0 ON 1547 UDP SRC 4000 DST 225.1.1.3/5000 periodic [1 64] TOS 1 TTL 32
+2020-08-14 10:52:16,386 - CaaSmgenActor - INFO - Waiting 1 seconds for next event.
+2020-08-14 10:52:17,388 - CaaSmgenActor - INFO - MGEN event sent as non-adaptive data rate: 0.0 ON 2021 UDP SRC 4011 DST 225.1.1.4/5011 periodic [8 100] TOS 1 TTL 32
+2020-08-14 10:52:17,388 - CaaSmgenActor - INFO - Waiting to send 0.0 ON 1051 UDP SRC 4000 DST 225.1.1.3/5008 periodic [0.1 64] TOS 1 TTL 32
+2020-08-14 10:52:17,388 - CaaSmgenActor - INFO - Waiting 1 seconds for next event.
+2020-08-14 10:52:18,389 - CaaSmgenActor - INFO - Waiting to send 0.0 ON 1064 UDP SRC 4000 DST 225.1.1.3/5008 periodic [0.1 64] TOS 1 TTL 32
+2020-08-14 10:52:18,390 - CaaSmgenActor - INFO - Waiting 1 seconds for next event.
+2020-08-14 10:52:19,390 - CaaSmgenActor - INFO - Waiting to send 0.0 ON 1572 UDP SRC 4000 DST 225.1.1.3/5000 periodic [1 64] TOS 1 TTL 32
+2020-08-14 10:52:19,391 - CaaSmgenActor - INFO - Waiting to send 0.0 ON 1078 UDP SRC 4000 DST 225.1.1.3/5008 periodic [0.1 64] TOS 1 TTL 32
+2020-08-14 10:52:19,391 - CaaSmgenActor - INFO - Waiting 1 seconds for next event.
+2020-08-14 10:52:20,392 - CaaSmgenActor - INFO - Waiting to send 0.0 ON 1580 UDP SRC 4000 DST 225.1.1.3/5000 periodic [1 64] TOS 1 TTL 32
+2020-08-14 10:52:20,393 - CaaSmgenActor - INFO - Waiting to send 0.0 ON 1716 UDP SRC 4002 DST 225.1.1.2/5002 periodic [1 64] TOS 0 TTL 32
+2020-08-14 10:52:20,393 - CaaSmgenActor - INFO - Waiting to send 0.0 ON 1582 UDP SRC 4000 DST 225.1.1.3/5000 periodic [1 64] TOS 1 TTL 32
+2020-08-14 10:52:20,394 - CaaSmgenActor - INFO - Waiting 2 seconds for next event.
+2020-08-14 10:52:22,395 - CaaSmgenActor - INFO - Waiting to send 0.0 ON 1599 UDP SRC 4000 DST 225.1.1.3/5000 periodic [1 64] TOS 1 TTL 32
+2020-08-14 10:52:22,395 - CaaSmgenActor - INFO - Waiting to send 0.0 ON 1604 UDP SRC 4000 DST 225.1.1.3/5000 periodic [1 64] TOS 1 TTL 32
+2020-08-14 10:52:22,395 - CaaSmgenActor - INFO - Waiting 1 seconds for next event.
+2020-08-14 10:52:23,396 - CaaSmgenActor - INFO - Waiting to send 0.0 ON 1113 UDP SRC 4000 DST 225.1.1.3/5008 periodic [0.1 64] TOS 1 TTL 32
+2020-08-14 10:52:23,397 - CaaSmgenActor - INFO - Waiting 2 seconds for next event.
+2020-08-14 10:52:25,399 - CaaSmgenActor - INFO - Waiting to send 0.0 ON 1629 UDP SRC 4000 DST 225.1.1.3/5000 periodic [1 64] TOS 1 TTL 32
+2020-08-14 10:52:25,399 - CaaSmgenActor - INFO - Waiting 1 seconds for next event.
+2020-08-14 10:52:26,399 - CaaSmgenActor - INFO - Waiting to send 0.0 ON 1143 UDP SRC 4000 DST 225.1.1.3/5008 periodic [0.1 64] TOS 1 TTL 32
+2020-08-14 10:52:26,400 - CaaSmgenActor - INFO - Waiting to send 0.0 ON 1643 UDP SRC 4000 DST 225.1.1.3/5000 periodic [1 64] TOS 1 TTL 32
+2020-08-14 10:52:26,400 - CaaSmgenActor - INFO - Waiting to send 0.0 ON 1145 UDP SRC 4000 DST 225.1.1.3/5008 periodic [0.1 64] TOS 1 TTL 32
+2020-08-14 10:52:26,400 - CaaSmgenActor - INFO - Waiting to send 0.0 ON 1647 UDP SRC 4000 DST 225.1.1.3/5000 periodic [1 64] TOS 1 TTL 32
+2020-08-14 10:52:26,400 - CaaSmgenActor - INFO - Waiting 1 seconds for next event.
+2020-08-14 10:52:27,400 - CaaSmgenActor - INFO - Waiting to send 0.0 ON 1150 UDP SRC 4000 DST 225.1.1.3/5008 periodic [0.1 64] TOS 1 TTL 32
+2020-08-14 10:52:27,401 - CaaSmgenActor - INFO - Waiting 1 seconds for next event.
+2020-08-14 10:52:28,402 - CaaSmgenActor - INFO - Waiting to send 0.0 ON 1162 UDP SRC 4000 DST 225.1.1.3/5008 periodic [0.1 64] TOS 1 TTL 32
+2020-08-14 10:52:28,402 - CaaSmgenActor - INFO - Waiting to send 0.0 ON 1168 UDP SRC 4000 DST 225.1.1.3/5008 periodic [0.1 64] TOS 1 TTL 32
+2020-08-14 10:52:28,402 - CaaSmgenActor - INFO - Waiting 1 seconds for next event.
+2020-08-14 10:52:29,403 - CaaSmgenActor - INFO - Waiting to send 0.0 ON 1678 UDP SRC 4000 DST 225.1.1.3/5000 periodic [1 64] TOS 1 TTL 32
+2020-08-14 10:52:29,404 - CaaSmgenActor - INFO - Waiting 2 seconds for next event.
+2020-08-14 10:52:30,234 - CaaSmgenActor - INFO - Flow Accepted: 5171 Source: 10.10.102.2  Destination: 225.1.1.1  Data Rate: 1040
+2020-08-14 10:52:30,235 - CaaSmgenActor - INFO - Flow Accepted: 5171 Source: 10.10.102.2  Destination: 225.1.1.1  Data Rate: 1040
+2020-08-14 10:52:30,235 - CaaSmgenActor - INFO - Flow Accepted: 5171 Source: 10.10.102.2  Destination: 225.1.1.1  Data Rate: 1040
+2020-08-14 10:52:30,236 - CaaSmgenActor - INFO - Flow Accepted: 5171 Source: 10.10.102.2  Destination: 225.1.1.1  Data Rate: 1040
+2020-08-14 10:52:30,236 - CaaSmgenActor - INFO - Flow Accepted: 5171 Source: 10.10.102.2  Destination: 225.1.1.1  Data Rate: 1040
+2020-08-14 10:52:30,242 - CaaSmgenActor - INFO - Flow Accepted: 5180 Source: 10.10.102.2  Destination: 225.1.1.3  Data Rate: 260000
+2020-08-14 10:52:30,242 - CaaSmgenActor - INFO - MGEN event sent: 0.0 ON 1547 UDP SRC 4000 DST 225.1.1.3/5000 periodic [1 64] TOS 1 TTL 32
+2020-08-14 10:52:30,242 - CaaSmgenActor - INFO - MGEN event sent: 0.0 ON 1647 UDP SRC 4000 DST 225.1.1.3/5000 periodic [1 64] TOS 1 TTL 32
+2020-08-14 10:52:30,242 - CaaSmgenActor - INFO - MGEN event sent: 0.0 ON 1643 UDP SRC 4000 DST 225.1.1.3/5000 periodic [1 64] TOS 1 TTL 32
+2020-08-14 10:52:30,242 - CaaSmgenActor - INFO - MGEN event sent: 0.0 ON 1540 UDP SRC 4000 DST 225.1.1.3/5000 periodic [1 64] TOS 1 TTL 32
+2020-08-14 10:52:30,242 - CaaSmgenActor - INFO - MGEN event sent: 0.0 ON 1582 UDP SRC 4000 DST 225.1.1.3/5000 periodic [1 64] TOS 1 TTL 32
+2020-08-14 10:52:30,243 - CaaSmgenActor - INFO - MGEN event sent: 0.0 ON 1580 UDP SRC 4000 DST 225.1.1.3/5000 periodic [1 64] TOS 1 TTL 32
+2020-08-14 10:52:30,243 - CaaSmgenActor - INFO - MGEN event sent: 0.0 ON 1604 UDP SRC 4000 DST 225.1.1.3/5000 periodic [1 64] TOS 1 TTL 32
+2020-08-14 10:52:30,243 - CaaSmgenActor - INFO - MGEN event sent: 0.0 ON 1536 UDP SRC 4000 DST 225.1.1.3/5000 periodic [1 64] TOS 1 TTL 32
+2020-08-14 10:52:30,243 - CaaSmgenActor - INFO - MGEN event sent: 0.0 ON 1678 UDP SRC 4000 DST 225.1.1.3/5000 periodic [1 64] TOS 1 TTL 32
+2020-08-14 10:52:30,243 - CaaSmgenActor - INFO - MGEN event sent: 0.0 ON 1572 UDP SRC 4000 DST 225.1.1.3/5000 periodic [1 64] TOS 1 TTL 32
+2020-08-14 10:52:30,244 - CaaSmgenActor - INFO - MGEN event sent: 0.0 ON 1599 UDP SRC 4000 DST 225.1.1.3/5000 periodic [1 64] TOS 1 TTL 32
+2020-08-14 10:52:30,244 - CaaSmgenActor - INFO - MGEN event sent: 0.0 ON 1629 UDP SRC 4000 DST 225.1.1.3/5000 periodic [1 64] TOS 1 TTL 32
+2020-08-14 10:52:30,244 - CaaSmgenActor - INFO - Flow Accepted: 5180 Source: 10.10.102.2  Destination: 225.1.1.3  Data Rate: 260000
+2020-08-14 10:52:30,245 - CaaSmgenActor - INFO - Flow Accepted: 5180 Source: 10.10.102.2  Destination: 225.1.1.3  Data Rate: 260000
+2020-08-14 10:52:30,245 - CaaSmgenActor - INFO - Flow Accepted: 5180 Source: 10.10.102.2  Destination: 225.1.1.3  Data Rate: 260000
+2020-08-14 10:52:30,245 - CaaSmgenActor - INFO - Flow Accepted: 5180 Source: 10.10.102.2  Destination: 225.1.1.3  Data Rate: 260000
+2020-08-14 10:52:30,260 - CaaSmgenActor - INFO - Flow Accepted: 5189 Source: 10.10.102.2  Destination: 225.1.1.3  Data Rate: 52000
+2020-08-14 10:52:30,261 - CaaSmgenActor - INFO - MGEN event sent: 0.0 ON 1051 UDP SRC 4000 DST 225.1.1.3/5008 periodic [0.1 64] TOS 1 TTL 32
+2020-08-14 10:52:30,261 - CaaSmgenActor - INFO - MGEN event sent: 0.0 ON 1027 UDP SRC 4000 DST 225.1.1.3/5008 periodic [0.1 64] TOS 1 TTL 32
+2020-08-14 10:52:30,261 - CaaSmgenActor - INFO - MGEN event sent: 0.0 ON 1162 UDP SRC 4000 DST 225.1.1.3/5008 periodic [0.1 64] TOS 1 TTL 32
+2020-08-14 10:52:30,261 - CaaSmgenActor - INFO - MGEN event sent: 0.0 ON 1078 UDP SRC 4000 DST 225.1.1.3/5008 periodic [0.1 64] TOS 1 TTL 32
+2020-08-14 10:52:30,262 - CaaSmgenActor - INFO - MGEN event sent: 0.0 ON 1143 UDP SRC 4000 DST 225.1.1.3/5008 periodic [0.1 64] TOS 1 TTL 32
+2020-08-14 10:52:30,262 - CaaSmgenActor - INFO - MGEN event sent: 0.0 ON 1145 UDP SRC 4000 DST 225.1.1.3/5008 periodic [0.1 64] TOS 1 TTL 32
+2020-08-14 10:52:30,262 - CaaSmgenActor - INFO - MGEN event sent: 0.0 ON 1168 UDP SRC 4000 DST 225.1.1.3/5008 periodic [0.1 64] TOS 1 TTL 32
+2020-08-14 10:52:30,262 - CaaSmgenActor - INFO - MGEN event sent: 0.0 ON 1064 UDP SRC 4000 DST 225.1.1.3/5008 periodic [0.1 64] TOS 1 TTL 32
+2020-08-14 10:52:30,263 - CaaSmgenActor - INFO - MGEN event sent: 0.0 ON 1150 UDP SRC 4000 DST 225.1.1.3/5008 periodic [0.1 64] TOS 1 TTL 32
+2020-08-14 10:52:30,263 - CaaSmgenActor - INFO - MGEN event sent: 0.0 ON 1113 UDP SRC 4000 DST 225.1.1.3/5008 periodic [0.1 64] TOS 1 TTL 32
+2020-08-14 10:52:30,263 - CaaSmgenActor - INFO - MGEN event sent: 0.0 ON 1039 UDP SRC 4000 DST 225.1.1.3/5008 periodic [0.1 64] TOS 1 TTL 32
+2020-08-14 10:52:30,263 - CaaSmgenActor - INFO - MGEN event sent: 0.0 ON 1018 UDP SRC 4000 DST 225.1.1.3/5008 periodic [0.1 64] TOS 1 TTL 32
+2020-08-14 10:52:30,263 - CaaSmgenActor - INFO - MGEN event sent: 0.0 ON 1035 UDP SRC 4000 DST 225.1.1.3/5008 periodic [0.1 64] TOS 1 TTL 32
+2020-08-14 10:52:30,264 - CaaSmgenActor - INFO - Flow Accepted: 5189 Source: 10.10.102.2  Destination: 225.1.1.3  Data Rate: 52000
+2020-08-14 10:52:30,264 - CaaSmgenActor - INFO - Flow Accepted: 5189 Source: 10.10.102.2  Destination: 225.1.1.3  Data Rate: 52000
+2020-08-14 10:52:30,265 - CaaSmgenActor - INFO - Flow Accepted: 5189 Source: 10.10.102.2  Destination: 225.1.1.3  Data Rate: 52000
+2020-08-14 10:52:30,265 - CaaSmgenActor - INFO - Flow Accepted: 5189 Source: 10.10.102.2  Destination: 225.1.1.3  Data Rate: 52000
+2020-08-14 10:52:31,406 - CaaSmgenActor - INFO - MGEN event sent: 0.0 ON 1191 UDP SRC 4000 DST 225.1.1.3/5008 periodic [0.1 64] TOS 1 TTL 32
+2020-08-14 10:52:31,406 - CaaSmgenActor - INFO - MGEN event sent: 0.0 ON 1194 UDP SRC 4000 DST 225.1.1.3/5008 periodic [0.1 64] TOS 1 TTL 32
+2020-08-14 10:52:31,406 - CaaSmgenActor - INFO - Waiting 1 seconds for next event.
+2020-08-14 10:52:32,408 - CaaSmgenActor - INFO - MGEN event sent: 0.0 ON 1207 UDP SRC 4000 DST 225.1.1.3/5008 periodic [0.1 64] TOS 1 TTL 32
+2020-08-14 10:52:32,408 - CaaSmgenActor - INFO - Waiting 2 seconds for next event.
+2020-08-14 10:52:34,411 - CaaSmgenActor - INFO - MGEN event sent: 0.0 ON 1223 UDP SRC 4000 DST 225.1.1.3/5008 periodic [0.1 64] TOS 1 TTL 32
+2020-08-14 10:52:34,411 - CaaSmgenActor - INFO - MGEN event sent: 0.0 ON 1228 UDP SRC 4000 DST 225.1.1.3/5008 periodic [0.1 64] TOS 1 TTL 32
+2020-08-14 10:52:34,411 - CaaSmgenActor - INFO - Waiting 4 seconds for next event.
+2020-08-14 10:52:38,412 - CaaSmgenActor - INFO - MGEN event sent: 0.0 ON 1267 UDP SRC 4000 DST 225.1.1.3/5008 periodic [0.1 64] TOS 1 TTL 32
+2020-08-14 10:52:38,412 - CaaSmgenActor - INFO - Waiting 1 seconds for next event.
+2020-08-14 10:52:39,413 - CaaSmgenActor - INFO - MGEN event sent: 0.0 ON 1273 UDP SRC 4000 DST 225.1.1.3/5008 periodic [0.1 64] TOS 1 TTL 32
+2020-08-14 10:52:39,414 - CaaSmgenActor - INFO - MGEN event sent: 0.0 ON 1278 UDP SRC 4000 DST 225.1.1.3/5008 periodic [0.1 64] TOS 1 TTL 32
+2020-08-14 10:52:39,414 - CaaSmgenActor - INFO - Waiting 4 seconds for next event.
+2020-08-14 10:52:43,418 - CaaSmgenActor - INFO - MGEN event sent: 0.0 ON 1310 UDP SRC 4000 DST 225.1.1.3/5008 periodic [0.1 64] TOS 1 TTL 32
+2020-08-14 10:52:43,418 - CaaSmgenActor - INFO - Waiting 1 seconds for next event.
+2020-08-14 10:52:44,419 - CaaSmgenActor - INFO - MGEN event sent: 0.0 ON 1321 UDP SRC 4000 DST 225.1.1.3/5008 periodic [0.1 64] TOS 1 TTL 32
+2020-08-14 10:52:44,420 - CaaSmgenActor - INFO - MGEN event sent: 0.0 ON 1327 UDP SRC 4000 DST 225.1.1.3/5008 periodic [0.1 64] TOS 1 TTL 32
+2020-08-14 10:52:44,420 - CaaSmgenActor - INFO - Waiting 3 seconds for next event.
+2020-08-14 10:52:47,424 - CaaSmgenActor - INFO - MGEN event sent: 0.0 ON 1349 UDP SRC 4000 DST 225.1.1.3/5008 periodic [0.1 64] TOS 1 TTL 32
+2020-08-14 10:52:47,424 - CaaSmgenActor - INFO - MGEN event sent: 0.0 ON 1352 UDP SRC 4000 DST 225.1.1.3/5008 periodic [0.1 64] TOS 1 TTL 32
+2020-08-14 10:52:47,424 - CaaSmgenActor - INFO - Waiting 1 seconds for next event.
+2020-08-14 10:52:48,425 - CaaSmgenActor - INFO - MGEN event sent: 0.0 ON 1360 UDP SRC 4000 DST 225.1.1.3/5008 periodic [0.1 64] TOS 1 TTL 32
+2020-08-14 10:52:48,425 - CaaSmgenActor - INFO - Waiting 1 seconds for next event.
+2020-08-14 10:52:49,427 - CaaSmgenActor - INFO - MGEN event sent: 0.0 ON 1371 UDP SRC 4000 DST 225.1.1.3/5008 periodic [0.1 64] TOS 1 TTL 32
+2020-08-14 10:52:49,427 - CaaSmgenActor - INFO - Waiting 1 seconds for next event.
+2020-08-14 10:52:50,429 - CaaSmgenActor - INFO - MGEN event sent: 0.0 ON 1384 UDP SRC 4000 DST 225.1.1.3/5008 periodic [0.1 64] TOS 1 TTL 32
+2020-08-14 10:52:50,429 - CaaSmgenActor - INFO - MGEN event sent: 0.0 ON 1385 UDP SRC 4000 DST 225.1.1.3/5008 periodic [0.1 64] TOS 1 TTL 32
+2020-08-14 10:52:50,429 - CaaSmgenActor - INFO - Waiting 1 seconds for next event.
+2020-08-14 10:52:51,430 - CaaSmgenActor - INFO - MGEN event sent: 0.0 ON 1396 UDP SRC 4000 DST 225.1.1.3/5008 periodic [0.1 64] TOS 1 TTL 32
+2020-08-14 10:52:51,430 - CaaSmgenActor - INFO - Waiting 2 seconds for next event.
+2020-08-14 10:52:53,433 - CaaSmgenActor - INFO - MGEN event sent: 0.0 ON 1823 UDP SRC 4005 DST DDG-3-Host/5005 periodic [0.2 64] TOS 8 TTL 32
+2020-08-14 10:52:53,433 - CaaSmgenActor - INFO - MGEN event sent: 0.0 ON 1826 UDP SRC 4005 DST DDG-5-Host/5005 periodic [0.2 64] TOS 8 TTL 32
+2020-08-14 10:52:53,433 - CaaSmgenActor - INFO - Waiting 5 seconds for next event.
+2020-08-14 10:52:58,438 - CaaSmgenActor - INFO - MGEN event sent: 0.0 ON 1462 UDP SRC 4000 DST 225.1.1.3/5008 periodic [0.1 64] TOS 1 TTL 32
+2020-08-14 10:52:58,438 - CaaSmgenActor - INFO - MGEN event sent: 0.0 ON 1464 UDP SRC 4000 DST 225.1.1.3/5008 periodic [0.1 64] TOS 1 TTL 32
+2020-08-14 10:52:58,439 - CaaSmgenActor - INFO - Waiting 3 seconds for next event.
+2020-08-14 10:53:01,442 - CaaSmgenActor - INFO - MGEN event sent: 0.0 ON 1492 UDP SRC 4000 DST 225.1.1.3/5008 periodic [0.1 64] TOS 1 TTL 32
+2020-08-14 10:53:01,442 - CaaSmgenActor - INFO - Waiting 252 seconds for next event.
+2020-08-14 10:55:02,815 - CaaSmgenActor - INFO - Flow Accepted: 5080 Source: 10.10.102.2  Destination: 10.10.101.2  Data Rate: 2080
+2020-08-14 10:55:02,838 - CaaSmgenActor - INFO - Flow Accepted: 5012 Source: 10.10.102.2  Destination: 10.10.2.2  Data Rate: 2080
+2020-08-14 10:55:02,841 - CaaSmgenActor - INFO - Flow Accepted: 5084 Source: 10.10.102.2  Destination: 10.10.2.2  Data Rate: 2080
+2020-08-14 10:55:02,846 - CaaSmgenActor - INFO - Flow Accepted: 5083 Source: 10.10.102.2  Destination: 10.10.1.2  Data Rate: 2080
+2020-08-14 10:55:02,854 - CaaSmgenActor - INFO - Flow Accepted: 5011 Source: 10.10.102.2  Destination: 10.10.1.2  Data Rate: 2080
+2020-08-14 10:55:02,858 - CaaSmgenActor - INFO - Flow Accepted: 5008 Source: 10.10.102.2  Destination: 10.10.101.2  Data Rate: 2080

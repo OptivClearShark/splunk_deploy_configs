@@ -1,16 +1,17 @@
 ---
   - name: Remove borked directory from Splunk server
-    hosts: idxrs dfs shs
+    hosts: idxrs
     become: true
     strategy: free
-    vars:
-      app : "{{ app }}"
     tasks:
 
     - name: Splunk delete etc/app directory
       file:
         path: "/opt/splunk/etc/apps/{{ item }}"
         state: absent
+      with_items:
+        - org_all_deploymentclient_site1
+        - org_all_deploymentclient_site2
 
     - name: Restarting Splunk Enterprise Services with DEBUG ENABLED
       command: "/opt/splunk/bin/splunk restart"

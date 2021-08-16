@@ -1,18 +1,17 @@
 ---
   # uncomment if you want to enable fips
-  # - import_playbook: enableOsFips.yaml
+  - import_playbook: enableOsFips.yaml
   - import_playbook: installSplunkEnterprise.yaml
   - import_playbook: installSplunkUf.yaml
   - import_playbook: createSplunkDataDisks.yaml
   - import_playbook: configure_standalone.yaml
-  - import_playbook: configure_cm.yaml
-  - import_playbook: configure_ds.yaml
-  - import_playbook: configure_shs.yaml
   - import_playbook: configure_lm.yaml
-  - import_playbook: configure_idxrs.yaml
-  - import_playbook: configure_idxrs_site1.yaml
-  - import_playbook: configure_idxrs_site2.yaml
+  - import_playbook: configure_shs.yaml
+  - import_playbook: removeBrokenAppDirectory.yaml
+  - import_playbook: configure_clustered_idxrs.yaml
   - import_playbook: configure_deployer.yaml
   - import_playbook: configure_subordinate_ds.yaml
+  - import_playbook: configure_cm.yaml
   - import_playbook: changeSplunkHostname.yaml
-  - import_playbook: restartSplunk.yaml
+  - import_playbook: configure_cm.yaml
+  - import_playbook: configure_ds.yaml

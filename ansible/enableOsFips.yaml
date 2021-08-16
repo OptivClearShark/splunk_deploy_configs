@@ -3,5 +3,16 @@
     hosts: all
     become: true
     tasks:
-      - name: run bash script to install splunk
-        script: ./scripts/rehl_enable_fips.sh
+
+      - name: check if fips is enabled
+        shell: cat /proc/sys/crypto/fips_enabled
+        register: fips_enabled
+
+      - name: run bash to script to enable FIPS
+        script: ../scripts/rehl_enable_fips.sh
+        when: fips_enabled.stdout == "0"
+
+      - name: Wait 300 seconds, but only start checking after 35 seconds
+        wait_for_connection:
+          delay: 35
+          timeout: 300

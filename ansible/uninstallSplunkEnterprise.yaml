@@ -1,7 +1,30 @@
 ---
   - name: run bash script to install splunk enterprise
-    hosts: syslog
+    hosts: sc4u_hosts
     become: true
     tasks:
-      - name: run bash script to install splunk
-        script: ../scripts/splunk_uninstall.sh
+      - name: stop splunk and disable boot strap
+        shell: |
+         /opt/splunk/bin/splunk stop
+         /opt/splunk/bin/splunk disable boot-start
+        ignore_errors: yes
+
+      - name: find current splunk rpm package
+        shell: rpm -qa | grep splunk
+        register: splunk_rpm
+        ignore_errors: yes
+
+      - name: Show splunk rpm package output
+        ansible.builtin.debug:
+          msg: "{{ splunk_rpm.stdout }}"
+        ignore_errors: yes
+
+      - name: uninstall splunk with rpm
+        shell: rpm -e "{{ splunk_rpm.stdout }}"
+        ignore_errors: yes
+
+      - name: delete remenants of splunk directory
+        file:
+          state: absent
+          path: /opt/splunk
+        ignore_errors: yes

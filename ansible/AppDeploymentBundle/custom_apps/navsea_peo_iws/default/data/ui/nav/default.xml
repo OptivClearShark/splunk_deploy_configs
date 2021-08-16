@@ -1,0 +1,7 @@
+<nav search_view="search">
+  <view name="search"  />
+  <view name="reports" />
+  <view name="caas_event_dashboard" default='true' />
+  <view name="mgen_event_view" />
+</nav>
+

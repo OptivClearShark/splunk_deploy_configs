@@ -1,0 +1,9 @@
+{
+  "credentials": {
+    "username": "jonathan@clearshark.com",
+    "password": "clearshark123!"
+  },
+  "setup": {
+    "console_url": "https://twistlock-console.apps.cloudmegalodon.us"
+  }
+}

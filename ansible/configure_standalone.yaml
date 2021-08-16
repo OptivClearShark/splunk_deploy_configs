@@ -77,3 +77,29 @@
           - org_hec_indexer_inputs
         tags:
           - standalone
+
+      - name: Copy downloaded  apps to etc/apps
+        copy:
+          src: "./AppDeploymentBundle/DownloadedApps/{{ item }}"
+          dest: "/opt/splunk/etc/apps/"
+          owner: splunk
+          group: splunk
+          mode: 0755
+        with_items:
+          - Splunk_TA_f5-bigip
+        tags:
+          - standalone
+          - downloaded
+
+      - name: Copy downloaded  apps to etc/apps
+        copy:
+          src: "./AppDeploymentBundle/DownloadedApps/{{ item }}"
+          dest: "/opt/splunk/etc/deployment-apps/"
+          owner: splunk
+          group: splunk
+          mode: 0755
+        with_items:
+          - Splunk_TA_f5-bigip
+        tags:
+          - standalone
+          - downloaded

@@ -1,0 +1,5 @@
+<nav search_view="search">
+  <view name="search"  />
+  <view name="reports" />
+  <view name="ip_list" default='true' />
+</nav>

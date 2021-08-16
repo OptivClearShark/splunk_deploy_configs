@@ -1,22 +1,38 @@
 [cms]
+splunksha0.cloudmegalodon.us
 
 [idxrs]
+splunkidxra0.cloudmegalodon.us
+splunkidxra1.cloudmegalodon.us
+splunkidxrb0.cloudmegalodon.us
+splunkidxrb1.cloudmegalodon.us
+
 
 [idxrs_site1]
+splunkidxra0.cloudmegalodon.us
+splunkidxra1.cloudmegalodon.us
 
 [idxrs_site2]
+splunkidxrb0.cloudmegalodon.us
+splunkidxrb1.cloudmegalodon.us
 
 [shs]
+splunksha0.cloudmegalodon.us
+splunkshb0.cloudmegalodon.us
 
 [dmcs]
 
-[ds
+[ds]
+splunksha0.cloudmegalodon.us
 
 [subordinate_ds]
+splunkshb0.cloudmegalodon.us
 
 [deployer]
 
 [lms]
+splunksha0.cloudmegalodon.us
+splunkshb0.cloudmegalodon.us
 
 [standalone]
 
@@ -25,3 +41,6 @@
 [hfs]
 
 [syslog]
+
+[sc4u_hosts]
+splunksc4sb0.cloudmegalodon.us

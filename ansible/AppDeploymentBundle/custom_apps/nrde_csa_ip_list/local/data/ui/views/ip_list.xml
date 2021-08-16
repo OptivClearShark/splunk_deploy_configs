@@ -1,0 +1,73 @@
+<form theme="dark">
+  <label>CSA Portal Access Dashboard</label>
+  <fieldset submitButton="false" autoRun="true">
+    <input type="time" token="time" searchWhenChanged="true">
+      <label>Time Range</label>
+      <default>
+        <earliest>-24h@h</earliest>
+        <latest>now</latest>
+      </default>
+    </input>
+  </fieldset>
+  <row>
+    <panel>
+      <table>
+        <title>Unique Session Information</title>
+        <search>
+          <query>index="csa_f5" sourcetype="f5_syslog_splunk" NOT (session_id=00000000) 
+| convert ctime(_time) as time      
+| stats  last(hostname) as BigIP earliest(time) as "Earliest Time Stamp" latest(time) as "Latest Time Stamp" last(Virtual_IP) as Virtual_IP last(Client_IP) as Source_IP last(session.policy.result) as "Policy_Result" last(session.ssl.cert.subject) as "Identity" last(session.custom.whitelist.ip_category) as "Whitelist_Category" by session_id      
+| fillnull  value="n/a"      
+| where  Policy_Result="allow" AND Whitelist_Category="csa_registered"
+| table  session_id, BigIP, "Earliest Time Stamp", "Latest Time Stamp", "Virtual_IP", "Source_IP", "Identity", "Whitelist_Category", "Policy_Result"</query>
+          <earliest>$time.earliest$</earliest>
+          <latest>$time.latest$</latest>
+          <sampleRatio>1</sampleRatio>
+        </search>
+        <option name="count">100</option>
+        <option name="drilldown">none</option>
+        <option name="refresh.display">progressbar</option>
+      </table>
+    </panel>
+  </row>
+  <row>
+    <panel>
+      <title>WHITELIST</title>
+      <table>
+        <title>Unique Source IP Information</title>
+        <search>
+          <query>index="csa_f5" sourcetype="f5_syslog_splunk" NOT (session_id=00000000)    
+| stats  last(hostname) as BigIP earliest(time) as "Earliest Time Stamp" latest(time) as "Latest Time Stamp" last(Virtual_IP) as Virtual_IP last(Client_IP) as Source_IP last(session.policy.result) as "Policy_Result" last(session.ssl.cert.subject) as "Identity" last(session.custom.whitelist.ip_category) as "Whitelist_Category" by session_id      
+| where  Policy_Result="allow" AND Whitelist_Category="csa_registered"
+| eval subnetmask="32"
+| table "Source_IP",subnetmask,"Identity", "Whitelist_Category"</query>
+          <earliest>$time.earliest$</earliest>
+          <latest>$time.latest$</latest>
+          <sampleRatio>1</sampleRatio>
+        </search>
+        <option name="count">100</option>
+        <option name="drilldown">none</option>
+        <option name="refresh.display">progressbar</option>
+      </table>
+    </panel>
+  </row>
+  <row>
+    <panel>
+      <map>
+        <title>CSA Portal Session Cluster Map</title>
+        <search>
+          <query>index="csa_f5" sourcetype="f5_syslog_splunk" NOT (session_id=00000000) 
+| iplocation Client_IP
+| geostats latfield=lat longfield=lon count(session.ssl.cert.subject) by Client_IP</query>
+          <earliest>rt-5m</earliest>
+          <latest>rt</latest>
+          <refresh>1m</refresh>
+          <refreshType>delay</refreshType>
+        </search>
+        <option name="drilldown">none</option>
+        <option name="mapping.type">marker</option>
+        <option name="refresh.display">progressbar</option>
+      </map>
+    </panel>
+  </row>
+</form>

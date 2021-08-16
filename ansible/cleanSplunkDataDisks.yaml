@@ -1,0 +1,18 @@
+- hosts: idxrs
+  become: True
+  become_user: root
+
+  vars:
+    splunk_vg: 'vg_splunkdata'
+    splunk_lv: 'lv_splunkdata'
+
+  tasks:
+    ##
+    # First make sure we have a clean volume group
+    ##
+    - name: Make sure test volume does not exist
+      lvol:
+        vg: "{{ splunk_vg }}"
+        lv: "{{ splunk_lv }}"
+        state: absent
+        force: yes
